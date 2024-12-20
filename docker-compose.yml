@@ -170,6 +170,32 @@ services:
   # docker exec -it mosquitto mosquitto_sub -h mosquitto -t "/#"
   # docker exec -it mosquitto mosquitto_pub -h mosquitto -m "Hello world!" -t "/test"
 
+  # Mongo DB front-end
+  mongo-express:
+    image: mongo-express #:1.0.2-18
+    hostname: mongo-fe
+    container_name: fe-mongo
+  # depends_on:
+  #   mongo:
+  #     condition: service_healthy
+    depends_on:
+      - mongo
+    networks:
+      - hyperride-net
+    expose:
+      - "8081"
+  # ports:
+  #   - "8081:8081"
+    environment:
+      - ME_CONFIG_BASICAUTH_USERNAME=
+      - ME_CONFIG_BASICAUTH_PASSWORD=
+      - ME_CONFIG_MONGODB_SERVER=mongo-db
+    healthcheck:
+      test: wget --quiet --tries=3 --spider http://admin:pass@localhost:8081/status || exit 1
+
+  # docker run -it --rm --net=hyperride-net --name fe-mongo -p 8081:8081 -e ME_CONFIG_BASICAUTH=true -e ME_CONFIG_MONGODB_SERVER=mongo-db mongo-express
+  # docker run -it --rm --net=hyperride-net --name ngrok-mongo -e NGROK_AUTHTOKEN=2L2kdrNlcTBcxDERiOxTW3kyEaV_3siN3rWauYmt4KLGHrHZg ngrok/ngrok:latest http 8081
+
 volumes:
   ganache-db: ~
   keycloak-data: ~
