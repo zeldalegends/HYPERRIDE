@@ -6,7 +6,7 @@
                 "view-store-position": false,
                 "view-show-grid": true,
                 "view-snap-grid": true,
-                "view-grid-size": 20,
+                "view-grid-size": "20",
                 "view-node-status": true,
                 "view-node-show-label": true,
                 "view-show-tips": true,
@@ -14,7 +14,19 @@
             },
             "tours": {
                 "welcome": "4.0.8"
+            },
+            "sidebar": {
+                "order": [
+                    "info",
+                    "help",
+                    "debug",
+                    "dashboard",
+                    "config",
+                    "context"
+                ]
             }
-        }
+        },
+        "menu-deploymenu-item-node": true,
+        "menu-deploymenu-item-full": false
     }
 }

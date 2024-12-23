@@ -4,7 +4,7 @@ services:
 
   # The Context Broker (Orion-LD)
   orion-ld:
-    platform: linux/amd64
+  # platform: linux/amd64
   # image: fiware/orion-ld:1.7.1
     image: quay.io/fiware/orion-ld:1.7.1
     hostname: orion
@@ -35,7 +35,7 @@ services:
 
   # DB for the Context Broker (MongoDB)
   mongo:
-    image: mongo:6 #:6.0.19 (6.0) :8.0.4 (latest)
+    image: mongo #:6.0.19 (6.0) :8.0.4 (latest)
     hostname: mongo-db
     container_name: db-mongo
   # restart: always
@@ -47,12 +47,12 @@ services:
       - mongo-configdb:/data/configdb
       - mongo-db:/data/db
     healthcheck:
-      test: mongosh localhost:27017/test --quiet || exit 1
-    # test: mongo --eval "db.adminCommand('ping')" --quiet"
+      test: mongosh --eval "db.runCommand('ping')"
+    # test: echo 'db.adminCommand("ping")' | mongosh --quiet
     # test: echo 'db.stats().ok' | mongo localhost:27017/test --quiet
     # test: echo 'db.runCommand("ping").ok' | mongo mongo:27017/test --quiet
 
-  # Context Provider and Swagger GUI (Node.js)
+  # Context Provider and Swagger GUI (Node-RED)
   node-red:
   # build: node-red
     image: nodered/node-red #:4.0.8
@@ -199,7 +199,7 @@ services:
       - ME_CONFIG_SITE_BASEURL=/mongoadmin
       - ME_CONFIG_HEALTH_CHECK_PATH=/status
     healthcheck:
-      test: wget --quiet --tries=3 --spider http://admin:pass@mongo-fe:8081/status || exit 1
+      test: wget --quiet --tries=3 --spider http://admin:pass@127.0.0.1:8081/mongoadmin/status || exit 1
 
   # docker run -it --rm --net=hyperride-net --name fe-mongo -e ME_CONFIG_BASICAUTH=true -e ME_CONFIG_MONGODB_SERVER=mongo-db mongo-express
   # docker run -it --rm --net=hyperride-net --name ngrok-mongo -e NGROK_AUTHTOKEN=2e3OcV139oYcSUIwi0bCL4NLexU_554rNagEXCygsfFeNm7aA ngrok/ngrok:latest http 8081

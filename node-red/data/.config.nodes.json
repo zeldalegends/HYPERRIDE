@@ -1308,7 +1308,7 @@
     },
     "node-red-contrib-web-worldmap": {
         "name": "node-red-contrib-web-worldmap",
-        "version": "4.8.0",
+        "version": "5.0.8",
         "local": true,
         "user": true,
         "nodes": {
@@ -1327,8 +1327,7 @@
                 "module": "node-red-contrib-web-worldmap",
                 "file": "/data/node_modules/node-red-contrib-web-worldmap/worldmap.js"
             }
-        },
-        "pending_version": "5.0.8"
+        }
     },
     "node-red-dashboard": {
         "name": "node-red-dashboard",
@@ -1609,7 +1608,7 @@
     },
     "node-red-node-ui-table": {
         "name": "node-red-node-ui-table",
-        "version": "0.4.3",
+        "version": "0.4.4",
         "local": true,
         "user": true,
         "nodes": {
@@ -1624,7 +1623,6 @@
                 "module": "node-red-node-ui-table",
                 "file": "/data/node_modules/node-red-node-ui-table/node.js"
             }
-        },
-        "pending_version": "0.4.4"
+        }
     }
 }
