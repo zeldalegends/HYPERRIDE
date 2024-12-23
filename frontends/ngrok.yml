@@ -1,0 +1,19 @@
+version: 2
+
+# asmterni@proton.me
+api_key: 2qauPy2N4YeTpyxXkyvwwya7ynb_4Xamm13hSyEBXR5TnGGGm
+authtoken: 2e3OcV139oYcSUIwi0bCL4NLexU_554rNagEXCygsfFeNm7aA
+
+tunnels:
+  inspect:
+    proto: http
+    addr: 4040
+# mongoExpress: (use /mongoadmin instead)
+#   proto: http
+#   addr: fe-mongo:8081
+  nginx:
+    proto: http
+    addr: nginx
+  node-red:
+    proto: http
+    addr: node-red:1880

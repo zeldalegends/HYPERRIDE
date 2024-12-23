@@ -1,7 +1,7 @@
 {
     "node-red": {
         "name": "node-red",
-        "version": "4.0.7",
+        "version": "4.0.8",
         "local": false,
         "user": false,
         "nodes": {
@@ -1327,7 +1327,8 @@
                 "module": "node-red-contrib-web-worldmap",
                 "file": "/data/node_modules/node-red-contrib-web-worldmap/worldmap.js"
             }
-        }
+        },
+        "pending_version": "5.0.8"
     },
     "node-red-dashboard": {
         "name": "node-red-dashboard",
@@ -1623,6 +1624,7 @@
                 "module": "node-red-node-ui-table",
                 "file": "/data/node_modules/node-red-node-ui-table/node.js"
             }
-        }
+        },
+        "pending_version": "0.4.4"
     }
 }

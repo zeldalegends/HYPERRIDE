@@ -152,6 +152,14 @@
         "env": []
     },
     {
+        "id": "a13a956a0dd2eb49",
+        "type": "tab",
+        "label": "Keycloak",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "34047250a1f44ce1",
         "type": "group",
         "z": "48a7733923a33252",
@@ -963,48 +971,6 @@
         "idmEndpoint": "http://host.docker.internal:3005"
     },
     {
-        "id": "ade1f84b9abbf285",
-        "type": "ui_group",
-        "name": "Monitoring data",
-        "tab": "e6013c6f.69328",
-        "order": 2,
-        "disp": true,
-        "width": "6",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "a9912d64.97094",
-        "type": "ui_group",
-        "name": "System Information",
-        "tab": "e6013c6f.69328",
-        "order": 1,
-        "disp": true,
-        "width": "6"
-    },
-    {
-        "id": "b6cc1aae65862dae",
-        "type": "ui_group",
-        "name": "Realtime",
-        "tab": "e6013c6f.69328",
-        "order": 3,
-        "disp": true,
-        "width": "6",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "f6e5eaea1a3d31cf",
-        "type": "ui_group",
-        "name": "Loadavg",
-        "tab": "e6013c6f.69328",
-        "order": 4,
-        "disp": true,
-        "width": "6",
-        "collapse": false,
-        "className": ""
-    },
-    {
         "id": "e6013c6f.69328",
         "type": "ui_tab",
         "name": "System Monitor",
@@ -1056,39 +1022,6 @@
         "className": ""
     },
     {
-        "id": "160e81fb.f1c86e",
-        "type": "ui_group",
-        "name": "File Browser",
-        "tab": "b63d1f91.68095",
-        "order": 1,
-        "disp": false,
-        "width": "12",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "26e8fe8026c92abb",
-        "type": "ui_group",
-        "name": "Properties",
-        "tab": "b63d1f91.68095",
-        "order": 2,
-        "disp": true,
-        "width": "6",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "4128a70510a0cd4e",
-        "type": "ui_group",
-        "name": "Preview",
-        "tab": "b63d1f91.68095",
-        "order": 3,
-        "disp": true,
-        "width": "6",
-        "collapse": false,
-        "className": ""
-    },
-    {
         "id": "b63d1f91.68095",
         "type": "ui_tab",
         "name": "File Manager",
@@ -1096,15 +1029,6 @@
         "order": 5,
         "disabled": false,
         "hidden": false
-    },
-    {
-        "id": "a46f63f7bc8183e7",
-        "type": "sender-account",
-        "name": "Account 2 (Sepolia)",
-        "ethereumClient": "0604ca7353fa5a18",
-        "address": "0x7efC9d38581c7Cb8372325c349Ec5095D027B3Dd",
-        "managedByEthereumClient": true,
-        "transactionQueueSize": "100"
     },
     {
         "id": "af20b3f79a99fb33",
@@ -1119,17 +1043,6 @@
         "id": "b4799249b6347148",
         "type": "ngrokauth",
         "name": "fiware@proton.me"
-    },
-    {
-        "id": "51def6da5af481ac",
-        "type": "ui_group",
-        "name": "Database",
-        "tab": "1e15f62f82f992f8",
-        "order": 1,
-        "disp": true,
-        "width": "6",
-        "collapse": false,
-        "className": ""
     },
     {
         "id": "1e15f62f82f992f8",
@@ -1150,49 +1063,6 @@
         "width": "6",
         "collapse": false,
         "className": ""
-    },
-    {
-        "id": "3eb81d320b6c1fa6",
-        "type": "smart-contract",
-        "name": "My_PoE (Sepolia)",
-        "ethereumClient": "0604ca7353fa5a18",
-        "address": "0xE1989a90127A449Bd22176299104cf6d2cb5Ba86",
-        "abi": "[{         \"inputs\": [{                 \"internalType\": \"string\",                 \"name\": \"document\",                 \"type\": \"string\"             }         ],         \"name\": \"notarize\",         \"outputs\": [{                 \"internalType\": \"bytes32\",                 \"name\": \"\",                 \"type\": \"bytes32\"             }         ],         \"stateMutability\": \"nonpayable\",         \"type\": \"function\"     }, {         \"inputs\": [{                 \"internalType\": \"string\",                 \"name\": \"document\",                 \"type\": \"string\"             }         ],         \"name\": \"checkDocument\",         \"outputs\": [{                 \"internalType\": \"bool\",                 \"name\": \"\",                 \"type\": \"bool\"             }         ],         \"stateMutability\": \"view\",         \"type\": \"function\"     } ]"
-    },
-    {
-        "id": "21db029aa1b5a1dd",
-        "type": "sender-account",
-        "name": "Account 3 (Sepolia)",
-        "ethereumClient": "0604ca7353fa5a18",
-        "address": "0xcFB1d247D5213d75b75e2aA1De235d6ec32f6544",
-        "managedByEthereumClient": true,
-        "transactionQueueSize": "100"
-    },
-    {
-        "id": "c936756ac0243b92",
-        "type": "sender-account",
-        "name": "Account 7 (Sepolia)",
-        "ethereumClient": "0604ca7353fa5a18",
-        "address": "0x6ea4618FFead7e1B282b3cE11Afd3d95aE24CBb0",
-        "managedByEthereumClient": false,
-        "transactionQueueSize": "100"
-    },
-    {
-        "id": "a4b3ff3023c6a717",
-        "type": "smart-contract",
-        "name": "PoE v9 (Ganache)",
-        "ethereumClient": "151efd3e17f2a2d1",
-        "address": "0xe1db7c5eAEfe7C82912Cd1116684135B44202196",
-        "abi": "[{         \"inputs\": [{                 \"internalType\": \"string\",                 \"name\": \"document\",                 \"type\": \"string\"             }         ],         \"name\": \"notarize\",         \"outputs\": [{                 \"internalType\": \"bytes32\",                 \"name\": \"\",                 \"type\": \"bytes32\"             }         ],         \"stateMutability\": \"nonpayable\",         \"type\": \"function\"     }, {         \"inputs\": [{                 \"internalType\": \"string\",                 \"name\": \"document\",                 \"type\": \"string\"             }         ],         \"name\": \"checkDocument\",         \"outputs\": [{                 \"internalType\": \"bool\",                 \"name\": \"\",                 \"type\": \"bool\"             }         ],         \"stateMutability\": \"view\",         \"type\": \"function\"     } ]"
-    },
-    {
-        "id": "4309ab3d92258a66",
-        "type": "sender-account",
-        "name": "Account 0 (Ganache)",
-        "ethereumClient": "151efd3e17f2a2d1",
-        "address": "0x89a47029b7168a240BD49bd446F79cee6cad11D4",
-        "managedByEthereumClient": true,
-        "transactionQueueSize": "100"
     },
     {
         "id": "151efd3e17f2a2d1",
@@ -1256,17 +1126,6 @@
         "abi": "[ \t{ \t\t\"anonymous\": false, \t\t\"inputs\": [ \t\t\t{ \t\t\t\t\"indexed\": false, \t\t\t\t\"internalType\": \"bytes32\", \t\t\t\t\"name\": \"\", \t\t\t\t\"type\": \"bytes32\" \t\t\t}, \t\t\t{ \t\t\t\t\"components\": [ \t\t\t\t\t{ \t\t\t\t\t\t\"internalType\": \"string\", \t\t\t\t\t\t\"name\": \"description\", \t\t\t\t\t\t\"type\": \"string\" \t\t\t\t\t}, \t\t\t\t\t{ \t\t\t\t\t\t\"internalType\": \"address\", \t\t\t\t\t\t\"name\": \"provider\", \t\t\t\t\t\t\"type\": \"address\" \t\t\t\t\t}, \t\t\t\t\t{ \t\t\t\t\t\t\"internalType\": \"uint256\", \t\t\t\t\t\t\"name\": \"timestamp\", \t\t\t\t\t\t\"type\": \"uint256\" \t\t\t\t\t} \t\t\t\t], \t\t\t\t\"indexed\": false, \t\t\t\t\"internalType\": \"struct ProofOfExistence.Proof\", \t\t\t\t\"name\": \"\", \t\t\t\t\"type\": \"tuple\" \t\t\t} \t\t], \t\t\"name\": \"Notarized\", \t\t\"type\": \"event\" \t}, \t{ \t\t\"inputs\": [ \t\t\t{ \t\t\t\t\"internalType\": \"string\", \t\t\t\t\"name\": \"document\", \t\t\t\t\"type\": \"string\" \t\t\t}, \t\t\t{ \t\t\t\t\"internalType\": \"string\", \t\t\t\t\"name\": \"desc\", \t\t\t\t\"type\": \"string\" \t\t\t} \t\t], \t\t\"name\": \"certify\", \t\t\"outputs\": [ \t\t\t{ \t\t\t\t\"internalType\": \"bytes32\", \t\t\t\t\"name\": \"hash\", \t\t\t\t\"type\": \"bytes32\" \t\t\t}, \t\t\t{ \t\t\t\t\"components\": [ \t\t\t\t\t{ \t\t\t\t\t\t\"internalType\": \"string\", \t\t\t\t\t\t\"name\": \"description\", \t\t\t\t\t\t\"type\": \"string\" \t\t\t\t\t}, \t\t\t\t\t{ \t\t\t\t\t\t\"internalType\": \"address\", \t\t\t\t\t\t\"name\": \"provider\", \t\t\t\t\t\t\"type\": \"address\" \t\t\t\t\t}, \t\t\t\t\t{ \t\t\t\t\t\t\"internalType\": \"uint256\", \t\t\t\t\t\t\"name\": \"timestamp\", \t\t\t\t\t\t\"type\": \"uint256\" \t\t\t\t\t} \t\t\t\t], \t\t\t\t\"internalType\": \"struct ProofOfExistence.Proof\", \t\t\t\t\"name\": \"proof\", \t\t\t\t\"type\": \"tuple\" \t\t\t} \t\t], \t\t\"stateMutability\": \"nonpayable\", \t\t\"type\": \"function\" \t}, \t{ \t\t\"inputs\": [ \t\t\t{ \t\t\t\t\"internalType\": \"string\", \t\t\t\t\"name\": \"document\", \t\t\t\t\"type\": \"string\" \t\t\t} \t\t], \t\t\"name\": \"check\", \t\t\"outputs\": [ \t\t\t{ \t\t\t\t\"internalType\": \"bool\", \t\t\t\t\"name\": \"result\", \t\t\t\t\"type\": \"bool\" \t\t\t} \t\t], \t\t\"stateMutability\": \"view\", \t\t\"type\": \"function\" \t}, \t{ \t\t\"inputs\": [ \t\t\t{ \t\t\t\t\"internalType\": \"string\", \t\t\t\t\"name\": \"document\", \t\t\t\t\"type\": \"string\" \t\t\t} \t\t], \t\t\"name\": \"createProofHash\", \t\t\"outputs\": [ \t\t\t{ \t\t\t\t\"internalType\": \"bytes32\", \t\t\t\t\"name\": \"hash\", \t\t\t\t\"type\": \"bytes32\" \t\t\t} \t\t], \t\t\"stateMutability\": \"pure\", \t\t\"type\": \"function\" \t}, \t{ \t\t\"inputs\": [ \t\t\t{ \t\t\t\t\"internalType\": \"bytes32\", \t\t\t\t\"name\": \"hash\", \t\t\t\t\"type\": \"bytes32\" \t\t\t} \t\t], \t\t\"name\": \"getProof\", \t\t\"outputs\": [ \t\t\t{ \t\t\t\t\"components\": [ \t\t\t\t\t{ \t\t\t\t\t\t\"internalType\": \"string\", \t\t\t\t\t\t\"name\": \"description\", \t\t\t\t\t\t\"type\": \"string\" \t\t\t\t\t}, \t\t\t\t\t{ \t\t\t\t\t\t\"internalType\": \"address\", \t\t\t\t\t\t\"name\": \"provider\", \t\t\t\t\t\t\"type\": \"address\" \t\t\t\t\t}, \t\t\t\t\t{ \t\t\t\t\t\t\"internalType\": \"uint256\", \t\t\t\t\t\t\"name\": \"timestamp\", \t\t\t\t\t\t\"type\": \"uint256\" \t\t\t\t\t} \t\t\t\t], \t\t\t\t\"internalType\": \"struct ProofOfExistence.Proof\", \t\t\t\t\"name\": \"proof\", \t\t\t\t\"type\": \"tuple\" \t\t\t} \t\t], \t\t\"stateMutability\": \"view\", \t\t\"type\": \"function\" \t}, \t{ \t\t\"inputs\": [ \t\t\t{ \t\t\t\t\"internalType\": \"bytes32\", \t\t\t\t\"name\": \"hash\", \t\t\t\t\"type\": \"bytes32\" \t\t\t}, \t\t\t{ \t\t\t\t\"internalType\": \"string\", \t\t\t\t\"name\": \"description\", \t\t\t\t\"type\": \"string\" \t\t\t} \t\t], \t\t\"name\": \"notarize\", \t\t\"outputs\": [ \t\t\t{ \t\t\t\t\"components\": [ \t\t\t\t\t{ \t\t\t\t\t\t\"internalType\": \"string\", \t\t\t\t\t\t\"name\": \"description\", \t\t\t\t\t\t\"type\": \"string\" \t\t\t\t\t}, \t\t\t\t\t{ \t\t\t\t\t\t\"internalType\": \"address\", \t\t\t\t\t\t\"name\": \"provider\", \t\t\t\t\t\t\"type\": \"address\" \t\t\t\t\t}, \t\t\t\t\t{ \t\t\t\t\t\t\"internalType\": \"uint256\", \t\t\t\t\t\t\"name\": \"timestamp\", \t\t\t\t\t\t\"type\": \"uint256\" \t\t\t\t\t} \t\t\t\t], \t\t\t\t\"internalType\": \"struct ProofOfExistence.Proof\", \t\t\t\t\"name\": \"proof\", \t\t\t\t\"type\": \"tuple\" \t\t\t} \t\t], \t\t\"stateMutability\": \"nonpayable\", \t\t\"type\": \"function\" \t}, \t{ \t\t\"inputs\": [ \t\t\t{ \t\t\t\t\"internalType\": \"bytes32\", \t\t\t\t\"name\": \"hash\", \t\t\t\t\"type\": \"bytes32\" \t\t\t} \t\t], \t\t\"name\": \"verify\", \t\t\"outputs\": [ \t\t\t{ \t\t\t\t\"internalType\": \"bool\", \t\t\t\t\"name\": \"result\", \t\t\t\t\"type\": \"bool\" \t\t\t} \t\t], \t\t\"stateMutability\": \"view\", \t\t\"type\": \"function\" \t} ]"
     },
     {
-        "id": "160ddf0a.756f41",
-        "type": "ui_group",
-        "name": "Smart contract",
-        "tab": "f83ce942.20d488",
-        "order": 1,
-        "disp": true,
-        "width": "17",
-        "collapse": false,
-        "className": ""
-    },
-    {
         "id": "f83ce942.20d488",
         "type": "ui_tab",
         "name": "Docs",
@@ -1274,71 +1133,6 @@
         "order": 3,
         "disabled": false,
         "hidden": false
-    },
-    {
-        "id": "f701a43274ccd342",
-        "type": "ui_spacer",
-        "z": "2835520133019989",
-        "name": "spacer",
-        "group": "8bf6217eeefd1458",
-        "order": 3,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "034f76c56f2d3e30",
-        "type": "ui_group",
-        "name": "Monitoring Layer",
-        "tab": "79064d60a1b37fc4",
-        "order": 1,
-        "disp": true,
-        "width": "6",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "776e063e75a19d4d",
-        "type": "ui_group",
-        "name": "Security Layer",
-        "tab": "79064d60a1b37fc4",
-        "order": 2,
-        "disp": true,
-        "width": "6",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "efac37e36504e95b",
-        "type": "ui_group",
-        "name": "Intrusion Detection",
-        "tab": "79064d60a1b37fc4",
-        "order": 4,
-        "disp": true,
-        "width": 6,
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "abf93112e16b2254",
-        "type": "ui_group",
-        "name": "Context Broker",
-        "tab": "79064d60a1b37fc4",
-        "order": 3,
-        "disp": true,
-        "width": "6",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "8bf6217eeefd1458",
-        "type": "ui_group",
-        "name": "Anomaly Detection",
-        "tab": "79064d60a1b37fc4",
-        "order": 5,
-        "disp": true,
-        "width": "6",
-        "collapse": false,
-        "className": ""
     },
     {
         "id": "79064d60a1b37fc4",
@@ -1589,6 +1383,219 @@
         "className": ""
     },
     {
+        "id": "720b0f7b90bc1ba9",
+        "type": "ui_tab",
+        "name": "Terminal",
+        "icon": "fa-keyboard-o",
+        "order": 11,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "ade1f84b9abbf285",
+        "type": "ui_group",
+        "name": "Monitoring data",
+        "tab": "e6013c6f.69328",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "a9912d64.97094",
+        "type": "ui_group",
+        "name": "System Information",
+        "tab": "e6013c6f.69328",
+        "order": 1,
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "b6cc1aae65862dae",
+        "type": "ui_group",
+        "name": "Realtime",
+        "tab": "e6013c6f.69328",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "f6e5eaea1a3d31cf",
+        "type": "ui_group",
+        "name": "Loadavg",
+        "tab": "e6013c6f.69328",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "160e81fb.f1c86e",
+        "type": "ui_group",
+        "name": "File Browser",
+        "tab": "b63d1f91.68095",
+        "order": 1,
+        "disp": false,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "26e8fe8026c92abb",
+        "type": "ui_group",
+        "name": "Properties",
+        "tab": "b63d1f91.68095",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "4128a70510a0cd4e",
+        "type": "ui_group",
+        "name": "Preview",
+        "tab": "b63d1f91.68095",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "a46f63f7bc8183e7",
+        "type": "sender-account",
+        "name": "Account 2 (Sepolia)",
+        "ethereumClient": "0604ca7353fa5a18",
+        "address": "0x7efC9d38581c7Cb8372325c349Ec5095D027B3Dd",
+        "managedByEthereumClient": true,
+        "transactionQueueSize": "100"
+    },
+    {
+        "id": "51def6da5af481ac",
+        "type": "ui_group",
+        "name": "Database",
+        "tab": "1e15f62f82f992f8",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "3eb81d320b6c1fa6",
+        "type": "smart-contract",
+        "name": "My_PoE (Sepolia)",
+        "ethereumClient": "0604ca7353fa5a18",
+        "address": "0xE1989a90127A449Bd22176299104cf6d2cb5Ba86",
+        "abi": "[{         \"inputs\": [{                 \"internalType\": \"string\",                 \"name\": \"document\",                 \"type\": \"string\"             }         ],         \"name\": \"notarize\",         \"outputs\": [{                 \"internalType\": \"bytes32\",                 \"name\": \"\",                 \"type\": \"bytes32\"             }         ],         \"stateMutability\": \"nonpayable\",         \"type\": \"function\"     }, {         \"inputs\": [{                 \"internalType\": \"string\",                 \"name\": \"document\",                 \"type\": \"string\"             }         ],         \"name\": \"checkDocument\",         \"outputs\": [{                 \"internalType\": \"bool\",                 \"name\": \"\",                 \"type\": \"bool\"             }         ],         \"stateMutability\": \"view\",         \"type\": \"function\"     } ]"
+    },
+    {
+        "id": "21db029aa1b5a1dd",
+        "type": "sender-account",
+        "name": "Account 3 (Sepolia)",
+        "ethereumClient": "0604ca7353fa5a18",
+        "address": "0xcFB1d247D5213d75b75e2aA1De235d6ec32f6544",
+        "managedByEthereumClient": true,
+        "transactionQueueSize": "100"
+    },
+    {
+        "id": "c936756ac0243b92",
+        "type": "sender-account",
+        "name": "Account 7 (Sepolia)",
+        "ethereumClient": "0604ca7353fa5a18",
+        "address": "0x6ea4618FFead7e1B282b3cE11Afd3d95aE24CBb0",
+        "managedByEthereumClient": false,
+        "transactionQueueSize": "100"
+    },
+    {
+        "id": "a4b3ff3023c6a717",
+        "type": "smart-contract",
+        "name": "PoE v9 (Ganache)",
+        "ethereumClient": "151efd3e17f2a2d1",
+        "address": "0xe1db7c5eAEfe7C82912Cd1116684135B44202196",
+        "abi": "[{         \"inputs\": [{                 \"internalType\": \"string\",                 \"name\": \"document\",                 \"type\": \"string\"             }         ],         \"name\": \"notarize\",         \"outputs\": [{                 \"internalType\": \"bytes32\",                 \"name\": \"\",                 \"type\": \"bytes32\"             }         ],         \"stateMutability\": \"nonpayable\",         \"type\": \"function\"     }, {         \"inputs\": [{                 \"internalType\": \"string\",                 \"name\": \"document\",                 \"type\": \"string\"             }         ],         \"name\": \"checkDocument\",         \"outputs\": [{                 \"internalType\": \"bool\",                 \"name\": \"\",                 \"type\": \"bool\"             }         ],         \"stateMutability\": \"view\",         \"type\": \"function\"     } ]"
+    },
+    {
+        "id": "4309ab3d92258a66",
+        "type": "sender-account",
+        "name": "Account 0 (Ganache)",
+        "ethereumClient": "151efd3e17f2a2d1",
+        "address": "0x89a47029b7168a240BD49bd446F79cee6cad11D4",
+        "managedByEthereumClient": true,
+        "transactionQueueSize": "100"
+    },
+    {
+        "id": "160ddf0a.756f41",
+        "type": "ui_group",
+        "name": "Smart contract",
+        "tab": "f83ce942.20d488",
+        "order": 1,
+        "disp": true,
+        "width": "17",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "034f76c56f2d3e30",
+        "type": "ui_group",
+        "name": "Monitoring Layer",
+        "tab": "79064d60a1b37fc4",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "776e063e75a19d4d",
+        "type": "ui_group",
+        "name": "Security Layer",
+        "tab": "79064d60a1b37fc4",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "efac37e36504e95b",
+        "type": "ui_group",
+        "name": "Intrusion Detection",
+        "tab": "79064d60a1b37fc4",
+        "order": 4,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "abf93112e16b2254",
+        "type": "ui_group",
+        "name": "Context Broker",
+        "tab": "79064d60a1b37fc4",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "8bf6217eeefd1458",
+        "type": "ui_group",
+        "name": "Anomaly Detection",
+        "tab": "79064d60a1b37fc4",
+        "order": 5,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
         "id": "a65a9209d83b81e9",
         "type": "ui_group",
         "name": "Script",
@@ -1622,13 +1629,14 @@
         "className": ""
     },
     {
-        "id": "720b0f7b90bc1ba9",
-        "type": "ui_tab",
-        "name": "Terminal",
-        "icon": "fa-keyboard-o",
-        "order": 11,
-        "disabled": false,
-        "hidden": false
+        "id": "f701a43274ccd342",
+        "type": "ui_spacer",
+        "z": "2835520133019989",
+        "name": "spacer",
+        "group": "8bf6217eeefd1458",
+        "order": 3,
+        "width": 1,
+        "height": 1
     },
     {
         "id": "cd911636ac7027a9",
@@ -10023,6 +10031,16 @@
         "info": "Ngrok\nuser=pass=mail\n2fyygnIfWo7nHC90oLv9x4zzSIH_6a9gScSEMfvoa3NyDEB3Y\n",
         "x": 710,
         "y": 20,
+        "wires": []
+    },
+    {
+        "id": "9736898267fe71b1",
+        "type": "comment",
+        "z": "8769aeb719e4f5f1",
+        "name": "MongoExpress",
+        "info": "https://admin:pass@f2cc-185-131-248-1.ngrok-free.app/mongoadmin",
+        "x": 140,
+        "y": 500,
         "wires": []
     },
     {
@@ -24350,8 +24368,7 @@
         "g": "ae95b855fca41e1f",
         "name": "link in 1",
         "links": [
-            "f727a63929e72d53",
-            "3f62d43724c15ed1"
+            "f727a63929e72d53"
         ],
         "x": 55,
         "y": 1900,
@@ -26410,8 +26427,7 @@
         "name": "link out 2",
         "mode": "link",
         "links": [
-            "460a5149f518619d",
-            "37e9d7b01e23e35a"
+            "460a5149f518619d"
         ],
         "x": 715,
         "y": 1200,
@@ -26697,8 +26713,7 @@
         "name": "link in 2",
         "links": [
             "44ed83480cd91188",
-            "f727a63929e72d53",
-            "3f62d43724c15ed1"
+            "f727a63929e72d53"
         ],
         "x": 55,
         "y": 1520,
@@ -27616,8 +27631,7 @@
         "g": "bfc8e3a59536fac2",
         "name": "link in 3",
         "links": [
-            "f727a63929e72d53",
-            "3f62d43724c15ed1"
+            "f727a63929e72d53"
         ],
         "x": 55,
         "y": 1600,
@@ -41869,13 +41883,7 @@
         "name": "link out 7",
         "mode": "link",
         "links": [
-            "845b7eec01673e6b",
-            "9033b371626bf611",
-            "57b390584e1de97e",
-            "117bff5b46a626ab",
-            "2f254442811cef81",
-            "12b95fb39aa1dd50",
-            "de6618760335f482"
+            "845b7eec01673e6b"
         ],
         "x": 735,
         "y": 420,
@@ -42677,5 +42685,478 @@
                 "2c1ab79043fbed59"
             ]
         ]
+    },
+    {
+        "id": "28b12979433dbfca",
+        "type": "http request",
+        "z": "a13a956a0dd2eb49",
+        "name": "POST keycloak /token",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://keycloak:8080/realms/dedalus/protocol/openid-connect/token",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [
+            {
+                "keyType": "Content-Type",
+                "keyValue": "",
+                "valueType": "other",
+                "valueValue": "application/x-www-form-urlencoded"
+            }
+        ],
+        "x": 400,
+        "y": 40,
+        "wires": [
+            [
+                "10d71747deb3e352",
+                "ba76dd03d09bd419"
+            ]
+        ]
+    },
+    {
+        "id": "471557b444554a9a",
+        "type": "inject",
+        "z": "a13a956a0dd2eb49",
+        "name": "auth",
+        "props": [
+            {
+                "p": "username",
+                "v": "myuser",
+                "vt": "str"
+            },
+            {
+                "p": "password",
+                "v": "myuser",
+                "vt": "str"
+            },
+            {
+                "p": "client_id",
+                "v": "orion",
+                "vt": "str"
+            },
+            {
+                "p": "client_secret",
+                "v": "u0uEieRqtUVrXPluUAiuvGAZ2Qk4Bco6",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "*/1 0-23 * * *",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 90,
+        "y": 40,
+        "wires": [
+            [
+                "7d39cb67e81b2053"
+            ]
+        ]
+    },
+    {
+        "id": "10d71747deb3e352",
+        "type": "debug",
+        "z": "a13a956a0dd2eb49",
+        "name": "set flow.access_token",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload.access_token",
+        "statusType": "msg",
+        "x": 620,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "7d39cb67e81b2053",
+        "type": "template",
+        "z": "a13a956a0dd2eb49",
+        "name": "payload",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "grant_type=password&username={{{username}}}&password={{{password}}}&client_id={{client_id}}&client_secret={{client_secret}}",
+        "output": "str",
+        "x": 220,
+        "y": 40,
+        "wires": [
+            [
+                "28b12979433dbfca"
+            ]
+        ]
+    },
+    {
+        "id": "ba76dd03d09bd419",
+        "type": "change",
+        "z": "a13a956a0dd2eb49",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "access_token",
+                "pt": "flow",
+                "to": "payload.access_token",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 620,
+        "y": 40,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "84e27798478f2f0c",
+        "type": "inject",
+        "z": "a13a956a0dd2eb49",
+        "name": "write",
+        "props": [
+            {
+                "p": "access_token",
+                "v": "access_token",
+                "vt": "flow"
+            },
+            {
+                "p": "bearer",
+                "v": "\"Bearer \" & access_token",
+                "vt": "jsonata"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 90,
+        "y": 100,
+        "wires": [
+            [
+                "6570a2c78b7902b8"
+            ]
+        ]
+    },
+    {
+        "id": "74cc3eea514f96f6",
+        "type": "http request",
+        "z": "a13a956a0dd2eb49",
+        "name": "POST nginx /entities",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://nginx/orion/ngsi-ld/v1/entities",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [
+            {
+                "keyType": "Content-Type",
+                "keyValue": "",
+                "valueType": "application/json",
+                "valueValue": ""
+            },
+            {
+                "keyType": "other",
+                "keyValue": "Link",
+                "valueType": "other",
+                "valueValue": "<https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld>; rel=\"http://www.w3.org/ns/json-ld#context\"; type=\"application/ld+json\""
+            },
+            {
+                "keyType": "Authorization",
+                "keyValue": "",
+                "valueType": "msg",
+                "valueValue": "bearer"
+            }
+        ],
+        "x": 400,
+        "y": 100,
+        "wires": [
+            [
+                "4dd7ae06ecb60f58"
+            ]
+        ]
+    },
+    {
+        "id": "6570a2c78b7902b8",
+        "type": "template",
+        "z": "a13a956a0dd2eb49",
+        "name": "payload",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "json",
+        "syntax": "mustache",
+        "template": "{\n    \"id\": \"urn:ngsi-ld:TemperatureSensor:001\",\n    \"type\": \"TemperatureSensor\",\n    \"category\": {\n        \"type\": \"Property\",\n        \"value\": \"sensor\"\n    },\n    \"temperature\": {\n        \"type\": \"Property\",\n        \"value\": 25,\n        \"unitCode\": \"CEL\"\n    }\n}",
+        "output": "json",
+        "x": 220,
+        "y": 100,
+        "wires": [
+            [
+                "74cc3eea514f96f6"
+            ]
+        ]
+    },
+    {
+        "id": "1a019fc553653f82",
+        "type": "http request",
+        "z": "a13a956a0dd2eb49",
+        "name": "GET nginx /entities/{id}",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://nginx/orion/ngsi-ld/v1/entities/{{id}}",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [
+            {
+                "keyType": "Content-Type",
+                "keyValue": "",
+                "valueType": "application/json",
+                "valueValue": ""
+            },
+            {
+                "keyType": "other",
+                "keyValue": "Link",
+                "valueType": "other",
+                "valueValue": "<https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld>; rel=\"http://www.w3.org/ns/json-ld#context\"; type=\"application/ld+json\""
+            },
+            {
+                "keyType": "Authorization",
+                "keyValue": "",
+                "valueType": "msg",
+                "valueValue": "bearer"
+            }
+        ],
+        "x": 400,
+        "y": 160,
+        "wires": [
+            [
+                "0c74672276dd062f"
+            ]
+        ]
+    },
+    {
+        "id": "06670b32743e5dd4",
+        "type": "inject",
+        "z": "a13a956a0dd2eb49",
+        "name": "read",
+        "props": [
+            {
+                "p": "access_token",
+                "v": "access_token",
+                "vt": "flow"
+            },
+            {
+                "p": "bearer",
+                "v": "\"Bearer \" & access_token",
+                "vt": "jsonata"
+            },
+            {
+                "p": "id",
+                "v": "urn:ngsi-ld:TemperatureSensor:001",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 90,
+        "y": 160,
+        "wires": [
+            [
+                "da899ab5474617e2"
+            ]
+        ]
+    },
+    {
+        "id": "da899ab5474617e2",
+        "type": "template",
+        "z": "a13a956a0dd2eb49",
+        "name": "payload",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "options=sysAttrs",
+        "output": "str",
+        "x": 220,
+        "y": 160,
+        "wires": [
+            [
+                "1a019fc553653f82"
+            ]
+        ]
+    },
+    {
+        "id": "72ba0af2c4e83e54",
+        "type": "http request",
+        "z": "a13a956a0dd2eb49",
+        "name": "GET nginx /entities/{id}",
+        "method": "DELETE",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://nginx/orion/ngsi-ld/v1/entities/{{id}}",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [
+            {
+                "keyType": "Authorization",
+                "keyValue": "",
+                "valueType": "msg",
+                "valueValue": "bearer"
+            }
+        ],
+        "x": 400,
+        "y": 220,
+        "wires": [
+            [
+                "68fa1576e1aae25c"
+            ]
+        ]
+    },
+    {
+        "id": "3de0e666f0ea1e0b",
+        "type": "inject",
+        "z": "a13a956a0dd2eb49",
+        "name": "delete",
+        "props": [
+            {
+                "p": "access_token",
+                "v": "access_token",
+                "vt": "flow"
+            },
+            {
+                "p": "bearer",
+                "v": "\"Bearer \" & access_token",
+                "vt": "jsonata"
+            },
+            {
+                "p": "id",
+                "v": "urn:ngsi-ld:TemperatureSensor:001",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 90,
+        "y": 220,
+        "wires": [
+            [
+                "72ba0af2c4e83e54"
+            ]
+        ]
+    },
+    {
+        "id": "dc7b2efabc472c30",
+        "type": "debug",
+        "z": "a13a956a0dd2eb49",
+        "name": "test create",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "statusCode & \": \" & (statusCode > 300 ? payload.title : \"created at \" & $now(\"[H01]:[m]:[s]\"))",
+        "statusType": "jsonata",
+        "x": 590,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "4dd7ae06ecb60f58",
+        "type": "debug",
+        "z": "a13a956a0dd2eb49",
+        "name": "test write",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "statusCode & \": \" & (statusCode > 300 ? payload.title : \"updated at \" & $now(\"[H01]:[m]:[s]\"))",
+        "statusType": "jsonata",
+        "x": 580,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "c270db07a1442714",
+        "type": "debug",
+        "z": "a13a956a0dd2eb49",
+        "name": "test read",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "statusCode & \": \" & (statusCode > 300 ? payload.title : payload)",
+        "statusType": "jsonata",
+        "x": 580,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "0c74672276dd062f",
+        "type": "debug",
+        "z": "a13a956a0dd2eb49",
+        "name": "test get",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "statusCode & \": \" & (statusCode > 300 ? payload.title : payload.id)",
+        "statusType": "jsonata",
+        "x": 580,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "68fa1576e1aae25c",
+        "type": "debug",
+        "z": "a13a956a0dd2eb49",
+        "name": "test delete",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "statusCode & \": \" & (statusCode > 300 ? payload.title : \"deleted at \" & $now(\"[H01]:[m]:[s]\"))",
+        "statusType": "jsonata",
+        "x": 590,
+        "y": 220,
+        "wires": []
     }
 ]
