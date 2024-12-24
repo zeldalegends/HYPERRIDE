@@ -1,45 +1,18 @@
 {
-    "15d84497.52381b": {
-        "username": "alice-the-admin@test.com",
-        "password": "test",
-        "client_id": "tutorial-dckr-site-0000-xpresswebapp",
-        "client_secret": "tutorial-dckr-site-0000-clientsecret"
-    },
-    "a46f63f7bc8183e7": {
-        "privateKey": "5f00a68d77e79e051aeafd7dec7657999dce84c045a8aa9d7995137267f91e52"
-    },
     "b4799249b6347148": {
         "authtoken": "2eCc2WUv8ElJbzGU8WE4tM9nIbU_3i7Z564CFmajxtUrUZWod"
-    },
-    "907c553d7533ec10": {
-        "username": "myuser",
-        "password": "myuser",
-        "clientid": "orion",
-        "clientsecret": "u0uEieRqtUVrXPluUAiuvGAZ2Qk4Bco6"
-    },
-    "6cf4ec1defe5e72f": {
-        "authtoken": "2e3OcV139oYcSUIwi0bCL4NLexU_554rNagEXCygsfFeNm7aA"
     },
     "63ac671491a13a4b": {
         "privatekey": "0xdbbf87459bea5ca7309d9eb990f05922ab8579f4ad42364ffc229000db2ed818"
     },
-    "9abdcc39a40c6598": {
-        "authtoken": "2fyygnIfWo7nHC90oLv9x4zzSIH_6a9gScSEMfvoa3NyDEB3Y"
-    },
     "c936756ac0243b92": {
         "privateKey": "7d11bf396636d740052ba2f3cd3a78b1d146fb2f257e37f3d74828d30123341a"
     },
-    "28b12979433dbfca": {},
-    "74cc3eea514f96f6": {},
-    "1a019fc553653f82": {},
-    "72ba0af2c4e83e54": {},
-    "bdac50254b8867df": {},
-    "4e2f16be3101c3b9": {},
-    "fbc4bf0f9b5d2e51": {},
-    "5a093d1d688eb1df": {},
-    "5b4e7071e7feaa35": {},
-    "1ec5d01f0c696c5d": {},
-    "34c447b23552404f": {},
     "40b1b6f19e5fe649": {},
-    "2d99ea2db10ee7fe": {}
+    "9abdcc39a40c6598": {
+        "authtoken": "2fyygnIfWo7nHC90oLv9x4zzSIH_6a9gScSEMfvoa3NyDEB3Y"
+    },
+    "f3f177e2fcf9641a": {
+        "authtoken": "2cGxS9Kr1LpCYDaBM0CRNjL41Gw_3oNu23uDryLhG81w3dpLm"
+    }
 }
