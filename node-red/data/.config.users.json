@@ -24,6 +24,12 @@
                     "config",
                     "context"
                 ]
+            },
+            "dialog": {
+                "export": {
+                    "pretty": true,
+                    "json-view": false
+                }
             }
         },
         "menu-deploymenu-item-node": true,

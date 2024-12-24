@@ -1,12 +1,29 @@
+# version: "3.8"
+
 services:
 
   # The Context Broker (Orion-LD)
   orion-ld:
-    image: quay.io/fiware/orion-ld:1.7.1 # fiware/orion-ld:1.7.1
+  # platform: linux/amd64
+  # image: fiware/orion-ld:1.7.1
+    image: quay.io/fiware/orion-ld:1.7.1
     hostname: orion
     container_name: orion-ld
+  # depends_on:
+  #   mongo:
+  #     condition: service_healthy
     depends_on:
       - mongo
+  # restart: on-failure # for Docker Compose
+  # deploy:             # for Docker Swarm
+  #   restart_policy:
+  #     condition: on-failure
+    networks:
+      - hyperride-net
+  # expose:
+  #   - "1026"
+  # ports:
+  #   - "1026:1026"
     environment:
       - OAUTH2_ENABLED=true
       - OAUTH2_TOKEN_ENDPOINT=${KEYCLOAK_URL}/realms/${KEYCLOAK_REALM}/protocol/openid-connect/token
@@ -18,23 +35,43 @@ services:
 
   # DB for the Context Broker (MongoDB)
   mongo:
-    image: mongo #:8.0.4 #:6.0.19
+    image: mongo #:6.0.19 (6.0) :8.0.4 (latest)
     hostname: mongo-db
     container_name: db-mongo
+  # restart: always
+    networks:
+      - hyperride-net
+  # command: --nojournal
     volumes:
       - ./mongo/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
       - mongo-configdb:/data/configdb
       - mongo-db:/data/db
     healthcheck:
-    # test: test $$(echo "db.runCommand('ping').ok" | mongosh --quiet) -eq 1
       test: mongosh --eval "db.runCommand('ping')"
+    # test: echo 'db.adminCommand("ping")' | mongosh --quiet
+    # test: echo 'db.stats().ok' | mongo localhost:27017/test --quiet
+    # test: echo 'db.runCommand("ping").ok' | mongo mongo:27017/test --quiet
 
-  # Custom NGSI Agent (Node-RED)
+  # Context Provider and Swagger GUI (Node-RED)
   node-red:
   # build: node-red
     image: nodered/node-red #:4.0.8
     hostname: ${HOSTNAME:-node-red}
     container_name: node-red
+  # depends_on:
+  #   ganache:
+  #     condition: service_healthy
+  #   keycloak:
+  #     condition: service_healthy
+  #   mosquitto:
+  #     condition: service_healthy
+  # depends_on:
+  #   - ganache
+  #   - keycloak
+  #   - mosquitto
+  # restart: always
+    networks:
+      - hyperride-net
     ports:
       - "${PORT:-1880}:1880"
     extra_hosts:
@@ -49,39 +86,47 @@ services:
 
   # Identity Manager (Keycloak)
   keycloak:
-    image: quay.io/keycloak/keycloak #:23.0.6 #:26.0.7
+    image: quay.io/keycloak/keycloak:23.0.6 #:26.0.7
     hostname: idm
     container_name: keycloak
+  # restart: always
+    networks:
+      - hyperride-net
     ports:
       - "8080:8080"
-    # - "9000:9000"
+      - "9000:9000"
     environment:
-    # - KEYCLOAK_ADMIN=${KEYCLOAK_ADMIN_USERNAME}
-    # - KEYCLOAK_ADMIN_PASSWORD=${KEYCLOAK_ADMIN_PASSWORD}
-      - KC_BOOTSTRAP_ADMIN_USERNAME=${KEYCLOAK_ADMIN_USERNAME}
-      - KC_BOOTSTRAP_ADMIN_PASSWORD=${KEYCLOAK_ADMIN_PASSWORD}
+      - KEYCLOAK_ADMIN=${KEYCLOAK_ADMIN_USERNAME}
+      - KEYCLOAK_ADMIN_PASSWORD=${KEYCLOAK_ADMIN_PASSWORD}
       - KC_HEALTH_ENABLED=true
     command: start-dev --import-realm
     volumes:
       - ./configs/realm-config.json:/opt/keycloak/data/import/realm-config.json
       - keycloak-data:/opt/keycloak/data/
     healthcheck:
-    # test: "exec 3<>/dev/tcp/127.0.0.1/9000; echo -e 'GET /health/ready HTTP/1.1\r\nHost: http://localhost\r\nConnection: close\r\n\r\n' >&3; if [ $? -eq 0 ]; then echo 'Healthcheck Successful'; exit 0; else echo 'Healthcheck Failed'; exit 1; fi;"
-      test: "exec 3<>/dev/tcp/127.0.0.1/9000; echo -e 'GET /health/ready HTTP/1.1\r\nHost: localhost\r\nConnection: close\r\n\r\n' >&3; cat <&3 | grep -q '\"status\": \"UP\"'"
+    # test: "exec 3<>/dev/tcp/127.0.0.1/9000; echo -e 'GET /health/ready HTTP/1.1\r\nHost: localhost:9000\r\nConnection: close\r\n\r\n' >&3; cat <&3 | grep -q '\"status\": \"UP\"'"
+      test: "exec 3<>/dev/tcp/127.0.0.1/9000; echo -e 'GET /health/ready HTTP/1.1\r\nHost: http://localhost\r\nConnection: close\r\n\r\n' >&3; if [ $? -eq 0 ]; then echo 'Healthcheck Successful'; exit 0; else echo 'Healthcheck Failed'; exit 1; fi;"
 
-  # Reverse proxy (Nginx)
+  # Reverse proxy and Web Server for NGSI-LD @context files (Nginx)
   nginx:
     image: nginx #:1.27.3
-    hostname: context
+    hostname: web
     container_name: nginx
     depends_on:
       - keycloak
       - orion-ld
       - node-red
+  # restart: always
+    networks:
+      hyperride-net:
+        aliases:
+          - context
+          - ld-context
     ports:
       - "80:80"
     volumes:
       - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    # - ./nginx/conf/default.conf:/etc/nginx/conf.d/default.conf:ro
       - ./public:/home/www/public_html/localhost/public
     # - ./public:/usr/share/nginx/html
     healthcheck:
@@ -91,9 +136,12 @@ services:
   # Blockchain with deployed PoE smart contract
   ganache:
   # image: trufflesuite/ganache #:v7.9.2
-    image: hybuild/ganache:poe9 #:etk4
-    hostname: ethereum
+    image: hybuild/ganache #:poe9 #:etk4
+    hostname: rpc
     container_name: ganache
+  # restart: always
+    networks:
+      - hyperride-net
     ports:
       - "7545:7545"
   # command: --database.dbPath /db --server.host 0.0.0.0 --server.port 7545 --wallet.mnemonic "visit carpet logic blame furnace confirm rebel deliver medal mean illness error"
@@ -107,6 +155,9 @@ services:
     image: eclipse-mosquitto #:2.0.20
     hostname: mqtt
     container_name: mosquitto
+  # restart: always
+    networks:
+      - hyperride-net
     ports:
       - "1883:1883"
     # - "9001:9001"
@@ -123,22 +174,32 @@ services:
   # Mongo DB front-end
   mongo-express:
     image: mongo-express #:1.0.2-18
-    hostname: mongo-admin
-    container_name: mongo-express
+    hostname: mongo-fe
+    container_name: fe-mongo
+  # depends_on:
+  #   mongo:
+  #     condition: service_healthy
     depends_on:
       - mongo
+  # restart: always
+    networks:
+      - hyperride-net
+  # expose:
+  #   - "8081"
+  # ports:
+  #   - "8081:8081"
     environment:
-    # - ME_CONFIG_BASICAUTH=false
-    # - ME_CONFIG_BASICAUTH_USERNAME=
-    # - ME_CONFIG_BASICAUTH_PASSWORD=
+  #   - ME_CONFIG_BASICAUTH=false
+      - ME_CONFIG_BASICAUTH_USERNAME=
+      - ME_CONFIG_BASICAUTH_PASSWORD=
       - ME_CONFIG_MONGODB_SERVER=mongo-db
       - ME_CONFIG_SITE_BASEURL=/mongoadmin
       - ME_CONFIG_HEALTH_CHECK_PATH=/status
     healthcheck:
-      test: wget --quiet --tries=3 --spider http://admin:pass@127.0.0.1:8081/mongoadmin/status
+      test: wget --quiet --tries=3 --spider http://admin:pass@127.0.0.1:8081/mongoadmin/status || exit 1
 
-  # docker run -it --rm --net=hyperride_default --name mongo-express -e ME_CONFIG_BASICAUTH=true -e ME_CONFIG_MONGODB_SERVER=mongo-db mongo-express
-  # docker run -it --rm --net=hyperride_default --name ngrok -e NGROK_AUTHTOKEN=2e3OcV139oYcSUIwi0bCL4NLexU_554rNagEXCygsfFeNm7aA ngrok/ngrok:latest http 8081
+  # docker run -it --rm --net=hyperride-net --name fe-mongo -e ME_CONFIG_BASICAUTH=true -e ME_CONFIG_MONGODB_SERVER=mongo-db mongo-express
+  # docker run -it --rm --net=hyperride-net --name ngrok-mongo -e NGROK_AUTHTOKEN=2e3OcV139oYcSUIwi0bCL4NLexU_554rNagEXCygsfFeNm7aA ngrok/ngrok:latest http 8081
 
 volumes:
   ganache-db: ~
@@ -147,3 +208,8 @@ volumes:
   mongo-db: ~
   mosquitto-data: ~
   mosquitto-log: ~
+
+networks:
+  hyperride-net:
+    name: hyperride-net
+    driver: bridge
