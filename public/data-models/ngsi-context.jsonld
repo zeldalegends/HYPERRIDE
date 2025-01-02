@@ -90,6 +90,7 @@
         "openingHours": "fiware:openingHours",
         "osVersion": "fiware:osVersion",
         "owner": "fiware:owner",
+        "power": "https://w3id.org/saref#power",
         "precipitation": "https://w3id.org/saref#precipitation",
         "pressure": "https://w3id.org/saref#pressure",
         "providedBy": "fiware:providedBy",
