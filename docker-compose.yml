@@ -12,15 +12,16 @@ services:
       - OAUTH2_TOKEN_ENDPOINT=${KEYCLOAK_URL}/realms/${KEYCLOAK_REALM}/protocol/openid-connect/token
       - OAUTH2_CLIENT_ID=${ORION_CLIENT_ID}
       - OAUTH2_CLIENT_SECRET=${ORION_CLIENT_SECRET}
-    command: -dbhost mongo-db -db orionld -logLevel DEBUG -forwarding -mongocOnly
+    command: -dbhost mongo-db -db orionld -logLevel DEBUG -forwarding # -mongocOnly # avoids Legacy C++ driver (deprecated) but disable NGSI-v2 support
     healthcheck:
-      test: curl -sf http://localhost:1026/version || exit 1
+      test: curl -sf http://localhost:1026/version
 
   # DB for the Context Broker (MongoDB)
   mongo:
-    image: mongo #:8.0.4 #:6.0.19
+    image: mongo:5.0 #:5.0.30 #:6.0.19 #:8.0.4
     hostname: mongo-db
     container_name: db-mongo
+    command: --nojournal # remove with mongo > 6.0
     volumes:
       - ./mongo/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
       - mongo-configdb:/data/configdb
@@ -66,7 +67,7 @@ services:
       - ./configs/realm-config.json:/opt/keycloak/data/import/realm-config.json
       - keycloak-data:/opt/keycloak/data/
     healthcheck:
-    # test: "exec 3<>/dev/tcp/127.0.0.1/9000; echo -e 'GET /health/ready HTTP/1.1\r\nHost: http://localhost\r\nConnection: close\r\n\r\n' >&3; if [ $? -eq 0 ]; then echo 'Healthcheck Successful'; exit 0; else echo 'Healthcheck Failed'; exit 1; fi;"
+    # test: "exec 3<>/dev/tcp/127.0.0.1/9000; echo -e 'GET /health/ready HTTP/1.1\r\nHost: localhost\r\nConnection: close\r\n\r\n' >&3; if [ $? -eq 0 ]; then echo 'Healthcheck Successful'; exit 0; else echo 'Healthcheck Failed'; exit 1; fi;"
       test: "exec 3<>/dev/tcp/127.0.0.1/9000; echo -e 'GET /health/ready HTTP/1.1\r\nHost: localhost\r\nConnection: close\r\n\r\n' >&3; cat <&3 | grep -q '\"status\": \"UP\"'"
 
   # Reverse proxy (Nginx)

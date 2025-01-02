@@ -32,6 +32,6 @@ docker run -it --rm \
     --name ngrok \
     -e NGROK_CONFIG=/etc/ngrok.yml \
     -v $(pwd)/ngrok.yml:/etc/ngrok.yml \
-    --health-cmd='curl -sf http://localhost:4040' \
+    --health-cmd="exec 3<>/dev/tcp/127.0.0.1/4040; echo -e 'GET /inspect/http HTTP/1.1\r\nHost: localhost\r\nConnection: close\r\n\r\n' >&3; cat <&3 | grep 'HTTP/1.1 200 OK'" \
     ngrok/ngrok:latest start --all
 #   ngrok/ngrok:3.19.0-debian start --all
