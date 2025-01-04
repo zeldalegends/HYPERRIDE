@@ -5,6 +5,7 @@
     "private": true,
     "dependencies": {
         "@andreashauschild/node-red-contrib-ethers-node": "~0.0.29",
+        "@flowfuse/node-red-dashboard": "~1.21.0",
         "keccak256": "^1.0.6",
         "node-red-contrib-ethereum": "https://github.com/timweing/node-red-contrib-ethereum",
         "node-red-contrib-fiware_official": "https://github.com/FIWARE/node-red-contrib-FIWARE_official.git",

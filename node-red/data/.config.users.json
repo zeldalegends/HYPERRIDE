@@ -9,7 +9,7 @@
                 "view-grid-size": "20",
                 "view-node-status": true,
                 "view-node-show-label": true,
-                "view-show-tips": true,
+                "view-show-tips": false,
                 "view-show-welcome-tours": true
             },
             "tours": {
@@ -20,9 +20,10 @@
                     "info",
                     "help",
                     "debug",
-                    "dashboard",
+                    "dashboard-2.0",
                     "config",
-                    "context"
+                    "context",
+                    "dashboard"
                 ]
             },
             "dialog": {

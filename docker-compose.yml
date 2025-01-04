@@ -36,6 +36,15 @@ services:
     image: nodered/node-red #:4.0.8
     hostname: ${HOSTNAME:-node-red}
     container_name: node-red
+    depends_on:
+      ganache:
+        condition: service_healthy
+      keycloak:
+        condition: service_healthy
+      mosquitto:
+        condition: service_healthy
+      orion-ld:
+        condition: service_healthy
     ports:
       - "${PORT:-1880}:1880"
     extra_hosts:
@@ -76,8 +85,8 @@ services:
     hostname: context
     container_name: nginx
     depends_on:
-      - keycloak
-      - orion-ld
+    # - keycloak
+    # - orion-ld
       - node-red
     ports:
       - "80:80"
@@ -126,15 +135,18 @@ services:
     container_name: mongo-express
     depends_on:
       - mongo
+    #  ports:
+    #   - "2024:8081"
     environment:
     # - ME_CONFIG_BASICAUTH=false
-    # - ME_CONFIG_BASICAUTH_USERNAME=
-    # - ME_CONFIG_BASICAUTH_PASSWORD=
+      - ME_CONFIG_BASICAUTH_USERNAME=alerox
+      - ME_CONFIG_BASICAUTH_PASSWORD=1234567890
       - ME_CONFIG_MONGODB_SERVER=mongo-db
       - ME_CONFIG_SITE_BASEURL=/mongoadmin
       - ME_CONFIG_HEALTH_CHECK_PATH=/status
     healthcheck:
-      test: wget --quiet --tries=3 --spider http://admin:pass@127.0.0.1:8081/mongoadmin/status
+    # test: wget --quiet --tries=3 --spider http://admin:pass@127.0.0.1:8081/mongoadmin/status
+      test: wget --quiet --tries=3 --spider http://alerox:1234567890@127.0.0.1:8081/mongoadmin/status
 
   # docker run -it --rm --net=hyperride_default --name mongo-express -e ME_CONFIG_BASICAUTH=true -e ME_CONFIG_MONGODB_SERVER=mongo-db mongo-express
   # docker run -it --rm --net=hyperride_default --name ngrok -e NGROK_AUTHTOKEN=2e3OcV139oYcSUIwi0bCL4NLexU_554rNagEXCygsfFeNm7aA ngrok/ngrok:latest http 8081

@@ -2,7 +2,7 @@
     {
         "id": "6f835252e7b4d315",
         "type": "tab",
-        "label": "Demo",
+        "label": "Home",
         "disabled": false,
         "info": "",
         "env": []
@@ -550,7 +550,10 @@
             "bc1b3c9abb0e3551",
             "0eae1cc6fe8d700d",
             "92a87c5afec535ec",
-            "f9a7f3c639521790"
+            "f9a7f3c639521790",
+            "5aa250aa721338da",
+            "068546c2eaea02e2",
+            "853358f3fa709f83"
         ],
         "x": 14,
         "y": 19,
@@ -941,6 +944,89 @@
         "y": 939,
         "w": 712,
         "h": 422
+    },
+    {
+        "id": "f246a18ed1e7d299",
+        "type": "group",
+        "z": "6f835252e7b4d315",
+        "name": "Keycloak & Setup (Flow Variables)",
+        "style": {
+            "fill": "#ffefbf",
+            "label": true
+        },
+        "nodes": [
+            "f85bce5ddfd72253",
+            "7a7fa879155f5d5a",
+            "e29116d09133f235",
+            "8a6f11d8979e44b2",
+            "2d08a1e8a790dd95",
+            "e5534b716ea19e6c",
+            "8fad2a1b511de54e",
+            "2085395db508f4da",
+            "3097029d4e574370",
+            "89462a3b37372cfe"
+        ],
+        "x": 14,
+        "y": 19,
+        "w": 692,
+        "h": 142
+    },
+    {
+        "id": "8c7bd0a57fe08f37",
+        "type": "group",
+        "z": "6f835252e7b4d315",
+        "name": "Sensors (MQTT)",
+        "style": {
+            "label": true,
+            "fill": "#e3f3d3"
+        },
+        "nodes": [
+            "fb29fcc01fd1189b",
+            "1b4e862f77129f5e",
+            "ea31ce01a2cb3465",
+            "725452fa984f18a4",
+            "a1b67dafbe7283c5",
+            "56762cbea9a0bf3c",
+            "798f5483ee9a61d7",
+            "c994898e43756cdc",
+            "f5c08273a70e81fe",
+            "5046210129b7d4a1",
+            "4b0177fa71a057e8",
+            "8c0da9c6d853d8ca"
+        ],
+        "x": 14,
+        "y": 159,
+        "w": 692,
+        "h": 142
+    },
+    {
+        "id": "0d5fb5f33c555ea7",
+        "type": "group",
+        "z": "6f835252e7b4d315",
+        "name": "FIWARE (IoT Agent)",
+        "style": {
+            "fill": "#bfdbef",
+            "label": true
+        },
+        "nodes": [
+            "function_node",
+            "6ef213c02289c5d7",
+            "1abcfcf64c948ed0",
+            "c1fd62cf0d75f476",
+            "b508b85f235e4c9d",
+            "8d4891aef83541eb",
+            "2c8d70aa911db94f",
+            "ed9a6d253eabe8ad",
+            "31fac115710b926a",
+            "80bfd1069afbe128",
+            "5381f0edd89d8311",
+            "0ba7447f27de9d8f",
+            "afcbad6864eddf09"
+        ],
+        "x": 14,
+        "y": 299,
+        "w": 692,
+        "h": 262
     },
     {
         "id": "95f6c009.fa934",
@@ -1628,208 +1714,141 @@
         "name": "poev9.swagger@libero.it"
     },
     {
-        "id": "mqtt_broker",
-        "type": "mqtt-broker",
-        "name": "MQTT Broker",
-        "broker": "test.mosquitto.org",
-        "port": "1883",
-        "clientid": "",
-        "usetls": false,
-        "compatmode": true,
-        "keepalive": "60",
-        "cleansession": true,
-        "birthTopic": "",
-        "birthQos": "0",
-        "birthPayload": "",
-        "closeTopic": "",
-        "closePayload": "",
-        "willTopic": "",
-        "willQos": "0",
-        "willPayload": ""
+        "id": "a6553f660d1ea9d9",
+        "type": "ui-base",
+        "name": "My Dashboard",
+        "path": "/dashboard",
+        "appIcon": "",
+        "includeClientData": true,
+        "acceptsClientConfig": [
+            "ui-notification",
+            "ui-control"
+        ],
+        "showPathInSidebar": false,
+        "showPageTitle": true,
+        "navigationStyle": "default",
+        "titleBarStyle": "default",
+        "showReconnectNotification": true,
+        "notificationDisplayTime": 1,
+        "showDisconnectNotification": true
     },
     {
-        "id": "6b4d7d86.b7dc84",
-        "type": "ui_tab",
-        "name": "Home Assistant",
-        "icon": "dashboard",
-        "disabled": false,
-        "hidden": false
+        "id": "a8fa77ed8e1f758c",
+        "type": "ui-theme",
+        "name": "Default Theme",
+        "colors": {
+            "surface": "#ffffff",
+            "primary": "#0094CE",
+            "bgPage": "#eeeeee",
+            "groupBg": "#ffffff",
+            "groupOutline": "#cccccc"
+        },
+        "sizes": {
+            "density": "default",
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
+        }
     },
     {
-        "id": "1ecce004.eed28",
-        "type": "ui_group",
-        "name": "Smart Home",
-        "tab": "6b4d7d86.b7dc84",
+        "id": "c27544529a7af06f",
+        "type": "ui-page",
+        "name": "Home",
+        "ui": "a6553f660d1ea9d9",
+        "path": "/home",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "a8fa77ed8e1f758c",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
         "order": 1,
-        "disp": true,
-        "width": "6",
-        "collapse": false
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
     },
     {
-        "id": "ce7f07dc.416ef8",
-        "type": "ui_group",
-        "name": "Home Status Setting",
-        "tab": "6b4d7d86.b7dc84",
+        "id": "ac219a90acb61f31",
+        "type": "ui-group",
+        "name": "Sensors",
+        "page": "c27544529a7af06f",
+        "width": 6,
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "5ab3458349e52299",
+        "type": "ui-group",
+        "name": "FIWARE",
+        "page": "c27544529a7af06f",
+        "width": 6,
+        "height": 1,
         "order": 2,
-        "disp": true,
-        "width": "6",
-        "collapse": false
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
     },
     {
-        "id": "78a6b01b94643573",
-        "type": "inject",
-        "z": "6f835252e7b4d315",
-        "name": "sensor",
-        "props": [
-            {
-                "p": "timestamp",
-                "v": "iso",
-                "vt": "date"
-            },
-            {
-                "p": "value",
-                "v": "$round($random()*(100-19)+19)",
-                "vt": "jsonata"
-            },
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "2",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "{\"t\": timestamp, \"temperature\": value}",
-        "payloadType": "jsonata",
-        "x": 100,
-        "y": 40,
-        "wires": [
-            [
-                "14eef96d0a4ec9e5",
-                "fb29fcc01fd1189b"
-            ]
-        ]
+        "id": "b1791bd64a7f96d2",
+        "type": "ui-group",
+        "name": "Orion-LD Context Broker",
+        "page": "c27544529a7af06f",
+        "width": 6,
+        "height": 1,
+        "order": 4,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
     },
     {
-        "id": "5381f0edd89d8311",
-        "type": "mqtt in",
-        "z": "6f835252e7b4d315",
-        "name": "",
-        "topic": "/iot/#",
-        "qos": "2",
-        "datatype": "auto-detect",
-        "broker": "f222d0362c3de7e8",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 90,
-        "y": 340,
-        "wires": [
-            [
-                "function_node"
-            ]
-        ]
-    },
-    {
-        "id": "function_node",
-        "type": "function",
-        "z": "6f835252e7b4d315",
-        "name": "Parse Topic",
-        "func": "var topicParts = msg.topic.split('/');\nvar payload = msg.payload;\n\nmsg.parsed = {\n    sensor: topicParts[1],\n    type: topicParts[2],\n    id: topicParts[3],\n    value: payload\n};\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 270,
-        "y": 340,
-        "wires": [
-            [
-                "68739c5872fba9f4"
-            ]
-        ]
-    },
-    {
-        "id": "6cfc015a9c0138c0",
-        "type": "debug",
-        "z": "6f835252e7b4d315",
-        "name": "entity",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": true,
-        "complete": "payload[0]",
-        "targetType": "msg",
-        "statusVal": "payload[0].temperature.value",
-        "statusType": "msg",
-        "x": 630,
-        "y": 340,
-        "wires": []
-    },
-    {
-        "id": "68739c5872fba9f4",
-        "type": "template",
-        "z": "6f835252e7b4d315",
-        "name": "to NGSI-LD",
-        "field": "payload",
-        "fieldType": "msg",
-        "format": "json",
-        "syntax": "mustache",
-        "template": "[{\n    \"id\": \"urn:ngsi-ld:{{parsed.type}}:{{parsed.id}}\",\n    \"type\": \"{{parsed.type}}\",\n    \"category\": {\n        \"type\": \"Property\",\n        \"value\": \"sensor\"\n    },\n    \"temperature\": {\n        \"type\": \"Property\",\n        \"value\": {{payload.temperature}},\n        \"unitCode\": \"CEL\"\n    },\n    \"timestamp\": {\n        \"type\": \"Property\",\n        \"value\": \"{{payload.t}}\"\n    },\n    \"location\": {\n        \"type\": \"GeoProperty\",\n        \"value\": {\n            \"type\": \"Point\",\n            \"coordinates\": [\n                42.5671574,\n                12.5352246\n            ]\n        }\n    }\n}]",
-        "output": "json",
-        "x": 470,
-        "y": 340,
-        "wires": [
-            [
-                "6cfc015a9c0138c0",
-                "8d4891aef83541eb"
-            ]
-        ]
-    },
-    {
-        "id": "7061b26d662146b7",
-        "type": "inject",
-        "z": "6f835252e7b4d315",
-        "d": true,
-        "name": "sensor",
-        "props": [
-            {
-                "p": "timestamp",
-                "v": "iso",
-                "vt": "date"
-            },
-            {
-                "p": "value",
-                "v": "$round($random()*(100-19)+19)",
-                "vt": "jsonata"
-            },
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "2",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "{\"t\": timestamp, \"temperature\": value}",
-        "payloadType": "jsonata",
-        "x": 100,
-        "y": 100,
-        "wires": [
-            [
-                "1b4e862f77129f5e"
-            ]
-        ]
+        "id": "1a4cb0419a6cf9d9",
+        "type": "ui-group",
+        "name": "Credits",
+        "page": "c27544529a7af06f",
+        "width": 6,
+        "height": 1,
+        "order": 3,
+        "showTitle": false,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
     },
     {
         "id": "f85bce5ddfd72253",
         "type": "inject",
         "z": "6f835252e7b4d315",
-        "name": "orion",
+        "g": "f246a18ed1e7d299",
+        "name": "1m",
         "props": [
             {
                 "p": "orion",
@@ -1842,30 +1861,28 @@
                 "vt": "str"
             },
             {
-                "p": "link",
-                "v": "<http://context/data-models/ngsi-context.jsonld>; rel=\"http://www.w3.org/ns/json-ld#context\"; type=\"application/ld+json\"",
-                "vt": "str"
+                "p": "payload"
             },
             {
-                "p": "payload"
+                "p": "context",
+                "v": "http://context/data-models/context.jsonld",
+                "vt": "str"
             }
         ],
-        "repeat": "",
-        "crontab": "*/1 0-23 * * *",
+        "repeat": "60",
+        "crontab": "",
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
         "payload": "grant_type=password&username=myuser&password=myuser&client_id=orion&client_secret=u0uEieRqtUVrXPluUAiuvGAZ2Qk4Bco6",
         "payloadType": "str",
-        "x": 90,
-        "y": 220,
+        "x": 110,
+        "y": 60,
         "wires": [
             [
                 "8a6f11d8979e44b2",
                 "7a7fa879155f5d5a",
-                "e29116d09133f235",
-                "5e04ccd51f01ae90",
-                "3b4c51ca5d282f35"
+                "e29116d09133f235"
             ]
         ]
     },
@@ -1873,23 +1890,25 @@
         "id": "7a7fa879155f5d5a",
         "type": "debug",
         "z": "6f835252e7b4d315",
+        "g": "f246a18ed1e7d299",
         "name": "get flow.orion",
         "active": false,
-        "tosidebar": true,
+        "tosidebar": false,
         "console": false,
         "tostatus": true,
         "complete": "orion",
         "targetType": "msg",
-        "statusVal": "$flowContext(\"orion\")",
-        "statusType": "auto",
-        "x": 270,
-        "y": 280,
+        "statusVal": "orion",
+        "statusType": "msg",
+        "x": 130,
+        "y": 120,
         "wires": []
     },
     {
         "id": "e29116d09133f235",
         "type": "change",
         "z": "6f835252e7b4d315",
+        "g": "f246a18ed1e7d299",
         "name": "",
         "rules": [
             {
@@ -1905,102 +1924,21 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 270,
-        "y": 280,
+        "x": 130,
+        "y": 120,
         "wires": [
             [
-                "89462a3b37372cfe"
+                "2085395db508f4da",
+                "3097029d4e574370"
             ]
-        ]
-    },
-    {
-        "id": "89462a3b37372cfe",
-        "type": "http request",
-        "z": "6f835252e7b4d315",
-        "name": "GET /version",
-        "method": "GET",
-        "ret": "obj",
-        "paytoqs": "ignore",
-        "url": "{{{orion}}}/version",
-        "tls": "",
-        "persist": false,
-        "proxy": "",
-        "insecureHTTPParser": false,
-        "authType": "",
-        "senderr": false,
-        "headers": [],
-        "x": 470,
-        "y": 280,
-        "wires": [
-            [
-                "8fad2a1b511de54e"
-            ]
-        ]
-    },
-    {
-        "id": "8fad2a1b511de54e",
-        "type": "debug",
-        "z": "6f835252e7b4d315",
-        "name": "orion",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": true,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "statusCode & \" - \" & (payload.error ? payload.error : payload.orion.version ? payload.orion.version & \" (v2)\" : payload.\"orionld version\" & \" (LD)\")",
-        "statusType": "jsonata",
-        "x": 630,
-        "y": 280,
-        "wires": []
-    },
-    {
-        "id": "3b4c51ca5d282f35",
-        "type": "debug",
-        "z": "6f835252e7b4d315",
-        "name": "get flow.link",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": true,
-        "complete": "link",
-        "targetType": "msg",
-        "statusVal": "$flowContext(\"link\")",
-        "statusType": "auto",
-        "x": 270,
-        "y": 220,
-        "wires": []
-    },
-    {
-        "id": "5e04ccd51f01ae90",
-        "type": "change",
-        "z": "6f835252e7b4d315",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "link",
-                "pt": "flow",
-                "to": "link",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 270,
-        "y": 220,
-        "wires": [
-            []
         ]
     },
     {
         "id": "8a6f11d8979e44b2",
         "type": "http request",
         "z": "6f835252e7b4d315",
-        "name": "POST /token",
+        "g": "f246a18ed1e7d299",
+        "name": "POST keycloak /realms/.../token",
         "method": "POST",
         "ret": "obj",
         "paytoqs": "ignore",
@@ -2019,8 +1957,8 @@
                 "valueValue": "application/x-www-form-urlencoded"
             }
         ],
-        "x": 110,
-        "y": 160,
+        "x": 350,
+        "y": 60,
         "wires": [
             [
                 "2d08a1e8a790dd95",
@@ -2032,7 +1970,8 @@
         "id": "2d08a1e8a790dd95",
         "type": "debug",
         "z": "6f835252e7b4d315",
-        "name": "set flow.access_token",
+        "g": "f246a18ed1e7d299",
+        "name": "access_token",
         "active": false,
         "tosidebar": true,
         "console": false,
@@ -2041,21 +1980,84 @@
         "targetType": "msg",
         "statusVal": "payload.access_token",
         "statusType": "msg",
-        "x": 300,
-        "y": 160,
+        "x": 580,
+        "y": 60,
         "wires": []
     },
     {
         "id": "e5534b716ea19e6c",
         "type": "change",
         "z": "6f835252e7b4d315",
+        "g": "f246a18ed1e7d299",
         "name": "",
         "rules": [
             {
                 "t": "set",
-                "p": "access_token",
+                "p": "bearer",
                 "pt": "flow",
-                "to": "payload.access_token",
+                "to": "\"Bearer \" & payload.access_token",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 580,
+        "y": 60,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8fad2a1b511de54e",
+        "type": "debug",
+        "z": "6f835252e7b4d315",
+        "g": "f246a18ed1e7d299",
+        "name": "ver",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "statusCode & \" - \" & (payload.error ? payload.error : payload.orion.version ? payload.orion.version & \" (Orion v2)\" : payload.\"orionld version\" & \" (Orion LD)\")",
+        "statusType": "jsonata",
+        "x": 610,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "2085395db508f4da",
+        "type": "debug",
+        "z": "6f835252e7b4d315",
+        "g": "f246a18ed1e7d299",
+        "name": "set flow.context",
+        "active": false,
+        "tosidebar": false,
+        "console": false,
+        "tostatus": true,
+        "complete": "context",
+        "targetType": "msg",
+        "statusVal": "context",
+        "statusType": "msg",
+        "x": 300,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "3097029d4e574370",
+        "type": "change",
+        "z": "6f835252e7b4d315",
+        "g": "f246a18ed1e7d299",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "context",
+                "pt": "flow",
+                "to": "context",
                 "tot": "msg"
             }
         ],
@@ -2065,18 +2067,1184 @@
         "to": "",
         "reg": false,
         "x": 300,
-        "y": 160,
+        "y": 120,
         "wires": [
             [
-                "1a17d987cf938811",
-                "c5497d9e519f140c"
+                "89462a3b37372cfe"
             ]
         ]
+    },
+    {
+        "id": "24162bb230c66c6d",
+        "type": "ui-gauge",
+        "z": "6f835252e7b4d315",
+        "name": "",
+        "group": "ac219a90acb61f31",
+        "order": 2,
+        "width": 3,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "Power Sensor 001",
+        "units": "kW",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#ffc800"
+            },
+            {
+                "from": "0.5",
+                "color": "#5cd65c"
+            },
+            {
+                "from": "3",
+                "color": "#ea5353"
+            }
+        ],
+        "min": 0,
+        "max": "3.5",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 1290,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "f3fa84064e2ab5a5",
+        "type": "ui-gauge",
+        "z": "6f835252e7b4d315",
+        "name": "",
+        "group": "ac219a90acb61f31",
+        "order": 3,
+        "width": 3,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "Power Sensor 002",
+        "units": "kW",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#ffc800"
+            },
+            {
+                "from": "0.5",
+                "color": "#5cd65c"
+            },
+            {
+                "from": "3",
+                "color": "#ea5353"
+            }
+        ],
+        "min": 0,
+        "max": "3.5",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 1290,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "891c52c56afce0cb",
+        "type": "change",
+        "z": "6f835252e7b4d315",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.numValue.value ? payload.numValue.value : payload.numValue",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1100,
+        "y": 580,
+        "wires": [
+            [
+                "4ad34aa6a519adf2"
+            ]
+        ]
+    },
+    {
+        "id": "f1880642441355ab",
+        "type": "change",
+        "z": "6f835252e7b4d315",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.v",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1100,
+        "y": 200,
+        "wires": [
+            [
+                "24162bb230c66c6d"
+            ]
+        ]
+    },
+    {
+        "id": "100f6f90de18127e",
+        "type": "change",
+        "z": "6f835252e7b4d315",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.v",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1100,
+        "y": 260,
+        "wires": [
+            [
+                "f3fa84064e2ab5a5"
+            ]
+        ]
+    },
+    {
+        "id": "947307fd477afc91",
+        "type": "ui-template",
+        "z": "6f835252e7b4d315",
+        "group": "ac219a90acb61f31",
+        "page": "",
+        "ui": "",
+        "name": "HYPERRIDE Logo",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "head": "",
+        "format": "<center><img style=\"width: 80%;\" src=\"data:image/png;base64,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\"/></center>",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 870,
+        "y": 20,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2b138fd5b5964ca0",
+        "type": "change",
+        "z": "6f835252e7b4d315",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "query",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 860,
+        "y": 520,
+        "wires": [
+            [
+                "5a4f8769d627a6b6"
+            ]
+        ]
+    },
+    {
+        "id": "d5ed0fb54973ca2e",
+        "type": "ui-button",
+        "z": "6f835252e7b4d315",
+        "group": "b1791bd64a7f96d2",
+        "name": "",
+        "label": "Concise",
+        "order": 1,
+        "width": "2",
+        "height": "1",
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "concise",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 880,
+        "y": 380,
+        "wires": [
+            [
+                "014b3cbca04da0e6"
+            ]
+        ]
+    },
+    {
+        "id": "b14fb96c998ddd0d",
+        "type": "ui-button",
+        "z": "6f835252e7b4d315",
+        "group": "b1791bd64a7f96d2",
+        "name": "",
+        "label": "Normalized",
+        "order": 2,
+        "width": "2",
+        "height": "1",
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "normalized",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 890,
+        "y": 420,
+        "wires": [
+            [
+                "014b3cbca04da0e6"
+            ]
+        ]
+    },
+    {
+        "id": "d1359d21476f51f5",
+        "type": "inject",
+        "z": "6f835252e7b4d315",
+        "name": "",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 795,
+        "y": 380,
+        "wires": [
+            [
+                "d5ed0fb54973ca2e"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "18f096fd383a5893",
+        "type": "inject",
+        "z": "6f835252e7b4d315",
+        "name": "",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 795,
+        "y": 420,
+        "wires": [
+            [
+                "b14fb96c998ddd0d"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "3a72003fa9be0d46",
+        "type": "ui-button",
+        "z": "6f835252e7b4d315",
+        "group": "b1791bd64a7f96d2",
+        "name": "",
+        "label": "Simplified",
+        "order": 3,
+        "width": "2",
+        "height": "1",
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "simplified",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 880,
+        "y": 460,
+        "wires": [
+            [
+                "014b3cbca04da0e6"
+            ]
+        ]
+    },
+    {
+        "id": "f27dee108ebf2a74",
+        "type": "inject",
+        "z": "6f835252e7b4d315",
+        "name": "",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 795,
+        "y": 460,
+        "wires": [
+            [
+                "3a72003fa9be0d46"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "4ad34aa6a519adf2",
+        "type": "ui-chart",
+        "z": "6f835252e7b4d315",
+        "group": "5ab3458349e52299",
+        "name": "",
+        "label": "NGSI-LD Entities",
+        "order": 1,
+        "chartType": "line",
+        "category": "topic",
+        "categoryType": "msg",
+        "xAxisLabel": "",
+        "xAxisProperty": "",
+        "xAxisPropertyType": "timestamp",
+        "xAxisType": "time",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "",
+        "yAxisProperty": "payload",
+        "yAxisPropertyType": "msg",
+        "ymin": "",
+        "ymax": "",
+        "bins": 10,
+        "action": "append",
+        "stackSeries": false,
+        "pointShape": "circle",
+        "pointRadius": 4,
+        "showLegend": true,
+        "removeOlder": 1,
+        "removeOlderUnit": "60",
+        "removeOlderPoints": "",
+        "colors": [
+            "#0095ff",
+            "#ff0000",
+            "#ff7f0e",
+            "#2ca02c",
+            "#a347e1",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": "6",
+        "height": "7",
+        "className": "",
+        "interpolation": "linear",
+        "x": 1290,
+        "y": 580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f99825d0213cfe41",
+        "type": "ui-control",
+        "z": "6f835252e7b4d315",
+        "name": "",
+        "ui": "a6553f660d1ea9d9",
+        "events": "all",
+        "x": 1320,
+        "y": 20,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "61b6b06b0b3745d9",
+        "type": "ui-button",
+        "z": "6f835252e7b4d315",
+        "group": "b1791bd64a7f96d2",
+        "name": "",
+        "label": "Mongo Express",
+        "order": 5,
+        "width": "4",
+        "height": "1",
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "database",
+        "iconPosition": "left",
+        "payload": "{\"url\":\"http://alerox:1234567890@172.16.1.10/mongoadmin/db/orionld/entities?skip=0&key=&value=&type=&query=&projection=\",\"target\":\"_blank\"}",
+        "payloadType": "json",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "green",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 1100,
+        "y": 20,
+        "wires": [
+            [
+                "f99825d0213cfe41"
+            ]
+        ]
+    },
+    {
+        "id": "f648a1289fafaedc",
+        "type": "ui-switch",
+        "z": "6f835252e7b4d315",
+        "name": "",
+        "label": "System attributes",
+        "group": "b1791bd64a7f96d2",
+        "order": 6,
+        "width": "2",
+        "height": "1",
+        "passthru": true,
+        "decouple": false,
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "className": "",
+        "layout": "row-spread",
+        "clickableArea": "label",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 870,
+        "y": 300,
+        "wires": [
+            [
+                "a96295cbb8faa377"
+            ]
+        ]
+    },
+    {
+        "id": "00fc184cc46a2a44",
+        "type": "debug",
+        "z": "6f835252e7b4d315",
+        "name": "dump orion db",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "$count(payload) & \" entities\"",
+        "statusType": "jsonata",
+        "x": 1300,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "6a33d584578d85e6",
+        "type": "http request",
+        "z": "6f835252e7b4d315",
+        "name": "GET /entities",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "query",
+        "url": "{{{orion}}}/ngsi-ld/v1/entities?idPattern=.*",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [
+            {
+                "keyType": "Authorization",
+                "keyValue": "",
+                "valueType": "msg",
+                "valueValue": "bearer"
+            },
+            {
+                "keyType": "other",
+                "keyValue": "Link",
+                "valueType": "msg",
+                "valueValue": "link"
+            }
+        ],
+        "x": 1110,
+        "y": 500,
+        "wires": [
+            [
+                "c3368d1a43425faf",
+                "00fc184cc46a2a44"
+            ]
+        ]
+    },
+    {
+        "id": "5a4f8769d627a6b6",
+        "type": "change",
+        "z": "6f835252e7b4d315",
+        "name": "FIWARE",
+        "rules": [
+            {
+                "t": "set",
+                "p": "bearer",
+                "pt": "msg",
+                "to": "bearer",
+                "tot": "flow"
+            },
+            {
+                "t": "set",
+                "p": "context",
+                "pt": "msg",
+                "to": "context",
+                "tot": "flow"
+            },
+            {
+                "t": "set",
+                "p": "link",
+                "pt": "msg",
+                "to": "'<' & context & '>; rel=\"http://www.w3.org/ns/json-ld#context\"; type=\"application/ld+json\"'",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "orion",
+                "pt": "msg",
+                "to": "orion",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 965,
+        "y": 520,
+        "wires": [
+            [
+                "5a15556a67c818c3"
+            ]
+        ],
+        "icon": "node-red-contrib-fiware_official/fiware.png",
+        "l": false
+    },
+    {
+        "id": "c3368d1a43425faf",
+        "type": "ui-template",
+        "z": "6f835252e7b4d315",
+        "group": "b1791bd64a7f96d2",
+        "page": "",
+        "ui": "",
+        "name": "dump orion db",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "head": "",
+        "format": "<ul style=\"font-size:14px\">\n    <li v-for=\"item in msg.payload\">\n        <b><font color=\"#0094ce\">&nbsp;{{item.id}}</font></b>\n        <ul>\n            <li v-for=\"(value, key) in item\"><b>&nbsp;{{key}}</b>: {{value}}</li>\n        </ul>\n    </li>\n</ul>",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1300,
+        "y": 520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "89462a3b37372cfe",
+        "type": "http request",
+        "z": "6f835252e7b4d315",
+        "g": "f246a18ed1e7d299",
+        "name": "GET /version",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "{{{orion}}}/version",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 470,
+        "y": 120,
+        "wires": [
+            [
+                "8fad2a1b511de54e"
+            ]
+        ]
+    },
+    {
+        "id": "014b3cbca04da0e6",
+        "type": "switch",
+        "z": "6f835252e7b4d315",
+        "name": "flow.sysAttrs ?",
+        "property": "sysAttrs",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1100,
+        "y": 420,
+        "wires": [
+            [
+                "d8cde309d57941aa"
+            ],
+            [
+                "250d9255ef9a60e3"
+            ]
+        ]
+    },
+    {
+        "id": "d8cde309d57941aa",
+        "type": "change",
+        "z": "6f835252e7b4d315",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "query",
+                "pt": "flow",
+                "to": "{\"format\": payload, \"options\": \"sysAttrs\"}",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1300,
+        "y": 400,
+        "wires": [
+            [
+                "2b138fd5b5964ca0"
+            ]
+        ]
+    },
+    {
+        "id": "a96295cbb8faa377",
+        "type": "change",
+        "z": "6f835252e7b4d315",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "sysAttrs",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1100,
+        "y": 300,
+        "wires": [
+            [
+                "4a3854de2aa748cc"
+            ]
+        ]
+    },
+    {
+        "id": "250d9255ef9a60e3",
+        "type": "change",
+        "z": "6f835252e7b4d315",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "query",
+                "pt": "flow",
+                "to": "{\"format\": payload}",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1300,
+        "y": 440,
+        "wires": [
+            [
+                "2b138fd5b5964ca0"
+            ]
+        ]
+    },
+    {
+        "id": "4a3854de2aa748cc",
+        "type": "change",
+        "z": "6f835252e7b4d315",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "query.format",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1100,
+        "y": 360,
+        "wires": [
+            [
+                "014b3cbca04da0e6"
+            ]
+        ]
+    },
+    {
+        "id": "fb29fcc01fd1189b",
+        "type": "smooth",
+        "z": "6f835252e7b4d315",
+        "g": "8c7bd0a57fe08f37",
+        "name": "",
+        "property": "payload.v",
+        "action": "mean",
+        "count": "10",
+        "round": "3",
+        "mult": "multi",
+        "reduce": false,
+        "x": 305,
+        "y": 200,
+        "wires": [
+            [
+                "ea31ce01a2cb3465"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "1b4e862f77129f5e",
+        "type": "smooth",
+        "z": "6f835252e7b4d315",
+        "g": "8c7bd0a57fe08f37",
+        "name": "",
+        "property": "payload.v",
+        "action": "mean",
+        "count": "10",
+        "round": "3",
+        "mult": "multi",
+        "reduce": false,
+        "x": 305,
+        "y": 260,
+        "wires": [
+            [
+                "725452fa984f18a4"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "ea31ce01a2cb3465",
+        "type": "switch",
+        "z": "6f835252e7b4d315",
+        "g": "8c7bd0a57fe08f37",
+        "name": "flow.start1 ?",
+        "property": "start1",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 410,
+        "y": 200,
+        "wires": [
+            [
+                "798f5483ee9a61d7",
+                "f5c08273a70e81fe",
+                "f1880642441355ab"
+            ]
+        ]
+    },
+    {
+        "id": "725452fa984f18a4",
+        "type": "switch",
+        "z": "6f835252e7b4d315",
+        "g": "8c7bd0a57fe08f37",
+        "name": "flow.start2 ?",
+        "property": "start2",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 410,
+        "y": 260,
+        "wires": [
+            [
+                "c994898e43756cdc",
+                "5046210129b7d4a1",
+                "100f6f90de18127e"
+            ]
+        ]
+    },
+    {
+        "id": "a1b67dafbe7283c5",
+        "type": "change",
+        "z": "6f835252e7b4d315",
+        "g": "8c7bd0a57fe08f37",
+        "name": "{t, v, u}",
+        "rules": [
+            {
+                "t": "set",
+                "p": "timestamp",
+                "pt": "msg",
+                "to": "iso",
+                "tot": "date"
+            },
+            {
+                "t": "set",
+                "p": "value",
+                "pt": "msg",
+                "to": "$random() * 3.5",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"t\": timestamp, \"v\": value, \"u\": \"KWT\"}",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 230,
+        "y": 200,
+        "wires": [
+            [
+                "fb29fcc01fd1189b"
+            ]
+        ]
+    },
+    {
+        "id": "56762cbea9a0bf3c",
+        "type": "change",
+        "z": "6f835252e7b4d315",
+        "g": "8c7bd0a57fe08f37",
+        "name": "{t, v, u}",
+        "rules": [
+            {
+                "t": "set",
+                "p": "timestamp",
+                "pt": "msg",
+                "to": "iso",
+                "tot": "date"
+            },
+            {
+                "t": "set",
+                "p": "value",
+                "pt": "msg",
+                "to": "$random() * 3.5",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"t\": timestamp, \"v\": value, \"u\": \"KWT\"}",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 230,
+        "y": 260,
+        "wires": [
+            [
+                "1b4e862f77129f5e"
+            ]
+        ]
+    },
+    {
+        "id": "798f5483ee9a61d7",
+        "type": "debug",
+        "z": "6f835252e7b4d315",
+        "g": "8c7bd0a57fe08f37",
+        "name": "/iot/power/001",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 580,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "c994898e43756cdc",
+        "type": "debug",
+        "z": "6f835252e7b4d315",
+        "g": "8c7bd0a57fe08f37",
+        "name": "/iot/power/002",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 580,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "f5c08273a70e81fe",
+        "type": "mqtt out",
+        "z": "6f835252e7b4d315",
+        "g": "8c7bd0a57fe08f37",
+        "name": "",
+        "topic": "/iot/power/001",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "f222d0362c3de7e8",
+        "x": 580,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "5046210129b7d4a1",
+        "type": "mqtt out",
+        "z": "6f835252e7b4d315",
+        "g": "8c7bd0a57fe08f37",
+        "name": "",
+        "topic": "/iot/power/002",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "f222d0362c3de7e8",
+        "x": 580,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "4b0177fa71a057e8",
+        "type": "inject",
+        "z": "6f835252e7b4d315",
+        "g": "8c7bd0a57fe08f37",
+        "name": "1s",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 110,
+        "y": 200,
+        "wires": [
+            [
+                "a1b67dafbe7283c5"
+            ]
+        ]
+    },
+    {
+        "id": "8c0da9c6d853d8ca",
+        "type": "inject",
+        "z": "6f835252e7b4d315",
+        "g": "8c7bd0a57fe08f37",
+        "name": "1s",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 110,
+        "y": 260,
+        "wires": [
+            [
+                "56762cbea9a0bf3c"
+            ]
+        ]
+    },
+    {
+        "id": "function_node",
+        "type": "function",
+        "z": "6f835252e7b4d315",
+        "g": "0d5fb5f33c555ea7",
+        "name": "Parse",
+        "func": "var topicParts = msg.topic.split('/');\n// var payload = msg.payload;\n\nmsg.parsed = {\n    property: topicParts[2],\n    type: topicParts[2].substring(0, 1).toUpperCase() +\n        topicParts[2].substring(1) + \"Sensor\",\n    id: topicParts[3],\n//  ...payload\n    timestamp: msg.payload.t,\n    value: msg.payload.v,\n    unit: msg.payload.u\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 230,
+        "y": 340,
+        "wires": [
+            [
+                "8d4891aef83541eb"
+            ]
+        ],
+        "icon": "node-red/bridge.svg"
     },
     {
         "id": "6ef213c02289c5d7",
         "type": "http request",
         "z": "6f835252e7b4d315",
+        "g": "0d5fb5f33c555ea7",
         "name": "POST /entityOperations/upsert",
         "method": "POST",
         "ret": "obj",
@@ -2085,7 +3253,7 @@
         "tls": "",
         "persist": false,
         "proxy": "",
-        "insecureHTTPParser": false,
+        "insecureHTTPParser": true,
         "authType": "",
         "senderr": false,
         "headers": [
@@ -2098,17 +3266,11 @@
             {
                 "keyType": "Content-Type",
                 "keyValue": "",
-                "valueType": "application/json",
-                "valueValue": ""
-            },
-            {
-                "keyType": "other",
-                "keyValue": "Link",
-                "valueType": "msg",
-                "valueValue": "link"
+                "valueType": "other",
+                "valueValue": "application/ld+json"
             }
         ],
-        "x": 330,
+        "x": 350,
         "y": 400,
         "wires": [
             [
@@ -2121,16 +3283,17 @@
         "id": "1abcfcf64c948ed0",
         "type": "debug",
         "z": "6f835252e7b4d315",
-        "name": "test update",
+        "g": "0d5fb5f33c555ea7",
+        "name": "upsert status",
         "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": true,
         "complete": "payload",
         "targetType": "msg",
-        "statusVal": "statusCode & \": \" & (statusCode > 300 ? payload.title : \"updated at \" & $now(\"[H01]:[m]:[s]\"))",
+        "statusVal": "statusCode & \": \" & (statusCode > 300 ? (payload.title ? payload.title : payload) : statusCode > 204 ? payload.errors[0].error.title : \"updated at \" & $now(\"[H01]:[m]:[s]\"))",
         "statusType": "jsonata",
-        "x": 610,
+        "x": 590,
         "y": 400,
         "wires": []
     },
@@ -2138,11 +3301,12 @@
         "id": "c1fd62cf0d75f476",
         "type": "http request",
         "z": "6f835252e7b4d315",
+        "g": "0d5fb5f33c555ea7",
         "name": "GET /entities/{id}",
         "method": "GET",
         "ret": "obj",
         "paytoqs": "query",
-        "url": "{{{orion}}}/ngsi-ld/v1/entities/{{id}}",
+        "url": "{{{orion}}}/ngsi-ld/v1/entities/{{{id}}}",
         "tls": "",
         "persist": false,
         "proxy": "",
@@ -2163,11 +3327,12 @@
                 "valueValue": "link"
             }
         ],
-        "x": 290,
+        "x": 310,
         "y": 460,
         "wires": [
             [
                 "b508b85f235e4c9d",
+                "80bfd1069afbe128",
                 "31fac115710b926a"
             ]
         ]
@@ -2176,62 +3341,47 @@
         "id": "b508b85f235e4c9d",
         "type": "debug",
         "z": "6f835252e7b4d315",
-        "name": "test retrieve",
+        "g": "0d5fb5f33c555ea7",
+        "name": "read entity",
         "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": true,
         "complete": "payload",
         "targetType": "msg",
-        "statusVal": "statusCode > 300 ? payload.title : topic",
+        "statusVal": "statusCode > 200 ? payload.title : $substringAfter(id, \"urn:ngsi-ld:\")",
         "statusType": "jsonata",
-        "x": 610,
+        "x": 590,
         "y": 460,
-        "wires": []
-    },
-    {
-        "id": "31fac115710b926a",
-        "type": "debug",
-        "z": "6f835252e7b4d315",
-        "name": "test property",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": true,
-        "complete": "payload.temperature",
-        "targetType": "msg",
-        "statusVal": "payload.title ? payload.title : payload.temperature.value ? payload.temperature.value : payload.temperature",
-        "statusType": "jsonata",
-        "x": 610,
-        "y": 520,
         "wires": []
     },
     {
         "id": "8d4891aef83541eb",
         "type": "change",
         "z": "6f835252e7b4d315",
-        "name": "fiware (mod)",
+        "g": "0d5fb5f33c555ea7",
+        "name": "fiware",
         "rules": [
-            {
-                "t": "set",
-                "p": "access_token",
-                "pt": "msg",
-                "to": "access_token",
-                "tot": "flow"
-            },
             {
                 "t": "set",
                 "p": "bearer",
                 "pt": "msg",
-                "to": "\"Bearer \" & access_token",
-                "tot": "jsonata"
+                "to": "bearer",
+                "tot": "flow"
+            },
+            {
+                "t": "set",
+                "p": "context",
+                "pt": "msg",
+                "to": "context",
+                "tot": "flow"
             },
             {
                 "t": "set",
                 "p": "link",
                 "pt": "msg",
-                "to": "link",
-                "tot": "flow"
+                "to": "'<' & context & '>; rel=\"http://www.w3.org/ns/json-ld#context\"; type=\"application/ld+json\"'",
+                "tot": "jsonata"
             },
             {
                 "t": "set",
@@ -2239,14 +3389,492 @@
                 "pt": "msg",
                 "to": "orion",
                 "tot": "flow"
-            },
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 305,
+        "y": 340,
+        "wires": [
+            [
+                "afcbad6864eddf09"
+            ]
+        ],
+        "icon": "node-red-contrib-fiware_official/fiware.png",
+        "l": false
+    },
+    {
+        "id": "2c8d70aa911db94f",
+        "type": "change",
+        "z": "6f835252e7b4d315",
+        "g": "0d5fb5f33c555ea7",
+        "name": "",
+        "rules": [
             {
                 "t": "set",
                 "p": "id",
                 "pt": "msg",
                 "to": "payload[0].id",
                 "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 130,
+        "y": 400,
+        "wires": [
+            [
+                "6ef213c02289c5d7"
+            ]
+        ]
+    },
+    {
+        "id": "ed9a6d253eabe8ad",
+        "type": "inject",
+        "z": "6f835252e7b4d315",
+        "g": "0d5fb5f33c555ea7",
+        "name": "test",
+        "props": [
+            {
+                "p": "payload"
             },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "/iot/power/001",
+        "payload": "{\"t\":\"2024-04-22T22:43:00Z\",\"v\":20,\"u\":\"WTT\"}",
+        "payloadType": "json",
+        "x": 110,
+        "y": 340,
+        "wires": [
+            [
+                "function_node"
+            ]
+        ]
+    },
+    {
+        "id": "80bfd1069afbe128",
+        "type": "change",
+        "z": "6f835252e7b4d315",
+        "g": "0d5fb5f33c555ea7",
+        "name": "passthrough",
+        "rules": [],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 590,
+        "y": 520,
+        "wires": [
+            [
+                "2b138fd5b5964ca0",
+                "74e5a7a516b7ff21"
+            ]
+        ]
+    },
+    {
+        "id": "31fac115710b926a",
+        "type": "debug",
+        "z": "6f835252e7b4d315",
+        "g": "0d5fb5f33c555ea7",
+        "name": "read value",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload.numValue",
+        "targetType": "jsonata",
+        "statusVal": "payload.title ? payload.title : payload.numValue.value ? payload.numValue.value : payload.numValue",
+        "statusType": "jsonata",
+        "x": 590,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "9813133f433f065d",
+        "type": "ui-button",
+        "z": "6f835252e7b4d315",
+        "group": "ac219a90acb61f31",
+        "name": "",
+        "label": "Start",
+        "order": 4,
+        "width": "1",
+        "height": "1",
+        "emulateClick": true,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "play",
+        "iconPosition": "left",
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 870,
+        "y": 60,
+        "wires": [
+            [
+                "e1ed897e01070fbc"
+            ]
+        ]
+    },
+    {
+        "id": "cd8cd8f57c3673f4",
+        "type": "ui-button",
+        "z": "6f835252e7b4d315",
+        "group": "ac219a90acb61f31",
+        "name": "",
+        "label": "Stop",
+        "order": 5,
+        "width": "1",
+        "height": "1",
+        "emulateClick": true,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "stop",
+        "iconPosition": "left",
+        "payload": "false",
+        "payloadType": "bool",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 870,
+        "y": 100,
+        "wires": [
+            [
+                "e1ed897e01070fbc"
+            ]
+        ]
+    },
+    {
+        "id": "e1ed897e01070fbc",
+        "type": "change",
+        "z": "6f835252e7b4d315",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "start1",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1100,
+        "y": 80,
+        "wires": [
+            [
+                "d11e9230f616caaf"
+            ]
+        ]
+    },
+    {
+        "id": "56f57e2c57ba890e",
+        "type": "inject",
+        "z": "6f835252e7b4d315",
+        "name": "",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 795,
+        "y": 100,
+        "wires": [
+            [
+                "cd8cd8f57c3673f4"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "4490ce88321d5e9c",
+        "type": "inject",
+        "z": "6f835252e7b4d315",
+        "name": "",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 795,
+        "y": 60,
+        "wires": [
+            [
+                "9813133f433f065d"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "36df828d8d02245d",
+        "type": "ui-button",
+        "z": "6f835252e7b4d315",
+        "group": "ac219a90acb61f31",
+        "name": "",
+        "label": "Start",
+        "order": 7,
+        "width": "1",
+        "height": "1",
+        "emulateClick": true,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "play",
+        "iconPosition": "left",
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 870,
+        "y": 140,
+        "wires": [
+            [
+                "56e40c4a140fd121"
+            ]
+        ]
+    },
+    {
+        "id": "6b11b3c35b13ff64",
+        "type": "ui-button",
+        "z": "6f835252e7b4d315",
+        "group": "ac219a90acb61f31",
+        "name": "",
+        "label": "Stop",
+        "order": 8,
+        "width": "1",
+        "height": "1",
+        "emulateClick": true,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "stop",
+        "iconPosition": "left",
+        "payload": "false",
+        "payloadType": "bool",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 870,
+        "y": 180,
+        "wires": [
+            [
+                "56e40c4a140fd121"
+            ]
+        ]
+    },
+    {
+        "id": "56e40c4a140fd121",
+        "type": "change",
+        "z": "6f835252e7b4d315",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "start2",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1100,
+        "y": 160,
+        "wires": [
+            [
+                "8f94b6762e4aad4d"
+            ]
+        ]
+    },
+    {
+        "id": "9ddf27257faa71c3",
+        "type": "inject",
+        "z": "6f835252e7b4d315",
+        "name": "",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 795,
+        "y": 180,
+        "wires": [
+            [
+                "6b11b3c35b13ff64"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "61ab237ff295839c",
+        "type": "inject",
+        "z": "6f835252e7b4d315",
+        "name": "",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 795,
+        "y": 140,
+        "wires": [
+            [
+                "36df828d8d02245d"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "d11e9230f616caaf",
+        "type": "ui-gauge",
+        "z": "6f835252e7b4d315",
+        "name": "",
+        "group": "ac219a90acb61f31",
+        "order": 6,
+        "width": "1",
+        "height": "1",
+        "gtype": "gauge-tile",
+        "gstyle": "needle",
+        "title": "Status",
+        "units": "units",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#ea5353"
+            },
+            {
+                "from": "1",
+                "color": "#5cd65c"
+            }
+        ],
+        "min": 0,
+        "max": "1",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 1330,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "8f94b6762e4aad4d",
+        "type": "ui-gauge",
+        "z": "6f835252e7b4d315",
+        "name": "",
+        "group": "ac219a90acb61f31",
+        "order": 9,
+        "width": "1",
+        "height": "1",
+        "gtype": "gauge-tile",
+        "gstyle": "needle",
+        "title": "Status",
+        "units": "units",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#ea5353"
+            },
+            {
+                "from": "1",
+                "color": "#5cd65c"
+            }
+        ],
+        "min": 0,
+        "max": "1",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 1330,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "8a5a555bd99a7a78",
+        "type": "change",
+        "z": "6f835252e7b4d315",
+        "name": "",
+        "rules": [
             {
                 "t": "set",
                 "p": "topic",
@@ -2260,43 +3888,222 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 110,
-        "y": 400,
+        "x": 850,
+        "y": 640,
         "wires": [
-            [
-                "6ef213c02289c5d7"
-            ]
-        ],
-        "icon": "node-red-contrib-fiware_official/fiware.png"
+            []
+        ]
     },
     {
-        "id": "c5497d9e519f140c",
-        "type": "debug",
-        "z": "6f835252e7b4d315",
-        "name": "set flow.access_token",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": true,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "payload.access_token",
-        "statusType": "msg",
-        "x": 580,
-        "y": 160,
-        "wires": []
-    },
-    {
-        "id": "1a17d987cf938811",
+        "id": "74e5a7a516b7ff21",
         "type": "change",
         "z": "6f835252e7b4d315",
         "name": "",
         "rules": [
             {
                 "t": "set",
-                "p": "bearer",
-                "pt": "flow",
-                "to": "\"Bearer \" & access_token",
+                "p": "topic",
+                "pt": "msg",
+                "to": "id",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 850,
+        "y": 580,
+        "wires": [
+            [
+                "891c52c56afce0cb"
+            ]
+        ]
+    },
+    {
+        "id": "9f97c2ecd1fe5672",
+        "type": "ui-text",
+        "z": "6f835252e7b4d315",
+        "group": "1a4cb0419a6cf9d9",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Powered by HYPERRIDE ICT Platform, Alerox (ENG), 2024",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "x": 1160,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "3b84b5c8c7282d7f",
+        "type": "http request",
+        "z": "6f835252e7b4d315",
+        "name": "GET /entities",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "query",
+        "url": "{{{orion}}}/ngsi-ld/v1/entities?idPattern=.*",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [
+            {
+                "keyType": "Authorization",
+                "keyValue": "",
+                "valueType": "msg",
+                "valueValue": "bearer"
+            }
+        ],
+        "x": 1110,
+        "y": 540,
+        "wires": [
+            [
+                "c3368d1a43425faf"
+            ]
+        ]
+    },
+    {
+        "id": "5a15556a67c818c3",
+        "type": "switch",
+        "z": "6f835252e7b4d315",
+        "name": "",
+        "property": "sysAttrs",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "false"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1005,
+        "y": 520,
+        "wires": [
+            [
+                "6a33d584578d85e6"
+            ],
+            [
+                "3b84b5c8c7282d7f"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "5381f0edd89d8311",
+        "type": "mqtt in",
+        "z": "6f835252e7b4d315",
+        "g": "0d5fb5f33c555ea7",
+        "name": "",
+        "topic": "/iot/#",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "f222d0362c3de7e8",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 110,
+        "y": 340,
+        "wires": [
+            [
+                "function_node"
+            ]
+        ]
+    },
+    {
+        "id": "0ba7447f27de9d8f",
+        "type": "comment",
+        "z": "6f835252e7b4d315",
+        "g": "0d5fb5f33c555ea7",
+        "name": "Data Model",
+        "info": "<!-- 10-Header -->\n    \n[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png \"Logo\")](https://smartdatamodels.org)    \n\nEntity: DeviceMeasurement    \n=========================\n<!-- /10-Header -->\n    \n<!-- 15-License -->\n    \n\n[Open License](https://github.com/smart-data-models//dataModel.Device/blob/master/DeviceMeasurement/LICENSE.md)    \n\n[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)    \n<!-- /15-License -->\n    \n<!-- 20-Description -->\n    \n\nGlobal description: **Description of a generic measurement entity coming from a device or other data source.**    \n\nversion: 0.1.0    \n<!-- /20-Description -->\n    \n<!-- 30-PropertiesList -->\n    \n\n## List of properties    \n\n<sup><sub>[*] If there is not a type in an attribute is because it could have several types or different formats/patterns</sub></sup>    \n- `address[object]`: The mailing address  . Model: [https://schema.org/address](https://schema.org/address)\n\t- `addressCountry[string]`: The country. For example, Spain  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)    \n\t- `addressLocality[string]`: The locality in which the street address is, and which is in the region  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)    \n\t- `addressRegion[string]`: The region in which the locality is, and which is in the country  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)    \n\t- `district[string]`: A district is a type of administrative division that, in some countries, is managed by the local government      \n\t- `postOfficeBoxNumber[string]`: The post office box number for PO box addresses. For example, 03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)    \n\t- `postalCode[string]`: The postal code. For example, 24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)    \n\t- `streetAddress[string]`: The street address  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)    \n- `alternateName[string]`: An alternative name for this item  \n- `areaServed[string]`: The geographic area where a service or offered item is provided  . Model: [https://schema.org/Text](https://schema.org/Text)\n- `controlledProperty[string]`: Property being measured by the device  . Model: [https://schema.org/Text](https://schema.org/Text)\n- `dataProvider[string]`: A sequence of characters identifying the provider of the harmonised data entity  \n- `dateCreated[date-time]`: Entity creation timestamp. This will usually be allocated by the storage platform  \n- `dateModified[date-time]`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform  \n- `dateObserved[date-time]`: The date and time of this observation in ISO8601 UTC format  . Model: [https://schema.org/Text](https://schema.org/Text)\n- `description[string]`: A description of this item  \n- `deviceType[string]`: Type of device taking the measurement  . Model: [https://schema.org/Text](https://schema.org/Text)\n- `id[*]`: Unique identifier of the entity  \n- `location[*]`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  \n- `measurementType[string]`: The type of measurement to be taken  \n- `name[string]`: The name of this item  \n- `numValue[number]`: Numerical value of the measurement  . Model: [https://schema.org/Number](https://schema.org/Number)\n- `outlier[boolean]`: Value for marking the measurement to be specially processed  . Model: [https://schema.org/Boolean](https://schema.org/Boolean)\n- `owner[array]`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  \n- `refDevice[*]`: Device taking the measurement  \n- `seeAlso[*]`: list of uri pointing to additional resources about the item  \n- `source[string]`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object  \n- `textValue[string]`: Textual value of the measurement  . Model: [https://schema.org/Text](https://schema.org/Text)\n- `type[string]`: NGSI Entity type. It has to be Measurement  \n- `unit[string]`: Units of the measurement. In case of use of an acronym use units accepted in [CEFACT](https://www.unece.org/cefact.html) code  \n<!-- /30-PropertiesList -->\n    \n<!-- 35-RequiredProperties -->\n    \n\nRequired properties    \n- `id`  \n- `type`  \n<!-- /35-RequiredProperties -->\n    \n<!-- 40-RequiredProperties -->\n    \n\nNGSIv2 and NGSI-LD standards have ways of including units in every property. However there is a proeprty call 'Unit' for compatibility reasons. It is optional.    \n<!-- /40-RequiredProperties -->\n    \n<!-- 50-DataModelHeader -->\n    \n\n## Data Model description of properties    \n\nSorted alphabetically (click for details)    \n<!-- /50-DataModelHeader -->\n    \n<!-- 60-ModelYaml -->\n    \n<details><summary><strong>full yaml details</strong></summary>      \n\n```yaml    \nDeviceMeasurement:      \n  description: Description of a generic measurement entity coming from a device or other data source.      \n  properties:      \n    address:      \n      description: The mailing address      \n      properties:      \n        addressCountry:      \n          description: 'The country. For example, Spain'      \n          type: string      \n          x-ngsi:      \n            model: https://schema.org/addressCountry      \n            type: Property      \n        addressLocality:      \n          description: 'The locality in which the street address is, and which is in the region'      \n          type: string      \n          x-ngsi:      \n            model: https://schema.org/addressLocality      \n            type: Property      \n        addressRegion:      \n          description: 'The region in which the locality is, and which is in the country'      \n          type: string      \n          x-ngsi:      \n            model: https://schema.org/addressRegion      \n            type: Property      \n        district:      \n          description: 'A district is a type of administrative division that, in some countries, is managed by the local government'      \n          type: string      \n          x-ngsi:      \n            type: Property      \n        postOfficeBoxNumber:      \n          description: 'The post office box number for PO box addresses. For example, 03578'      \n          type: string      \n          x-ngsi:      \n            model: https://schema.org/postOfficeBoxNumber      \n            type: Property      \n        postalCode:      \n          description: 'The postal code. For example, 24004'      \n          type: string      \n          x-ngsi:      \n            model: https://schema.org/https://schema.org/postalCode      \n            type: Property      \n        streetAddress:      \n          description: The street address      \n          type: string      \n          x-ngsi:      \n            model: https://schema.org/streetAddress      \n            type: Property      \n        streetNr:      \n          description: Number identifying a specific property on a public street      \n          type: string      \n          x-ngsi:      \n            type: Property      \n      type: object      \n      x-ngsi:      \n        model: https://schema.org/address      \n        type: Property      \n    alternateName:      \n      description: An alternative name for this item      \n      type: string      \n      x-ngsi:      \n        type: Property      \n    areaServed:      \n      description: The geographic area where a service or offered item is provided      \n      type: string      \n      x-ngsi:      \n        model: https://schema.org/Text      \n        type: Property      \n    controlledProperty:      \n      description: Property being measured by the device      \n      type: string      \n      x-ngsi:      \n        model: https://schema.org/Text      \n        type: Property      \n    dataProvider:      \n      description: A sequence of characters identifying the provider of the harmonised data entity      \n      type: string      \n      x-ngsi:      \n        type: Property      \n    dateCreated:      \n      description: Entity creation timestamp. This will usually be allocated by the storage platform      \n      format: date-time      \n      type: string      \n      x-ngsi:      \n        type: Property      \n    dateModified:      \n      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform      \n      format: date-time      \n      type: string      \n      x-ngsi:      \n        type: Property      \n    dateObserved:      \n      description: The date and time of this observation in ISO8601 UTC format      \n      format: date-time      \n      type: string      \n      x-ngsi:      \n        model: https://schema.org/Text      \n        type: Property      \n    description:      \n      description: A description of this item      \n      type: string      \n      x-ngsi:      \n        type: Property      \n    deviceType:      \n      description: Type of device taking the measurement      \n      type: string      \n      x-ngsi:      \n        model: https://schema.org/Text      \n        type: Property      \n    id:      \n      anyOf:      \n        - description: Identifier format of any NGSI entity      \n          maxLength: 256      \n          minLength: 1      \n          pattern: ^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$      \n          type: string      \n          x-ngsi:      \n            type: Property      \n        - description: Identifier format of any NGSI entity      \n          format: uri      \n          type: string      \n          x-ngsi:      \n            type: Property      \n      description: Unique identifier of the entity      \n      x-ngsi:      \n        type: Property      \n    location:      \n      description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'      \n      oneOf:      \n        - description: Geojson reference to the item. Point      \n          properties:      \n            bbox:      \n              items:      \n                type: number      \n              minItems: 4      \n              type: array      \n            coordinates:      \n              items:      \n                type: number      \n              minItems: 2      \n              type: array      \n            type:      \n              enum:      \n                - Point      \n              type: string      \n          required:      \n            - type      \n            - coordinates      \n          title: GeoJSON Point      \n          type: object      \n          x-ngsi:      \n            type: GeoProperty      \n        - description: Geojson reference to the item. LineString      \n          properties:      \n            bbox:      \n              items:      \n                type: number      \n              minItems: 4      \n              type: array      \n            coordinates:      \n              items:      \n                items:      \n                  type: number      \n                minItems: 2      \n                type: array      \n              minItems: 2      \n              type: array      \n            type:      \n              enum:      \n                - LineString      \n              type: string      \n          required:      \n            - type      \n            - coordinates      \n          title: GeoJSON LineString      \n          type: object      \n          x-ngsi:      \n            type: GeoProperty      \n        - description: Geojson reference to the item. Polygon      \n          properties:      \n            bbox:      \n              items:      \n                type: number      \n              minItems: 4      \n              type: array      \n            coordinates:      \n              items:      \n                items:      \n                  items:      \n                    type: number      \n                  minItems: 2      \n                  type: array      \n                minItems: 4      \n                type: array      \n              type: array      \n            type:      \n              enum:      \n                - Polygon      \n              type: string      \n          required:      \n            - type      \n            - coordinates      \n          title: GeoJSON Polygon      \n          type: object      \n          x-ngsi:      \n            type: GeoProperty      \n        - description: Geojson reference to the item. MultiPoint      \n          properties:      \n            bbox:      \n              items:      \n                type: number      \n              minItems: 4      \n              type: array      \n            coordinates:      \n              items:      \n                items:      \n                  type: number      \n                minItems: 2      \n                type: array      \n              type: array      \n            type:      \n              enum:      \n                - MultiPoint      \n              type: string      \n          required:      \n            - type      \n            - coordinates      \n          title: GeoJSON MultiPoint      \n          type: object      \n          x-ngsi:      \n            type: GeoProperty      \n        - description: Geojson reference to the item. MultiLineString      \n          properties:      \n            bbox:      \n              items:      \n                type: number      \n              minItems: 4      \n              type: array      \n            coordinates:      \n              items:      \n                items:      \n                  items:      \n                    type: number      \n                  minItems: 2      \n                  type: array      \n                minItems: 2      \n                type: array      \n              type: array      \n            type:      \n              enum:      \n                - MultiLineString      \n              type: string      \n          required:      \n            - type      \n            - coordinates      \n          title: GeoJSON MultiLineString      \n          type: object      \n          x-ngsi:      \n            type: GeoProperty      \n        - description: Geojson reference to the item. MultiLineString      \n          properties:      \n            bbox:      \n              items:      \n                type: number      \n              minItems: 4      \n              type: array      \n            coordinates:      \n              items:      \n                items:      \n                  items:      \n                    items:      \n                      type: number      \n                    minItems: 2      \n                    type: array      \n                  minItems: 4      \n                  type: array      \n                type: array      \n              type: array      \n            type:      \n              enum:      \n                - MultiPolygon      \n              type: string      \n          required:      \n            - type      \n            - coordinates      \n          title: GeoJSON MultiPolygon      \n          type: object      \n          x-ngsi:      \n            type: GeoProperty      \n      x-ngsi:      \n        type: GeoProperty      \n    measurementType:      \n      description: The type of measurement to be taken      \n      type: string      \n      x-ngsi:      \n        type: Property      \n    name:      \n      description: The name of this item      \n      type: string      \n      x-ngsi:      \n        type: Property      \n    numValue:      \n      description: Numerical value of the measurement      \n      type: number      \n      x-ngsi:      \n        model: https://schema.org/Number      \n        type: Property      \n    outlier:      \n      description: Value for marking the measurement to be specially processed      \n      type: boolean      \n      x-ngsi:      \n        model: https://schema.org/Boolean      \n        type: Property      \n    owner:      \n      description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)      \n      items:      \n        anyOf:      \n          - description: Identifier format of any NGSI entity      \n            maxLength: 256      \n            minLength: 1      \n            pattern: ^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$      \n            type: string      \n            x-ngsi:      \n              type: Property      \n          - description: Identifier format of any NGSI entity      \n            format: uri      \n            type: string      \n            x-ngsi:      \n              type: Property      \n        description: Unique identifier of the entity      \n        x-ngsi:      \n          type: Property      \n      type: array      \n      x-ngsi:      \n        type: Property      \n    refDevice:      \n      anyOf:      \n        - description: Identifier format of any NGSI entity      \n          maxLength: 256      \n          minLength: 1      \n          pattern: ^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$      \n          type: string      \n          x-ngsi:      \n            type: Property      \n        - description: Identifier format of any NGSI entity      \n          format: uri      \n          type: string      \n          x-ngsi:      \n            type: Property      \n      description: Device taking the measurement      \n      x-ngsi:      \n        type: Relationship      \n    seeAlso:      \n      description: list of uri pointing to additional resources about the item      \n      oneOf:      \n        - items:      \n            format: uri      \n            type: string      \n          minItems: 1      \n          type: array      \n        - format: uri      \n          type: string      \n      x-ngsi:      \n        type: Property      \n    source:      \n      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object'      \n      type: string      \n      x-ngsi:      \n        type: Property      \n    textValue:      \n      description: Textual value of the measurement      \n      type: string      \n      x-ngsi:      \n        model: https://schema.org/Text      \n        type: Property      \n    type:      \n      description: NGSI Entity type. It has to be Measurement      \n      enum:      \n        - DeviceMeasurement      \n      type: string      \n      x-ngsi:      \n        type: Property      \n    unit:      \n      description: 'Units of the measurement. In case of use of an acronym use units accepted in [CEFACT](https://www.unece.org/cefact.html) code'      \n      type: string      \n      x-ngsi:      \n        type: Property      \n  required:      \n    - id      \n    - type      \n  type: object      \n  x-derived-from: \"\"      \n  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'      \n  x-license-url: https://github.com/smart-data-models/dataModel.Device/blob/master/DeviceMeasurement/LICENSE.md      \n  x-model-schema: https://smart-data-models.github.io/dataModel.Device/DeviceMeasurement/schema.json      \n  x-model-tags: \"\"      \n  x-version: 0.1.0      \n```    \n</details>      \n<!-- /60-ModelYaml -->\n    \n<!-- 70-MiddleNotes -->\n    \n<!-- /70-MiddleNotes -->\n    \n<!-- 80-Examples -->\n    \n\n## Example payloads      \n\n#### DeviceMeasurement NGSI-v2 key-values Example      \n\nHere is an example of a DeviceMeasurement in JSON-LD format as key-values. This is compatible with NGSI-v2 when  using `options=keyValues` and returns the context data of an individual entity.    \n<details><summary><strong>show/hide example</strong></summary>      \n\n```json  \n\n{  \n  \"id\": \"urn:ngsi-ld:MEASUREMENT:id:PMZY:77452386\",  \n  \"dateCreated\": \"2021-09-03T07:33:18Z\",  \n  \"dateModified\": \"2021-09-03T07:33:18Z\",  \n  \"source\": \"Datacenter\",  \n  \"name\": \"Simple measurement\",  \n  \"alternateName\": \"\",  \n  \"description\": \"DAta center measurement values\",  \n  \"dataProvider\": \"\",  \n  \"owner\": [  \n    \"urn:ngsi-ld:MEASUREMENT:seeAlso:owner:00001\"  \n  ],  \n  \"seeAlso\": [  \n    \"urn:ngsi-ld:MEASUREMENT:seeAlso:ZMHH:32977\"  \n  ],  \n  \"location\": {  \n    \"type\": \"Point\",  \n    \"coordinates\": [  \n      60.170833,  \n      24.9375  \n    ]  \n  },  \n  \"address\": {  \n    \"streetAddress\": \"Pohjoisesplanadi 11-13 \",  \n    \"addressLocality\": \"Helsinki\",  \n    \"addressRegion\": \"Helsinki\",  \n    \"addressCountry\": \"Finland\",  \n    \"postalCode\": \"00099\",  \n    \"postOfficeBoxNumber\": \"1\"  \n  },  \n  \"areaServed\": \"Helsinki council\",  \n  \"type\": \"DeviceMeasurement\",  \n  \"numValue\": 55.2,  \n  \"textValue\": \"\",  \n  \"controlledProperty\": \"humidity\",  \n  \"refDevice\": \"urn:ngsi-ld:MEASUREMENT:refDevice:ZMHH:32871158\",  \n  \"deviceType\": \"sensor\",  \n  \"measurementType\": \"FillingLevelSensor\",  \n  \"dateObserved\": \"2021-09-03T07:33:18Z\",  \n  \"outlier\": true,  \n  \"unit\": \"UDT0000016\"  \n}  \n```  \n</details>    \n\n#### DeviceMeasurement NGSI-v2 normalized Example      \n\nHere is an example of a DeviceMeasurement in JSON-LD format as normalized. This is compatible with NGSI-v2 when not using options and returns the context data of an individual entity.    \n<details><summary><strong>show/hide example</strong></summary>      \n\n```json  \n\n{  \n  \"id\": \"urn:ngsi-ld:MEASUREMENT:id:PMZY:77452386\",  \n  \"type\": \"DeviceMeasurement\",  \n  \"dateCreated\": {  \n    \"type\": \"DateTime\",  \n    \"value\": \"2021-09-03T07:33:18Z\"  \n  },  \n  \"dateModified\": {  \n    \"type\": \"DateTime\",  \n    \"value\": \"2021-09-03T07:33:18Z\"  \n  },  \n  \"source\": {  \n    \"type\": \"Text\",  \n    \"value\": \"Datacenter\"  \n  },  \n  \"name\": {  \n    \"type\": \"Text\",  \n    \"value\": \"Simple measurement\"  \n  },  \n  \"alternateName\": {  \n    \"type\": \"Text\",  \n    \"value\": \"\"  \n  },  \n  \"description\": {  \n    \"type\": \"Text\",  \n    \"value\": \"DAta center measurement values\"  \n  },  \n  \"dataProvider\": {  \n    \"type\": \"Text\",  \n    \"value\": \"\"  \n  },  \n  \"owner\": {  \n    \"type\": \"StructuredValue\",  \n    \"value\": []  \n  },  \n  \"seeAlso\": {  \n    \"type\": \"StructuredValue\",  \n    \"value\": [  \n      \"urn:ngsi-ld:MEASUREMENT:seeAlso:ZMHH:32977\"  \n    ]  \n  },  \n  \"location\": {  \n    \"type\": \"geo:json\",  \n    \"value\": {  \n      \"type\": \"Point\",  \n      \"coordinates\": [  \n        60.170833,  \n        24.9375  \n      ]  \n    }  \n  },  \n  \"address\": {  \n    \"type\": \"StructuredValue\",  \n    \"value\": {  \n      \"streetAddress\": \"Pohjoisesplanadi 11-13 \",  \n      \"addressLocality\": \"Helsinki\",  \n      \"addressRegion\": \"Helsinki\",  \n      \"addressCountry\": \"Finland\",  \n      \"postalCode\": \"00099\",  \n      \"postOfficeBoxNumber\": \"1\"  \n    }  \n  },  \n  \"areaServed\": {  \n    \"type\": \"Text\",  \n    \"value\": \"Helsinki council\"  \n  },  \n  \"numValue\": {  \n    \"type\": \"Number\",  \n    \"value\": 55.2  \n  },  \n  \"textValue\": {  \n    \"type\": \"Text\",  \n    \"value\": \"\"  \n  },  \n  \"controlledProperty\": {  \n    \"type\": \"Text\",  \n    \"value\": \"humidity\"  \n  },  \n  \"refDevice\": {  \n    \"type\": \"Text\",  \n    \"value\": \"urn:ngsi-ld:MEASUREMENT:refDevice:ZMHH:32871158\"  \n  },  \n  \"deviceType\": {  \n    \"type\": \"Text\",  \n    \"value\": \"sensor\"  \n  },  \n  \"measurementType\": {  \n    \"type\": \"Text\",  \n    \"value\": \"FillingLevelSensor\"  \n  },  \n  \"dateObserved\": {  \n    \"type\": \"DateTime\",  \n    \"value\": \"2021-09-03T07:33:18Z\"  \n  },  \n  \"outlier\": {  \n    \"type\": \"Boolean\",  \n    \"value\": true  \n  },  \n  \"unit\": {  \n    \"type\": \"Text\",  \n    \"value\": \"UDT0000016\"  \n  }  \n}  \n```  \n</details>    \n\n#### DeviceMeasurement NGSI-LD key-values Example      \n\nHere is an example of a DeviceMeasurement in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.    \n<details><summary><strong>show/hide example</strong></summary>      \n\n```json  \n\n{  \n  \"id\": \"urn:ngsi-ld:MEASUREMENT:id:PMZY:77452386\",  \n  \"type\": \"DeviceMeasurement\",  \n  \"address\": {  \n    \"streetAddress\": \"Pohjoisesplanadi 11-13 \",  \n    \"addressLocality\": \"Helsinki\",  \n    \"addressRegion\": \"Helsinki\",  \n    \"addressCountry\": \"Finland\",  \n    \"postalCode\": \"00099\",  \n    \"postOfficeBoxNumber\": \"1\"  \n  },  \n  \"alternateName\": \"\",  \n  \"areaServed\": \"Helsinki council\",  \n  \"controlledProperty\": \"humidity\",  \n  \"dataProvider\": \"\",  \n  \"dateCreated\": \"2021-09-03T07:33:18Z\",  \n  \"dateModified\": \"2021-09-03T07:33:18Z\",  \n  \"dateObserved\": \"2021-09-03T07:33:18Z\",  \n  \"description\": \"DAta center measurement values\",  \n  \"deviceType\": \"sensor\",  \n  \"location\": {  \n    \"type\": \"Point\",  \n    \"coordinates\": [  \n      60.170833,  \n      24.9375  \n    ]  \n  },  \n  \"measurementType\": \"FillingLevelSensor\",  \n  \"name\": \"Simple measurement\",  \n  \"numValue\": 55.2,  \n  \"outlier\": true,  \n  \"refDevice\": \"urn:ngsi-ld:MEASUREMENT:refDevice:ZMHH:32871158\",  \n  \"owner\": [  \n    \"urn:ngsi-ld:MEASUREMENT:seeAlso:owner:00001\"  \n  ],  \n  \"seeAlso\": [  \n    \"urn:ngsi-ld:MEASUREMENT:seeAlso:ZMHH:32977\"  \n  ],  \n  \"source\": \"Datacenter\",  \n  \"textValue\": \"\",  \n  \"unit\": \"UDT0000016\",  \n  \"@context\": [  \n    \"https://raw.githubusercontent.com/smart-data-models/dataModel.Device/master/context.jsonld\"  \n  ]  \n}  \n```  \n</details>    \n\n#### DeviceMeasurement NGSI-LD normalized Example      \n\nHere is an example of a DeviceMeasurement in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.    \n<details><summary><strong>show/hide example</strong></summary>      \n\n```json  \n\n{  \n    \"id\": \"urn:ngsi-ld:MEASUREMENT:id:PMZY:77452386\",  \n    \"type\": \"DeviceMeasurement\",  \n    \"address\": {  \n        \"type\": \"Property\",  \n        \"value\": {  \n            \"streetAddress\": \"Pohjoisesplanadi 11-13 \",  \n            \"addressLocality\": \"Helsinki\",  \n            \"addressRegion\": \"Helsinki\",  \n            \"addressCountry\": \"Finland\",  \n            \"postalCode\": \"00099\",  \n            \"postOfficeBoxNumber\": \"1\"  \n        }  \n    },  \n    \"alternateName\": {  \n        \"type\": \"Property\",  \n        \"value\": \"\"  \n    },  \n    \"areaServed\": {  \n        \"type\": \"Property\",  \n        \"value\": \"Helsinki council\"  \n    },  \n    \"controlledProperty\": {  \n        \"type\": \"Property\",  \n        \"value\": \"humidity\"  \n    },  \n    \"dataProvider\": {  \n        \"type\": \"Property\",  \n        \"value\": \"\"  \n    },  \n    \"dateCreated\": {  \n        \"type\": \"Property\",  \n        \"value\": \"2021-09-03T07:33:18Z\"  \n    },  \n    \"dateModified\": {  \n        \"type\": \"Property\",  \n        \"value\": \"2021-09-03T07:33:18Z\"  \n    },  \n    \"dateObserved\": {  \n        \"type\": \"Property\",  \n        \"value\": \"2021-09-03T07:33:18Z\"  \n    },  \n    \"description\": {  \n        \"type\": \"Property\",  \n        \"value\": \"DAta center measurement values\"  \n    },  \n    \"deviceType\": {  \n        \"type\": \"Property\",  \n        \"value\": \"sensor\"  \n    },  \n    \"location\": {  \n        \"type\": \"Property\",  \n        \"value\": {  \n            \"type\": \"Point\",  \n            \"coordinates\": [  \n                60.170833,  \n                24.9375  \n            ]  \n        }  \n    },  \n    \"measurementType\": {  \n        \"type\": \"Property\",  \n        \"value\": \"FillingLevelSensor\"  \n    },  \n    \"name\": {  \n        \"type\": \"Property\",  \n        \"value\": \"Simple measurement\"  \n    },  \n    \"numValue\": {  \n        \"type\": \"Property\",  \n        \"value\": 55.2  \n    },  \n    \"outlier\": {  \n        \"type\": \"Property\",  \n        \"value\": true  \n    },  \n    \"owner\": {  \n        \"type\": \"Property\",  \n        \"value\": []  \n    },  \n    \"refDevice\": {  \n        \"type\": \"Property\",  \n        \"value\": \"urn:ngsi-ld:MEASUREMENT:refDevice:ZMHH:32871158\"  \n    },  \n    \"seeAlso\": {  \n        \"type\": \"Property\",  \n        \"value\": []  \n    },  \n    \"source\": {  \n        \"type\": \"Property\",  \n        \"value\": \"Datacenter\"  \n    },  \n    \"textValue\": {  \n        \"type\": \"Property\",  \n        \"value\": \"\"  \n    },  \n    \"unit\": {  \n        \"type\": \"Property\",  \n        \"value\": \"UDT0000016\"  \n    },  \n    \"@context\": [  \n        \"https://raw.githubusercontent.com/smart-data-models/dataModel.Device/master/context.jsonld\"  \n    ]  \n}  \n```  \n</details><!-- /80-Examples -->\n    \n<!-- 90-FooterNotes -->\n    \n<!-- /90-FooterNotes -->\n    \n<!-- 95-Units -->\n    \n\nSee [FAQ 10](https://smartdatamodels.org/index.php/faqs/) to get an answer on how to deal with magnitude units    \n<!-- /95-Units -->\n    \n<!-- 97-LastFooter -->\n    \n---    \n\n[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->\n    \nSource: https://github.com/smart-data-models/dataModel.Device/blob/master/DeviceMeasurement/doc/spec.md",
+        "x": 590,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "75b798a246a630de",
+        "type": "template",
+        "z": "6f835252e7b4d315",
+        "name": "DeviceMeasurement (Github)",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "[\n    {\n        \"id\": \"urn:ngsi-ld:MEASUREMENT:id:ASMM:{{{parsed.id}}}\",\n        \"type\": \"DeviceMeasurement\",\n        \"address\": {\n            \"type\": \"Property\",\n            \"value\": {\n                \"streetAddress\": \"Via Bruno Capponi, 100\",\n                \"addressLocality\": \"Terni\",\n                \"addressRegion\": \"Umbria\",\n                \"addressCountry\": \"Italy\",\n                \"postalCode\": \"05100\"\n            }\n        },\n        \"alternateName\": {\n            \"type\": \"Property\",\n            \"value\": \"\"\n        },\n        \"areaServed\": {\n            \"type\": \"Property\",\n            \"value\": \"Umbria region\"\n        },\n        \"controlledProperty\": {\n            \"type\": \"Property\",\n            \"value\": \"{{parsed.property}}\"\n        },\n        \"dataProvider\": {\n            \"type\": \"Property\",\n            \"value\": \"\"\n        },\n        \"dateCreated\": {\n            \"type\": \"Property\",\n            \"value\": \"{{payload.t}}\"\n        },\n        \"dateModified\": {\n            \"type\": \"Property\",\n            \"value\": \"{{payload.t}}\"\n        },\n        \"dateObserved\": {\n            \"type\": \"Property\",\n            \"value\": \"{{payload.t}}\"\n        },\n        \"description\": {\n            \"type\": \"Property\",\n            \"value\": \"HYPERRIDE Demo Measurement values\"\n        },\n        \"deviceType\": {\n            \"type\": \"Property\",\n            \"value\": \"sensor\"\n        },\n        \"location\": {\n            \"type\": \"Property\",\n            \"value\": {\n                \"type\": \"Point\",\n                \"coordinates\": [\n                    42.5576098,\n                    12.5283058\n                ]\n            }\n        },\n        \"measurementType\": {\n            \"type\": \"Property\",\n            \"value\": \"{{parsed.type}}\"\n        },\n        \"name\": {\n            \"type\": \"Property\",\n            \"value\": \"Simple measurement\"\n        },\n        \"numValue\": {\n            \"type\": \"Property\",\n            \"value\": {{payload.v}},\n            \"unitCode\": \"{{payload.u}}\"\n        },\n        \"outlier\": {\n            \"type\": \"Property\",\n            \"value\": true\n        },\n        \"owner\": {\n            \"type\": \"Property\",\n            \"value\": []\n        },\n        \"refDevice\": {\n            \"type\": \"Property\",\n            \"value\": \"urn:ngsi-ld:MEASUREMENT:refDevice:ASMD:{{{parsed.id}}}\"\n        },\n        \"seeAlso\": {\n            \"type\": \"Property\",\n            \"value\": []\n        },\n        \"source\": {\n            \"type\": \"Property\",\n            \"value\": \"ASM Terni S.p.a.\"\n        },\n        \"textValue\": {\n            \"type\": \"Property\",\n            \"value\": \"\"\n        },\n        \"unit\": {\n            \"type\": \"Property\",\n            \"value\": \"{{payload.u}}\"\n        },\n        \"@context\": [\n            \"https://raw.githubusercontent.com/smart-data-models/dataModel.Device/master/context.jsonld\"\n        ]\n    }\n]",
+        "output": "json",
+        "x": 460,
+        "y": 640,
+        "wires": [
+            []
+        ],
+        "icon": "node-red-contrib-fiware_official/fiware.png"
+    },
+    {
+        "id": "f7e06d012247718b",
+        "type": "template",
+        "z": "6f835252e7b4d315",
+        "name": "PowerSensor (ngsi-context.jsonld)",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "[{\n    \"id\": \"urn:ngsi-ld:{{parsed.type}}:{{{parsed.id}}}\",\n    \"type\": \"{{parsed.type}}\",\n    \"category\": {\n        \"type\": \"Property\",\n        \"value\": \"sensor\"\n    },\n    \"{{parsed.property}}\": {\n        \"type\": \"Property\",\n        \"value\": {{parsed.value}},\n        \"unitCode\": \"{{parsed.unit}}\"\n    },\n    \"timestamp\": {\n        \"type\": \"Property\",\n        \"value\": \"{{parsed.timestamp}}\"\n    },\n    \"location\": {\n        \"type\": \"GeoProperty\",\n        \"value\": {\n            \"type\": \"Point\",\n            \"coordinates\": [\n                42.5671574,\n                12.5352246\n            ]\n        }\n    },\n    \"@context\": [\n        \"http://context/data-models/ngsi-context.jsonld\"\n    ]\n}]",
+        "output": "json",
+        "x": 480,
+        "y": 680,
+        "wires": [
+            []
+        ],
+        "icon": "node-red-contrib-fiware_official/fiware.png"
+    },
+    {
+        "id": "afcbad6864eddf09",
+        "type": "template",
+        "z": "6f835252e7b4d315",
+        "g": "0d5fb5f33c555ea7",
+        "name": "ngsi-ld entity",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "[\n    {\n        \"id\": \"urn:ngsi-ld:MEASUREMENT:id:ASMM:{{{parsed.id}}}\",\n        \"type\": \"DeviceMeasurement\",\n        \"address\": {\n            \"type\": \"Property\",\n            \"value\": {\n                \"streetAddress\": \"Via Bruno Capponi, 100\",\n                \"addressLocality\": \"Terni\",\n                \"addressRegion\": \"Umbria\",\n                \"addressCountry\": \"Italy\",\n                \"postalCode\": \"05100\"\n            }\n        },\n        \"alternateName\": {\n            \"type\": \"Property\",\n            \"value\": \"\"\n        },\n        \"areaServed\": {\n            \"type\": \"Property\",\n            \"value\": \"Umbria region\"\n        },\n        \"controlledProperty\": {\n            \"type\": \"Property\",\n            \"value\": \"{{parsed.property}}\"\n        },\n        \"dataProvider\": {\n            \"type\": \"Property\",\n            \"value\": \"\"\n        },\n        \"dateCreated\": {\n            \"type\": \"Property\",\n            \"value\": \"{{payload.t}}\"\n        },\n        \"dateModified\": {\n            \"type\": \"Property\",\n            \"value\": \"{{payload.t}}\"\n        },\n        \"dateObserved\": {\n            \"type\": \"Property\",\n            \"value\": \"{{payload.t}}\"\n        },\n        \"description\": {\n            \"type\": \"Property\",\n            \"value\": \"HYPERRIDE Demo Measurement values\"\n        },\n        \"deviceType\": {\n            \"type\": \"Property\",\n            \"value\": \"sensor\"\n        },\n        \"location\": {\n            \"type\": \"Property\",\n            \"value\": {\n                \"type\": \"Point\",\n                \"coordinates\": [\n                    42.5576098,\n                    12.5283058\n                ]\n            }\n        },\n        \"measurementType\": {\n            \"type\": \"Property\",\n            \"value\": \"{{parsed.type}}\"\n        },\n        \"name\": {\n            \"type\": \"Property\",\n            \"value\": \"Simple measurement\"\n        },\n        \"numValue\": {\n            \"type\": \"Property\",\n            \"value\": {{payload.v}},\n            \"unitCode\": \"{{payload.u}}\"\n        },\n        \"outlier\": {\n            \"type\": \"Property\",\n            \"value\": true\n        },\n        \"owner\": {\n            \"type\": \"Property\",\n            \"value\": []\n        },\n        \"refDevice\": {\n            \"type\": \"Property\",\n            \"value\": \"urn:ngsi-ld:MEASUREMENT:refDevice:ASMD:{{{parsed.id}}}\"\n        },\n        \"seeAlso\": {\n            \"type\": \"Property\",\n            \"value\": []\n        },\n        \"source\": {\n            \"type\": \"Property\",\n            \"value\": \"ASM Terni S.p.a.\"\n        },\n        \"textValue\": {\n            \"type\": \"Property\",\n            \"value\": \"\"\n        },\n        \"unit\": {\n            \"type\": \"Property\",\n            \"value\": \"{{payload.u}}\"\n        },\n        \"@context\": [\n            \"http://context/data-models/context.jsonld\"\n        ]\n    }\n]",
+        "output": "json",
+        "x": 410,
+        "y": 340,
+        "wires": [
+            [
+                "2c8d70aa911db94f"
+            ]
+        ]
+    },
+    {
+        "id": "7805af5c6caf2c9c",
+        "type": "change",
+        "z": "6f835252e7b4d315",
+        "name": "ngsi-ld entity",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "[{\t    \"id\": \"urn:ngsi-ld:MEASUREMENT:id:ASMM:\" & parsed.id,\t    \"type\": \"DeviceMeasurement\",\t    \"address\": {\t        \"type\": \"Property\",\t        \"value\": {\t            \"streetAddress\": \"Via Bruno Capponi, 100\",\t            \"addressLocality\": \"Terni\",\t            \"addressRegion\": \"Umbria\",\t            \"addressCountry\": \"Italy\",\t            \"postalCode\": \"05100\"\t        }\t    },\t    \"alternateName\": {\t        \"type\": \"Property\",\t        \"value\": \"\"\t    },\t    \"areaServed\": {\t        \"type\": \"Property\",\t        \"value\": \"Umbria region\"\t    },\t    \"controlledProperty\": {\t        \"type\": \"Property\",\t        \"value\": parsed.property\t    },\t    \"dataProvider\": {\t        \"type\": \"Property\",\t        \"value\": \"\"\t    },\t    \"dateCreated\": {\t        \"type\": \"Property\",\t        \"value\": \"2024-04-22T22:43:00.000Z\"\t    },\t    \"dateModified\": {\t        \"type\": \"Property\",\t        \"value\": $now()\t    },\t    \"dateObserved\": {\t        \"type\": \"Property\",\t        \"value\": parsed.timestamp\t    },\t    \"description\": {\t        \"type\": \"Property\",\t        \"value\": \"HYPERRIDE Demo Measurement values\"\t    },\t    \"deviceType\": {\t        \"type\": \"Property\",\t        \"value\": \"sensor\"\t    },\t    \"location\": {\t        \"type\": \"Property\",\t        \"value\": {\t            \"type\": \"Point\",\t            \"coordinates\": [\t                42.5576098,\t                12.5283058\t            ]\t        }  \t    },\t    \"measurementType\": {\t        \"type\": \"Property\",\t        \"value\": $uppercase($substring(parsed.property, 0, 1)) & $substring(parsed.property, 1) & \"Sensor\"\t    },\t    \"name\": {\t        \"type\": \"Property\",\t        \"value\": \"Simple measurement\"\t    },\t    \"numValue\": {\t        \"type\": \"Property\",\t        \"value\": parsed.value,\t        \"unitCode\": parsed.unit\t    },\t    \"outlier\": {\t        \"type\": \"Property\",\t        \"value\": true   \t    },\t    \"owner\": {\t        \"type\": \"Property\",\t        \"value\": []\t    },\t    \"refDevice\": {\t        \"type\": \"Property\",\t        \"value\": \"urn:ngsi-ld:MEASUREMENT:refDevice:ASMD:\" & parsed.id\t    },\t    \"seeAlso\": {\t        \"type\": \"Property\",\t        \"value\": []\t    },\t    \"source\": {\t        \"type\": \"Property\",\t        \"value\": \"ASM Terni S.p.a.\"\t    },\t    \"textValue\": {\t        \"type\": \"Property\",\t        \"value\": \"\" \t    },\t    \"unit\": {\t        \"type\": \"Property\",\t        \"value\": parsed.unit\t    },\t    \"@context\": [\t        \"http://context/data-models/context.jsonld\"\t    ]\t}]",
                 "tot": "jsonata"
             }
         ],
@@ -2305,109 +4112,10 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 600,
-        "y": 220,
+        "x": 410,
+        "y": 600,
         "wires": [
             []
-        ]
-    },
-    {
-        "id": "14eef96d0a4ec9e5",
-        "type": "delay",
-        "z": "6f835252e7b4d315",
-        "name": "",
-        "pauseType": "delay",
-        "timeout": "1",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 100,
-        "y": 100,
-        "wires": [
-            [
-                "1b4e862f77129f5e"
-            ]
-        ]
-    },
-    {
-        "id": "fb29fcc01fd1189b",
-        "type": "smooth",
-        "z": "6f835252e7b4d315",
-        "name": "",
-        "property": "payload.temperature",
-        "action": "mean",
-        "count": "10",
-        "round": "2",
-        "mult": "multi",
-        "reduce": false,
-        "x": 260,
-        "y": 40,
-        "wires": [
-            [
-                "f5c08273a70e81fe"
-            ]
-        ]
-    },
-    {
-        "id": "f5c08273a70e81fe",
-        "type": "mqtt out",
-        "z": "6f835252e7b4d315",
-        "name": "",
-        "topic": "/iot/TemperatureSensor/001",
-        "qos": "",
-        "retain": "",
-        "respTopic": "",
-        "contentType": "",
-        "userProps": "",
-        "correl": "",
-        "expiry": "",
-        "broker": "f222d0362c3de7e8",
-        "x": 560,
-        "y": 40,
-        "wires": []
-    },
-    {
-        "id": "5046210129b7d4a1",
-        "type": "mqtt out",
-        "z": "6f835252e7b4d315",
-        "name": "",
-        "topic": "/iot/TemperatureSensor/002",
-        "qos": "",
-        "retain": "",
-        "respTopic": "",
-        "contentType": "",
-        "userProps": "",
-        "correl": "",
-        "expiry": "",
-        "broker": "f222d0362c3de7e8",
-        "x": 560,
-        "y": 100,
-        "wires": []
-    },
-    {
-        "id": "1b4e862f77129f5e",
-        "type": "smooth",
-        "z": "6f835252e7b4d315",
-        "name": "",
-        "property": "payload.temperature",
-        "action": "mean",
-        "count": "10",
-        "round": "2",
-        "mult": "multi",
-        "reduce": false,
-        "x": 260,
-        "y": 100,
-        "wires": [
-            [
-                "5046210129b7d4a1"
-            ]
         ]
     },
     {
@@ -3974,7 +5682,7 @@
         "onceDelay": 0.1,
         "topic": "",
         "x": 140,
-        "y": 120,
+        "y": 140,
         "wires": [
             [
                 "93d670671aaa966f"
@@ -5097,7 +6805,7 @@
         "type": "comment",
         "z": "c8f2025cc62d5c75",
         "name": "NOTE",
-        "info": "The use of the options parameter for specifying attribute representation is deprecated. The goal\nis to avoid that the same parameter is used for different purposes. The preferred option for\nspecifying the attribute representation now is the format parameter.\n\nNGSI-LD v1.8.1\nhttps://docbox.etsi.org/isg/cim/open/NGSI-LD_API_v1.8.1-New_Features_and_Changes.pdf\n\nSupport for the new URL parameter \"format\" for output formats (normalized, concise, simplified).\n\nOrion-LD v1.6.0\nhttps://github.com/FIWARE/context.Orion-LD/releases/tag/1.6.0\n",
+        "info": "The use of the `options` parameter for specifying attribute representation is deprecated. The goal\nis to avoid that the same parameter is used for different purposes. The preferred option for\nspecifying the attribute representation now is the `format` parameter. [...]\n\nFor operations regarding regular Entities, the following format values can be used:\n• `normalized`: a normalized representation of Entities [...]\n• `concise`: a concise lossless representation of Entities [...]\nIn this case, the Context Broker will return data in the most\nconcise lossless representation possible, for example removing all Attribute `type` members.\n• `simplified` (or its synonym `keyValues`): a simplified representation of Entities [...]\nIf the Accept Header is set to \"application/geo+json“ the response will be in simplified\ngeoJSON format [...]\n\nNGSI-LD v1.8.1\nhttps://docbox.etsi.org/isg/cim/open/NGSI-LD_API_v1.8.1-New_Features_and_Changes.pdf\n\nSupport for the new URL parameter \"format\" for output formats (normalized, concise, simplified).\n\nOrion-LD v1.6.0\nhttps://github.com/FIWARE/context.Orion-LD/releases/tag/1.6.0\n",
         "x": 150,
         "y": 740,
         "wires": []
@@ -5121,7 +6829,7 @@
         "onceDelay": 0.1,
         "topic": "",
         "x": 140,
-        "y": 200,
+        "y": 180,
         "wires": [
             [
                 "93d670671aaa966f"
@@ -5147,7 +6855,7 @@
         "onceDelay": 0.1,
         "topic": "",
         "x": 150,
-        "y": 160,
+        "y": 100,
         "wires": [
             [
                 "93d670671aaa966f"
@@ -5314,7 +7022,7 @@
         "type": "debug",
         "z": "c8f2025cc62d5c75",
         "name": "flow.link",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": true,
@@ -5331,7 +7039,7 @@
         "type": "debug",
         "z": "c8f2025cc62d5c75",
         "name": "flow.context",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": true,
@@ -5963,6 +7671,84 @@
         ],
         "icon": "node-red-contrib-fiware_official/fiware.png",
         "l": false
+    },
+    {
+        "id": "5aa250aa721338da",
+        "type": "inject",
+        "z": "c8f2025cc62d5c75",
+        "g": "51b60370548eeedb",
+        "name": "dataModel.Device @context",
+        "props": [
+            {
+                "p": "context",
+                "v": "https://raw.githubusercontent.com/smart-data-models/dataModel.Device/master/context.jsonld",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 200,
+        "y": 200,
+        "wires": [
+            [
+                "93d670671aaa966f"
+            ]
+        ]
+    },
+    {
+        "id": "068546c2eaea02e2",
+        "type": "inject",
+        "z": "c8f2025cc62d5c75",
+        "g": "51b60370548eeedb",
+        "name": "Smart Data Models @context",
+        "props": [
+            {
+                "p": "context",
+                "v": "https://smartdatamodels.org/context.jsonld",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 220,
+        "y": 220,
+        "wires": [
+            [
+                "93d670671aaa966f"
+            ]
+        ]
+    },
+    {
+        "id": "853358f3fa709f83",
+        "type": "inject",
+        "z": "c8f2025cc62d5c75",
+        "g": "51b60370548eeedb",
+        "name": "Docker @context",
+        "props": [
+            {
+                "p": "context",
+                "v": "http://context/data-models/context.jsonld",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 170,
+        "y": 120,
+        "wires": [
+            [
+                "93d670671aaa966f"
+            ]
+        ]
     },
     {
         "id": "479aa658f42faf0f",
@@ -25407,7 +27193,7 @@
         "type": "comment",
         "z": "8769aeb719e4f5f1",
         "name": "poev9.swagger@libero.it",
-        "info": "emergency recovery codes\nZZFXK5MQUM (used)\n55BJT6H92E (used)\nDUYVDBYZAR\nYRDHUW6ZTB\nXX3E9U29GR\nH9X3VDK4SQ\nPK5MBWMJWZ\nPMNUC3Q77H\nE9AT7ZMR83\nMWKK9H5NN7",
+        "info": "emergency recovery codes\nZZFXK5MQUM (used)\n55BJT6H92E (used)\nDUYVDBYZAR\nYRDHUW6ZTB\nXX3E9U29GR\nH9X3VDK4SQ\nPK5MBWMJWZ\nPMNUC3Q77H\nE9AT7ZMR83\nMWKK9H5NN7\n\nFrom [Support @ ngrok](mailto://support@ngrok.com)\nThe codes are canceled once used, but once you log in, you can regenerate your MFA codes. You can do this here: https://dashboard.ngrok.com/user/settings under the MFA section. This is what I'd recommend to start. If you run into any issues, our next option is to disable MFA. As soon as you are logged in, you can re-enable in the same section of your user settings.",
         "x": 530,
         "y": 900,
         "wires": []

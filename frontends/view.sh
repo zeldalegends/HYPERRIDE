@@ -11,7 +11,7 @@ docker run -d --rm \
     -e ME_CONFIG_BASICAUTH=false \
     -e ME_CONFIG_SITE_BASEURL=/mongoadmin \
     -e ME_CONFIG_MONGODB_SERVER=mongo-db \
-    mongo-express:latest
+    mongo-express
 #   mongo-express:1.0.2
 
 # Ngrok for Mongo Express (asmterni@proton.me)
@@ -33,5 +33,5 @@ docker run -it --rm \
     -e NGROK_CONFIG=/etc/ngrok.yml \
     -v $(pwd)/ngrok.yml:/etc/ngrok.yml \
     --health-cmd="exec 3<>/dev/tcp/127.0.0.1/4040; echo -e 'GET /inspect/http HTTP/1.1\r\nHost: localhost\r\nConnection: close\r\n\r\n' >&3; cat <&3 | grep 'HTTP/1.1 200 OK'" \
-    ngrok/ngrok:latest start --all
+    ngrok/ngrok start --all
 #   ngrok/ngrok:3.19.0-debian start --all
