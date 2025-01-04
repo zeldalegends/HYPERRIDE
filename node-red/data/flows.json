@@ -1848,7 +1848,7 @@
         "type": "inject",
         "z": "6f835252e7b4d315",
         "g": "f246a18ed1e7d299",
-        "name": "1m",
+        "name": "1 min",
         "props": [
             {
                 "p": "orion",
@@ -2016,7 +2016,7 @@
         "z": "6f835252e7b4d315",
         "g": "f246a18ed1e7d299",
         "name": "ver",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": true,
@@ -3163,7 +3163,7 @@
         "type": "inject",
         "z": "6f835252e7b4d315",
         "g": "8c7bd0a57fe08f37",
-        "name": "1s",
+        "name": "1 sec",
         "props": [
             {
                 "p": "payload"
@@ -3193,7 +3193,7 @@
         "type": "inject",
         "z": "6f835252e7b4d315",
         "g": "8c7bd0a57fe08f37",
-        "name": "1s",
+        "name": "1 sec",
         "props": [
             {
                 "p": "payload"
@@ -3636,8 +3636,8 @@
         "props": [],
         "repeat": "",
         "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
+        "once": true,
+        "onceDelay": "60",
         "topic": "",
         "x": 795,
         "y": 60,
@@ -3781,8 +3781,8 @@
         "props": [],
         "repeat": "",
         "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
+        "once": true,
+        "onceDelay": "60",
         "topic": "",
         "x": 795,
         "y": 140,
@@ -3927,10 +3927,10 @@
         "z": "6f835252e7b4d315",
         "group": "1a4cb0419a6cf9d9",
         "order": 1,
-        "width": 0,
-        "height": 0,
+        "width": "5",
+        "height": "1",
         "name": "",
-        "label": "Powered by HYPERRIDE ICT Platform, Alerox (ENG), 2024",
+        "label": "Powered by HYPERRIDE ICT Platform, Alerox (ENG) 2024",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "style": false,
@@ -4116,6 +4116,310 @@
         "y": 600,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "3d7528ea4c8d7877",
+        "type": "inject",
+        "z": "6f835252e7b4d315",
+        "name": "10 sec",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "10",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 840,
+        "y": 700,
+        "wires": [
+            [
+                "f8f2eab73bde9a04"
+            ]
+        ]
+    },
+    {
+        "id": "f8f2eab73bde9a04",
+        "type": "http request",
+        "z": "6f835252e7b4d315",
+        "name": "GET keycloak /health",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://keycloak:9000/health",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1040,
+        "y": 700,
+        "wires": [
+            [
+                "d6c5ea750f28b73b"
+            ]
+        ]
+    },
+    {
+        "id": "4ab199e28a16f0d3",
+        "type": "ui-gauge",
+        "z": "6f835252e7b4d315",
+        "name": "",
+        "group": "1a4cb0419a6cf9d9",
+        "order": 2,
+        "width": "1",
+        "height": "1",
+        "gtype": "gauge-tile",
+        "gstyle": "needle",
+        "title": "IdM",
+        "units": "units",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#ea5353"
+            },
+            {
+                "from": "1",
+                "color": "#5cd65c"
+            }
+        ],
+        "min": 0,
+        "max": "1",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 1330,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "d6c5ea750f28b73b",
+        "type": "change",
+        "z": "6f835252e7b4d315",
+        "name": "UP ?",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.status = \"UP\"",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1210,
+        "y": 700,
+        "wires": [
+            [
+                "4ab199e28a16f0d3"
+            ]
+        ]
+    },
+    {
+        "id": "1b1e7d53da9ce06b",
+        "type": "debug",
+        "z": "a14fa814.88a288",
+        "name": "/health",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "statusCode",
+        "statusType": "msg",
+        "x": 570,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "d7c185c3bddcbf9b",
+        "type": "http request",
+        "z": "a14fa814.88a288",
+        "name": "GET keycloak /health",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://keycloak:9000/health",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 340,
+        "y": 20,
+        "wires": [
+            [
+                "1b1e7d53da9ce06b"
+            ]
+        ]
+    },
+    {
+        "id": "47091195f5e85f5a",
+        "type": "debug",
+        "z": "a14fa814.88a288",
+        "name": "/health/ready",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "statusCode",
+        "statusType": "msg",
+        "x": 590,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "b5d30854a3e62b5b",
+        "type": "http request",
+        "z": "a14fa814.88a288",
+        "name": "GET keycloak /health/ready",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://keycloak:9000/health/ready",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 360,
+        "y": 80,
+        "wires": [
+            [
+                "47091195f5e85f5a"
+            ]
+        ]
+    },
+    {
+        "id": "04044f96537f1427",
+        "type": "debug",
+        "z": "a14fa814.88a288",
+        "name": "/health/live",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "statusCode",
+        "statusType": "msg",
+        "x": 590,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "6626d6ee9ec49c78",
+        "type": "http request",
+        "z": "a14fa814.88a288",
+        "name": "GET keycloak /health/live",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://keycloak:9000/health/live",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 350,
+        "y": 140,
+        "wires": [
+            [
+                "04044f96537f1427"
+            ]
+        ]
+    },
+    {
+        "id": "a8666350d8f37f55",
+        "type": "debug",
+        "z": "a14fa814.88a288",
+        "name": "/health/started",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "statusCode",
+        "statusType": "msg",
+        "x": 600,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "38e20d569a3aa929",
+        "type": "http request",
+        "z": "a14fa814.88a288",
+        "name": "GET keycloak /health/started",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://keycloak:9000/health/started",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 360,
+        "y": 200,
+        "wires": [
+            [
+                "a8666350d8f37f55"
+            ]
+        ]
+    },
+    {
+        "id": "78139ca4a98b2fa9",
+        "type": "inject",
+        "z": "a14fa814.88a288",
+        "name": "",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 90,
+        "y": 80,
+        "wires": [
+            [
+                "d7c185c3bddcbf9b",
+                "b5d30854a3e62b5b",
+                "6626d6ee9ec49c78",
+                "38e20d569a3aa929"
+            ]
         ]
     },
     {
