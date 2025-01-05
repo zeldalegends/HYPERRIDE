@@ -584,18 +584,16 @@
             "95e1d540c51f3e01",
             "44bb71b072ec4e6a",
             "a1b0ba52dfc9acca",
-            "19229f4f9fe524f0",
             "36f497cf845cddc2",
             "7b31ebd771b8af6a",
-            "ab68b716b01f1233",
             "25b886d2a1e67415",
-            "ff9ddc0fb35bfb93",
-            "33da96e3f70ba897",
-            "6f54a385c73aef36",
-            "34f104caa1ce62ef",
             "f68193e4e46be8c6",
             "d127066a1b1a386d",
-            "d28eca0359d4e56b"
+            "9e5f95402e34f71e",
+            "0370af94a7bee82c",
+            "23b62d4913c6ff58",
+            "343fe759f6025234",
+            "8d9de5f15e0ad065"
         ],
         "x": 14,
         "y": 19,
@@ -612,17 +610,20 @@
             "label": true
         },
         "nodes": [
-            "3a96ca34630c6b76",
-            "41318855509fd9a7",
-            "f32ac4d495fbe1e9",
-            "c879cd0cb351a9a9",
+            "ed9f980ea73dba6b",
+            "304d9362abdacb44",
+            "efea555006cdd5ba",
+            "a2647295787624b8",
             "fe789db91657c03b",
-            "bac6d1cc4f6633fe"
+            "d5bb83627813150f",
+            "0460e309b8890873",
+            "f4f6adb6fbfdcdf2",
+            "5821d6fbd9a1eabc"
         ],
         "x": 1034,
-        "y": 319,
+        "y": 259,
         "w": 972,
-        "h": 82
+        "h": 142
     },
     {
         "id": "0d190ad7cc168747",
@@ -634,37 +635,24 @@
             "label": true
         },
         "nodes": [
-            "35e6e21bf9451fb5",
-            "9c87ca4e32caa8f3",
-            "b9763c1868c97fd1",
-            "a759aa4f17d90966",
-            "663a453f364e5817",
-            "a410b477991c3036",
-            "0a66835cb09d1c40",
-            "bc39baa9f70c4a76",
             "b8d8e199f11dc642",
             "7321916466810f15",
-            "f174df1be7e55d1c",
             "9e081de8aef532aa",
             "ccedb0c78ae4e5f1",
             "d20f9304c97fa82e",
-            "21a0cdc1a5c9cefb",
             "16e47977110f58aa",
             "43b7aadd9acf57c2",
             "9dcbab274605cf05",
             "63637c0445e2e51d",
             "2767beab154c1e0e",
-            "51543a1af3debeac",
-            "5d96d5513aacc2e4",
-            "c8c8ec46d03b70bf",
-            "5af4252051e69ea3",
-            "b3a9763bd84b2865",
-            "aebb7ec3dbb69af5"
+            "771aad96490e8e8a",
+            "0bf68b73b9a492d3",
+            "f174df1be7e55d1c"
         ],
         "x": 1034,
         "y": 19,
         "w": 972,
-        "h": 302
+        "h": 242
     },
     {
         "id": "21642ec360f31979",
@@ -2016,7 +2004,7 @@
         "z": "6f835252e7b4d315",
         "g": "f246a18ed1e7d299",
         "name": "ver",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": true,
@@ -4249,7 +4237,7 @@
         "targetType": "msg",
         "statusVal": "statusCode",
         "statusType": "msg",
-        "x": 570,
+        "x": 530,
         "y": 20,
         "wires": []
     },
@@ -4269,7 +4257,7 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 340,
+        "x": 280,
         "y": 20,
         "wires": [
             [
@@ -4290,7 +4278,7 @@
         "targetType": "msg",
         "statusVal": "statusCode",
         "statusType": "msg",
-        "x": 590,
+        "x": 550,
         "y": 80,
         "wires": []
     },
@@ -4310,7 +4298,7 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 360,
+        "x": 300,
         "y": 80,
         "wires": [
             [
@@ -4331,7 +4319,7 @@
         "targetType": "msg",
         "statusVal": "statusCode",
         "statusType": "msg",
-        "x": 590,
+        "x": 550,
         "y": 140,
         "wires": []
     },
@@ -4351,7 +4339,7 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 350,
+        "x": 290,
         "y": 140,
         "wires": [
             [
@@ -4372,7 +4360,7 @@
         "targetType": "msg",
         "statusVal": "statusCode",
         "statusType": "msg",
-        "x": 600,
+        "x": 560,
         "y": 200,
         "wires": []
     },
@@ -4392,7 +4380,7 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 360,
+        "x": 300,
         "y": 200,
         "wires": [
             [
@@ -4411,16 +4399,101 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "x": 90,
-        "y": 80,
+        "x": 55,
+        "y": 200,
         "wires": [
             [
                 "d7c185c3bddcbf9b",
                 "b5d30854a3e62b5b",
                 "6626d6ee9ec49c78",
-                "38e20d569a3aa929"
+                "38e20d569a3aa929",
+                "b4f9ca527674f574",
+                "c063a5872ea27fac"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "b4f9ca527674f574",
+        "type": "http request",
+        "z": "a14fa814.88a288",
+        "name": "GET keycloak /openid-configuration",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://keycloak:8080/realms/dedalus/.well-known/openid-configuration",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 320,
+        "y": 320,
+        "wires": [
+            [
+                "be46b8cecaeb33c3"
             ]
         ]
+    },
+    {
+        "id": "be46b8cecaeb33c3",
+        "type": "debug",
+        "z": "a14fa814.88a288",
+        "name": "/openid-configuration",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "msg",
+        "x": 580,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "c063a5872ea27fac",
+        "type": "http request",
+        "z": "a14fa814.88a288",
+        "name": "GET keycloak /realms/{realm}",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://keycloak:8080/realms/dedalus",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 310,
+        "y": 260,
+        "wires": [
+            [
+                "3e3afb76fd98716a"
+            ]
+        ]
+    },
+    {
+        "id": "3e3afb76fd98716a",
+        "type": "debug",
+        "z": "a14fa814.88a288",
+        "name": "/realms/{realm}",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload.realm",
+        "statusType": "msg",
+        "x": 560,
+        "y": 260,
+        "wires": []
     },
     {
         "id": "183b331947680411",
@@ -8059,7 +8132,7 @@
         "type": "http request",
         "z": "012382d57316093c",
         "g": "d6241867f1b746eb",
-        "name": "GET /version (v2)",
+        "name": "GET /version",
         "method": "GET",
         "ret": "obj",
         "paytoqs": "ignore",
@@ -8078,7 +8151,7 @@
                 "valueValue": "payload.access_token"
             }
         ],
-        "x": 570,
+        "x": 530,
         "y": 300,
         "wires": [
             [
@@ -8109,11 +8182,11 @@
         "type": "http request",
         "z": "012382d57316093c",
         "g": "d6241867f1b746eb",
-        "name": "POST /oauth2/token",
+        "name": "POST keycloak /token",
         "method": "POST",
         "ret": "obj",
         "paytoqs": "ignore",
-        "url": "{{{keyrock}}}/oauth2/token",
+        "url": "{{{keycloak}}}/realms/dedalus/protocol/openid-connect/token",
         "tls": "",
         "persist": false,
         "proxy": "",
@@ -8121,12 +8194,6 @@
         "authType": "",
         "senderr": false,
         "headers": [
-            {
-                "keyType": "Authorization",
-                "keyValue": "",
-                "valueType": "msg",
-                "valueValue": "authorization"
-            },
             {
                 "keyType": "Content-Type",
                 "keyValue": "",
@@ -8139,7 +8206,11 @@
         "wires": [
             [
                 "36f497cf845cddc2",
-                "7b31ebd771b8af6a"
+                "7b31ebd771b8af6a",
+                "a1b0ba52dfc9acca",
+                "518e16e1d77b25fa",
+                "d3b1255e1281fd8b",
+                "db58ff308da974cb"
             ]
         ]
     },
@@ -8148,16 +8219,16 @@
         "type": "debug",
         "z": "012382d57316093c",
         "g": "d6241867f1b746eb",
-        "name": "auth & cont-type headers",
+        "name": "content-type header",
         "active": false,
         "tosidebar": true,
         "console": false,
-        "tostatus": true,
+        "tostatus": false,
         "complete": "true",
         "targetType": "full",
-        "statusVal": "\"Basic \" & clientCredentials",
-        "statusType": "jsonata",
-        "x": 210,
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 200,
         "y": 180,
         "wires": []
     },
@@ -8166,11 +8237,11 @@
         "type": "http request",
         "z": "012382d57316093c",
         "g": "d6241867f1b746eb",
-        "name": "GET /version (IdM)",
+        "name": "GET keycloak /realms/{realm}",
         "method": "GET",
         "ret": "obj",
         "paytoqs": "ignore",
-        "url": "{{{keyrock}}}/version",
+        "url": "{{{keycloak}}}/realms/dedalus",
         "tls": "",
         "persist": false,
         "proxy": "",
@@ -8179,13 +8250,13 @@
         "senderr": false,
         "headers": [
             {
-                "keyType": "other",
-                "keyValue": "X-Auth-Token",
+                "keyType": "Authorization",
+                "keyValue": "",
                 "valueType": "msg",
-                "valueValue": "payload.access_token"
+                "valueValue": "bearer"
             }
         ],
-        "x": 570,
+        "x": 590,
         "y": 240,
         "wires": [
             [
@@ -8198,15 +8269,15 @@
         "type": "debug",
         "z": "012382d57316093c",
         "g": "d6241867f1b746eb",
-        "name": "keyrock version",
+        "name": "keycloak realm",
         "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": true,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "payload.keyrock.version",
-        "statusType": "msg",
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "statusCode & \" - \" & payload.realm",
+        "statusType": "jsonata",
         "x": 820,
         "y": 240,
         "wires": []
@@ -8216,15 +8287,8 @@
         "type": "change",
         "z": "012382d57316093c",
         "g": "d6241867f1b746eb",
-        "name": "auth & cont-type headers",
+        "name": "content-type header",
         "rules": [
-            {
-                "t": "set",
-                "p": "authorization",
-                "pt": "msg",
-                "to": "\"Basic \" & clientCredentials",
-                "tot": "jsonata"
-            },
             {
                 "t": "set",
                 "p": "content-type",
@@ -8238,7 +8302,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 210,
+        "x": 200,
         "y": 180,
         "wires": [
             [
@@ -8256,7 +8320,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "grant_type=password&username={{{username}}}&password={{{password}}}",
+        "template": "grant_type=password&username={{{username}}}&password={{{password}}}&client_id={{{client_id}}}&client_secret={{{client_secret}}}",
         "output": "str",
         "x": 390,
         "y": 180,
@@ -8276,7 +8340,7 @@
         "tosidebar": true,
         "console": false,
         "tostatus": true,
-        "complete": "clientId",
+        "complete": "client_id",
         "targetType": "msg",
         "statusVal": "clientId",
         "statusType": "auto",
@@ -8294,7 +8358,7 @@
         "tosidebar": true,
         "console": false,
         "tostatus": true,
-        "complete": "clientSecret",
+        "complete": "client_secret",
         "targetType": "msg",
         "statusVal": "clientId",
         "statusType": "auto",
@@ -11635,413 +11699,15 @@
         "wires": []
     },
     {
-        "id": "3a96ca34630c6b76",
-        "type": "debug",
-        "z": "012382d57316093c",
-        "g": "c8609bec9ca8c92e",
-        "name": "x-subject-token",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": true,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "headers[\"x-subject-token\"]",
-        "statusType": "msg",
-        "x": 1520,
-        "y": 360,
-        "wires": []
-    },
-    {
-        "id": "fe789db91657c03b",
-        "type": "inject",
-        "z": "012382d57316093c",
-        "g": "c8609bec9ca8c92e",
-        "name": "user info",
-        "props": [
-            {
-                "p": "keyrock",
-                "v": "keyrock",
-                "vt": "flow"
-            },
-            {
-                "p": "username",
-                "v": "username",
-                "vt": "flow"
-            },
-            {
-                "p": "password",
-                "v": "password",
-                "vt": "flow"
-            },
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "{ \"name\": username, \"password\": password }",
-        "payloadType": "jsonata",
-        "x": 1140,
-        "y": 360,
-        "wires": [
-            [
-                "bac6d1cc4f6633fe"
-            ]
-        ]
-    },
-    {
-        "id": "41318855509fd9a7",
-        "type": "http request",
-        "z": "012382d57316093c",
-        "g": "c8609bec9ca8c92e",
-        "name": "GET /v1/auth/tokens",
-        "method": "GET",
-        "ret": "obj",
-        "paytoqs": "ignore",
-        "url": "{{{keyrock}}}/v1/auth/tokens",
-        "tls": "",
-        "persist": false,
-        "proxy": "",
-        "insecureHTTPParser": false,
-        "authType": "",
-        "senderr": false,
-        "headers": [
-            {
-                "keyType": "Content-Type",
-                "keyValue": "",
-                "valueType": "application/json",
-                "valueValue": ""
-            },
-            {
-                "keyType": "other",
-                "keyValue": "X-Auth-token",
-                "valueType": "msg",
-                "valueValue": "x-subject-token"
-            },
-            {
-                "keyType": "other",
-                "keyValue": "X-Subject-token",
-                "valueType": "msg",
-                "valueValue": "x-subject-token"
-            }
-        ],
-        "x": 1740,
-        "y": 360,
-        "wires": [
-            [
-                "c879cd0cb351a9a9"
-            ]
-        ]
-    },
-    {
-        "id": "f32ac4d495fbe1e9",
-        "type": "change",
-        "z": "012382d57316093c",
-        "g": "c8609bec9ca8c92e",
-        "name": "x-subject-token",
-        "rules": [
-            {
-                "t": "set",
-                "p": "x-subject-token",
-                "pt": "msg",
-                "to": "headers[\"x-subject-token\"]",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1520,
-        "y": 360,
-        "wires": [
-            [
-                "41318855509fd9a7"
-            ]
-        ]
-    },
-    {
-        "id": "c879cd0cb351a9a9",
-        "type": "debug",
-        "z": "012382d57316093c",
-        "g": "c8609bec9ca8c92e",
-        "name": "user id",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": true,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "payload.User.id",
-        "statusType": "msg",
-        "x": 1910,
-        "y": 360,
-        "wires": []
-    },
-    {
-        "id": "35e6e21bf9451fb5",
-        "type": "change",
-        "z": "012382d57316093c",
-        "g": "0d190ad7cc168747",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "clientCredentials",
-                "pt": "msg",
-                "to": "clientId & \":\" & clientSecret",
-                "tot": "jsonata"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1450,
-        "y": 100,
-        "wires": [
-            [
-                "bc39baa9f70c4a76"
-            ]
-        ]
-    },
-    {
-        "id": "9c87ca4e32caa8f3",
-        "type": "debug",
-        "z": "012382d57316093c",
-        "g": "0d190ad7cc168747",
-        "name": "encoded credentials",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": true,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "clientCredentials",
-        "statusType": "msg",
-        "x": 1860,
-        "y": 100,
-        "wires": []
-    },
-    {
-        "id": "b9763c1868c97fd1",
-        "type": "change",
-        "z": "012382d57316093c",
-        "g": "0d190ad7cc168747",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "authorization",
-                "pt": "msg",
-                "to": "\"Basic \" & clientCredentials",
-                "tot": "jsonata"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1180,
-        "y": 160,
-        "wires": [
-            [
-                "0a66835cb09d1c40"
-            ]
-        ]
-    },
-    {
-        "id": "a759aa4f17d90966",
-        "type": "http request",
-        "z": "012382d57316093c",
-        "g": "0d190ad7cc168747",
-        "name": "POST /oauth2/token",
-        "method": "POST",
-        "ret": "obj",
-        "paytoqs": "ignore",
-        "url": "{{{keyrock}}}/oauth2/token",
-        "tls": "",
-        "persist": false,
-        "proxy": "",
-        "authType": "",
-        "senderr": false,
-        "headers": [
-            {
-                "keyType": "Authorization",
-                "keyValue": "",
-                "valueType": "msg",
-                "valueValue": "authorization"
-            },
-            {
-                "keyType": "Content-Type",
-                "keyValue": "",
-                "valueType": "other",
-                "valueValue": "application/x-www-form-urlencoded"
-            }
-        ],
-        "x": 1660,
-        "y": 160,
-        "wires": [
-            [
-                "663a453f364e5817",
-                "f174df1be7e55d1c"
-            ]
-        ]
-    },
-    {
-        "id": "663a453f364e5817",
-        "type": "debug",
-        "z": "012382d57316093c",
-        "g": "0d190ad7cc168747",
-        "name": "access_token",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": true,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "payload.access_token",
-        "statusType": "msg",
-        "x": 1880,
-        "y": 160,
-        "wires": []
-    },
-    {
-        "id": "a410b477991c3036",
-        "type": "change",
-        "z": "012382d57316093c",
-        "g": "0d190ad7cc168747",
-        "name": "A",
-        "rules": [
-            {
-                "t": "set",
-                "p": "clientId",
-                "pt": "msg",
-                "to": "tutorial-dckr-site-0000-xpresswebapp",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "clientSecret",
-                "pt": "msg",
-                "to": "tutorial-dckr-site-0000-clientsecret",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "username",
-                "pt": "msg",
-                "to": "alice-the-admin@test.com",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "password",
-                "pt": "msg",
-                "to": "test",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1130,
-        "y": 60,
-        "wires": [
-            [
-                "35e6e21bf9451fb5"
-            ]
-        ]
-    },
-    {
-        "id": "0a66835cb09d1c40",
-        "type": "template",
-        "z": "012382d57316093c",
-        "g": "0d190ad7cc168747",
-        "name": "oauth2 payload",
-        "field": "payload",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "username={{username}}&password={{password}}&grant_type=password",
-        "output": "str",
-        "x": 1420,
-        "y": 160,
-        "wires": [
-            [
-                "a759aa4f17d90966"
-            ]
-        ]
-    },
-    {
-        "id": "bc39baa9f70c4a76",
-        "type": "base64",
-        "z": "012382d57316093c",
-        "g": "0d190ad7cc168747",
-        "name": "",
-        "action": "str",
-        "property": "clientCredentials",
-        "x": 1660,
-        "y": 100,
-        "wires": [
-            [
-                "9c87ca4e32caa8f3",
-                "b9763c1868c97fd1"
-            ]
-        ]
-    },
-    {
-        "id": "bac6d1cc4f6633fe",
-        "type": "http request",
-        "z": "012382d57316093c",
-        "g": "c8609bec9ca8c92e",
-        "name": "POST /v1/auth/tokens",
-        "method": "POST",
-        "ret": "obj",
-        "paytoqs": "ignore",
-        "url": "{{{keyrock}}}/v1/auth/tokens",
-        "tls": "",
-        "persist": false,
-        "proxy": "",
-        "insecureHTTPParser": false,
-        "authType": "",
-        "senderr": false,
-        "headers": [
-            {
-                "keyType": "Content-Type",
-                "keyValue": "",
-                "valueType": "application/json",
-                "valueValue": ""
-            }
-        ],
-        "x": 1320,
-        "y": 360,
-        "wires": [
-            [
-                "f32ac4d495fbe1e9",
-                "3a96ca34630c6b76"
-            ]
-        ]
-    },
-    {
         "id": "44bb71b072ec4e6a",
         "type": "http request",
         "z": "012382d57316093c",
         "g": "d6241867f1b746eb",
-        "name": "GET /version (LD)",
+        "name": "GET /ngsi-ld/ex/v1/version",
         "method": "GET",
         "ret": "obj",
         "paytoqs": "ignore",
-        "url": "{{{orion-ld}}}/version",
+        "url": "{{{orion}}}/ngsi-ld/ex/v1/version",
         "tls": "",
         "persist": false,
         "proxy": "",
@@ -12056,7 +11722,7 @@
                 "valueValue": "payload.access_token"
             }
         ],
-        "x": 570,
+        "x": 580,
         "y": 360,
         "wires": [
             [
@@ -12070,13 +11736,13 @@
         "z": "012382d57316093c",
         "g": "d6241867f1b746eb",
         "name": "orion ld version",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": true,
         "complete": "true",
         "targetType": "full",
-        "statusVal": "statusCode & \" - \" & (payload.error ? payload.error : payload.\"orionld version\")",
+        "statusVal": "statusCode & \" - \" & (payload.error ? payload.error : payload.\"Orion-LD version\")",
         "statusType": "jsonata",
         "x": 820,
         "y": 360,
@@ -13150,17 +12816,6 @@
         "wires": []
     },
     {
-        "id": "19229f4f9fe524f0",
-        "type": "comment",
-        "z": "012382d57316093c",
-        "g": "d6241867f1b746eb",
-        "name": "Smart Data Models",
-        "info": "https://smartdatamodels.org/index.php/orion-ld-broker-with-examples-of-some-smart-data-models/",
-        "x": 430,
-        "y": 60,
-        "wires": []
-    },
-    {
         "id": "36f497cf845cddc2",
         "type": "debug",
         "z": "012382d57316093c",
@@ -13187,23 +12842,23 @@
         "rules": [
             {
                 "t": "set",
-                "p": "keyrock",
+                "p": "keycloak",
                 "pt": "flow",
-                "to": "keyrock",
+                "to": "keycloak",
                 "tot": "msg"
             },
             {
                 "t": "set",
-                "p": "clientId",
+                "p": "client_id",
                 "pt": "flow",
-                "to": "clientId",
+                "to": "client_id",
                 "tot": "msg"
             },
             {
                 "t": "set",
-                "p": "clientSecret",
+                "p": "client_secret",
                 "pt": "flow",
-                "to": "clientSecret",
+                "to": "client_secret",
                 "tot": "msg"
             },
             {
@@ -13229,30 +12884,23 @@
             },
             {
                 "t": "set",
-                "p": "orion-ld",
-                "pt": "flow",
-                "to": "orion-ld",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "x-auth-token",
+                "p": "access_token",
                 "pt": "flow",
                 "to": "payload.access_token",
                 "tot": "msg"
             },
             {
                 "t": "set",
-                "p": "link",
+                "p": "bearer",
                 "pt": "flow",
-                "to": "<https://raw.githubusercontent.com/FIWARE/tutorials.IoT-Agent/NGSI-LD/data-models/ngsi-context.jsonld>; rel=\"http://www.w3.org/ns/json-ld#context\"; type=\"application/ld+json\"",
-                "tot": "str"
+                "to": "\"Bearer \" & payload.access_token",
+                "tot": "jsonata"
             },
             {
                 "t": "set",
-                "p": "link-jsonld",
+                "p": "link",
                 "pt": "flow",
-                "to": "<https://raw.githubusercontent.com/FIWARE/tutorials.IoT-Agent/NGSI-LD/data-models/json-context.jsonld>; rel=\"http://www.w3.org/ns/json-ld#context\"; type=\"application/ld+json\"",
+                "to": "<http://context/data-models/ngsi-context.jsonld>; rel=\"http://www.w3.org/ns/json-ld#context\"; type=\"application/ld+json\"",
                 "tot": "str"
             },
             {
@@ -13261,6 +12909,20 @@
                 "pt": "flow",
                 "to": "<https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld>; rel=\"http://www.w3.org/ns/json-ld#context\"; type=\"application/ld+json\"",
                 "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "bearer",
+                "pt": "msg",
+                "to": "bearer",
+                "tot": "flow"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "access_token",
+                "tot": "flow"
             }
         ],
         "action": "",
@@ -13903,7 +13565,7 @@
         "statusVal": "statusCode&\" - \"&(payload.error?payload.error:payload.access_token)",
         "statusType": "jsonata",
         "x": 1150,
-        "y": 280,
+        "y": 220,
         "wires": []
     },
     {
@@ -13915,37 +13577,9 @@
         "rules": [
             {
                 "t": "set",
-                "p": "keyrock",
+                "p": "keycloak",
                 "pt": "flow",
-                "to": "keyrock",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "clientId",
-                "pt": "flow",
-                "to": "clientId",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "clientSecret",
-                "pt": "flow",
-                "to": "clientSecret",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "username",
-                "pt": "flow",
-                "to": "username",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "password",
-                "pt": "flow",
-                "to": "password",
+                "to": "keycloak",
                 "tot": "msg"
             },
             {
@@ -13957,24 +13591,17 @@
             },
             {
                 "t": "set",
-                "p": "orion-ld",
+                "p": "bearer",
                 "pt": "flow",
-                "to": "orion-ld",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "x-auth-token",
-                "pt": "flow",
-                "to": "payload.access_token",
+                "to": "bearer",
                 "tot": "msg"
             },
             {
                 "t": "set",
                 "p": "link",
                 "pt": "flow",
-                "to": "<https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld>; rel=\"http://www.w3.org/ns/json-ld#context\"; type=\"application/ld+json\"",
-                "tot": "str"
+                "to": "link",
+                "tot": "msg"
             }
         ],
         "action": "",
@@ -13983,42 +13610,9 @@
         "to": "",
         "reg": false,
         "x": 1150,
-        "y": 280,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "f174df1be7e55d1c",
-        "type": "change",
-        "z": "012382d57316093c",
-        "g": "0d190ad7cc168747",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "x-auth-token",
-                "pt": "msg",
-                "to": "payload.access_token",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1180,
         "y": 220,
         "wires": [
-            [
-                "b8d8e199f11dc642",
-                "7321916466810f15",
-                "16e47977110f58aa",
-                "43b7aadd9acf57c2",
-                "63637c0445e2e51d",
-                "2767beab154c1e0e"
-            ]
+            []
         ]
     },
     {
@@ -14039,14 +13633,14 @@
         "senderr": false,
         "headers": [
             {
-                "keyType": "other",
-                "keyValue": "X-Auth-Token",
+                "keyType": "Authorization",
+                "keyValue": "",
                 "valueType": "msg",
-                "valueValue": "x-auth-token"
+                "valueValue": "bearer"
             }
         ],
-        "x": 1640,
-        "y": 220,
+        "x": 1680,
+        "y": 140,
         "wires": [
             [
                 "d20f9304c97fa82e"
@@ -14068,7 +13662,7 @@
         "statusVal": "$count(payload) & \" entities\"\t",
         "statusType": "jsonata",
         "x": 1900,
-        "y": 280,
+        "y": 220,
         "wires": []
     },
     {
@@ -14086,90 +13680,8 @@
         "statusVal": "$count(payload) & \" entities\"\t",
         "statusType": "jsonata",
         "x": 1900,
-        "y": 220,
+        "y": 140,
         "wires": []
-    },
-    {
-        "id": "21a0cdc1a5c9cefb",
-        "type": "inject",
-        "z": "012382d57316093c",
-        "g": "0d190ad7cc168747",
-        "name": "Alice",
-        "props": [
-            {
-                "p": "username",
-                "v": "alice-the-admin@test.com",
-                "vt": "str"
-            },
-            {
-                "p": "password",
-                "v": "test",
-                "vt": "str"
-            },
-            {
-                "p": "orion",
-                "v": "orion",
-                "vt": "flow"
-            },
-            {
-                "p": "orion-ld",
-                "v": "orion-ld",
-                "vt": "flow"
-            },
-            {
-                "p": "keyrock",
-                "v": "keyrock",
-                "vt": "flow"
-            },
-            {
-                "p": "clientSecret",
-                "v": "clientSecret",
-                "vt": "flow"
-            },
-            {
-                "p": "clientId",
-                "v": "clientId",
-                "vt": "flow"
-            },
-            {
-                "p": "target",
-                "v": "link",
-                "vt": "flow"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "x": 1130,
-        "y": 60,
-        "wires": [
-            [
-                "35e6e21bf9451fb5"
-            ]
-        ]
-    },
-    {
-        "id": "ab68b716b01f1233",
-        "type": "base64",
-        "z": "012382d57316093c",
-        "g": "d6241867f1b746eb",
-        "name": "",
-        "action": "str",
-        "property": "clientCredentials",
-        "x": 600,
-        "y": 120,
-        "wires": [
-            [
-                "71e0a3bf13e8a4f6",
-                "03353ceef9372caf",
-                "518e16e1d77b25fa",
-                "d3b1255e1281fd8b",
-                "db58ff308da974cb",
-                "a1b0ba52dfc9acca"
-            ]
-        ]
     },
     {
         "id": "25b886d2a1e67415",
@@ -14184,13 +13696,8 @@
                 "vt": "flow"
             },
             {
-                "p": "orion-ld",
-                "v": "orion-ld",
-                "vt": "flow"
-            },
-            {
-                "p": "keyrock",
-                "v": "keyrock",
+                "p": "keycloak",
+                "v": "keycloak",
                 "vt": "flow"
             },
             {
@@ -14204,119 +13711,28 @@
                 "vt": "flow"
             },
             {
-                "p": "clientId",
-                "v": "clientId",
+                "p": "client_id",
+                "v": "client_id",
                 "vt": "flow"
             },
             {
-                "p": "clientSecret",
-                "v": "clientSecret",
+                "p": "client_secret",
+                "v": "client_secret",
                 "vt": "flow"
             }
         ],
-        "repeat": "",
+        "repeat": "300",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "x": 610,
-        "y": 60,
+        "x": 120,
+        "y": 240,
         "wires": [
             [
-                "6f54a385c73aef36"
+                "71e0a3bf13e8a4f6"
             ]
         ]
-    },
-    {
-        "id": "ff9ddc0fb35bfb93",
-        "type": "change",
-        "z": "012382d57316093c",
-        "g": "d6241867f1b746eb",
-        "name": "test Orion-LD broker",
-        "rules": [
-            {
-                "t": "set",
-                "p": "orion",
-                "pt": "msg",
-                "to": "https://smartdatamodels.org:1026",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "orion-ld",
-                "pt": "msg",
-                "to": "https://smartdatamodels.org:1026",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "keyrock",
-                "pt": "msg",
-                "to": "https://dev-utuiqz60u717uyr8.eu.auth0.com",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "clientId",
-                "pt": "msg",
-                "to": "F2-YTke0C2Ux21MffizKdsd6",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "clientSecret",
-                "pt": "msg",
-                "to": "XmSYwozBdicXeUmLv0BeRbrce81mDLIJ2qS5-GwZdORwecoj",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "username",
-                "pt": "msg",
-                "to": "evil-skipper@example.com",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "password",
-                "pt": "msg",
-                "to": "Cautious-Centipede-48",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 200,
-        "y": 60,
-        "wires": [
-            [
-                "6f54a385c73aef36"
-            ]
-        ]
-    },
-    {
-        "id": "33da96e3f70ba897",
-        "type": "inject",
-        "z": "012382d57316093c",
-        "g": "d6241867f1b746eb",
-        "name": "STARTUP",
-        "props": [],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "x": 75,
-        "y": 60,
-        "wires": [
-            [
-                "ff9ddc0fb35bfb93"
-            ]
-        ],
-        "l": false
     },
     {
         "id": "4b18a396793cbfc9",
@@ -14347,8 +13763,8 @@
         "syntax": "mustache",
         "template": "{\n    \"options\": \"keyValues\"\n}",
         "output": "json",
-        "x": 1420,
-        "y": 220,
+        "x": 1480,
+        "y": 140,
         "wires": [
             [
                 "9e081de8aef532aa"
@@ -14367,8 +13783,8 @@
         "syntax": "mustache",
         "template": "{\n    \"idPattern\": \".*\"\n}\n",
         "output": "json",
-        "x": 1420,
-        "y": 280,
+        "x": 1480,
+        "y": 220,
         "wires": [
             [
                 "9dcbab274605cf05"
@@ -14384,7 +13800,7 @@
         "method": "GET",
         "ret": "obj",
         "paytoqs": "query",
-        "url": "{{{orion-ld}}}/ngsi-ld/v1/entities",
+        "url": "{{{orion}}}/ngsi-ld/v1/entities",
         "tls": "",
         "persist": false,
         "proxy": "",
@@ -14393,14 +13809,14 @@
         "senderr": false,
         "headers": [
             {
-                "keyType": "other",
-                "keyValue": "X-Auth-Token",
+                "keyType": "Authorization",
+                "keyValue": "",
                 "valueType": "msg",
-                "valueValue": "x-auth-token"
+                "valueValue": "bearer"
             }
         ],
-        "x": 1670,
-        "y": 280,
+        "x": 1710,
+        "y": 220,
         "wires": [
             [
                 "ccedb0c78ae4e5f1"
@@ -14513,8 +13929,8 @@
         "syntax": "mustache",
         "template": "{\n    \"type\": \"PowerSensor\",\n    \"options\": \"keyValues\"\n}",
         "output": "json",
-        "x": 1420,
-        "y": 200,
+        "x": 1480,
+        "y": 100,
         "wires": [
             [
                 "9e081de8aef532aa"
@@ -14533,39 +13949,11 @@
         "syntax": "mustache",
         "template": "{\n    \"type\": \"TemperatureSensor\"\n}\n",
         "output": "json",
-        "x": 1420,
-        "y": 260,
+        "x": 1480,
+        "y": 180,
         "wires": [
             [
                 "9dcbab274605cf05"
-            ]
-        ]
-    },
-    {
-        "id": "6f54a385c73aef36",
-        "type": "change",
-        "z": "012382d57316093c",
-        "g": "d6241867f1b746eb",
-        "name": "client credentials",
-        "rules": [
-            {
-                "t": "set",
-                "p": "clientCredentials",
-                "pt": "msg",
-                "to": "clientId & \":\" & clientSecret",
-                "tot": "jsonata"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 430,
-        "y": 120,
-        "wires": [
-            [
-                "ab68b716b01f1233"
             ]
         ]
     },
@@ -14931,406 +14319,6 @@
         "wires": []
     },
     {
-        "id": "51543a1af3debeac",
-        "type": "change",
-        "z": "012382d57316093c",
-        "g": "0d190ad7cc168747",
-        "name": "B",
-        "rules": [
-            {
-                "t": "set",
-                "p": "clientId",
-                "pt": "msg",
-                "to": "tutorial-dckr-site-0000-xpresswebapp",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "clientSecret",
-                "pt": "msg",
-                "to": "tutorial-dckr-site-0000-clientsecret",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "username",
-                "pt": "msg",
-                "to": "bob-the-manager@test.com",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "password",
-                "pt": "msg",
-                "to": "test",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1130,
-        "y": 100,
-        "wires": [
-            [
-                "35e6e21bf9451fb5"
-            ]
-        ]
-    },
-    {
-        "id": "5d96d5513aacc2e4",
-        "type": "inject",
-        "z": "012382d57316093c",
-        "g": "0d190ad7cc168747",
-        "name": "Bob",
-        "props": [
-            {
-                "p": "username",
-                "v": "bob-the-manager@test.com",
-                "vt": "str"
-            },
-            {
-                "p": "password",
-                "v": "test",
-                "vt": "str"
-            },
-            {
-                "p": "orion",
-                "v": "orion",
-                "vt": "flow"
-            },
-            {
-                "p": "orion-ld",
-                "v": "orion-ld",
-                "vt": "flow"
-            },
-            {
-                "p": "keyrock",
-                "v": "keyrock",
-                "vt": "flow"
-            },
-            {
-                "p": "clientSecret",
-                "v": "clientSecret",
-                "vt": "flow"
-            },
-            {
-                "p": "clientId",
-                "v": "clientId",
-                "vt": "flow"
-            },
-            {
-                "p": "target",
-                "v": "link",
-                "vt": "flow"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "x": 1130,
-        "y": 100,
-        "wires": [
-            [
-                "35e6e21bf9451fb5"
-            ]
-        ]
-    },
-    {
-        "id": "c8c8ec46d03b70bf",
-        "type": "change",
-        "z": "012382d57316093c",
-        "g": "0d190ad7cc168747",
-        "name": "C",
-        "rules": [
-            {
-                "t": "set",
-                "p": "clientId",
-                "pt": "msg",
-                "to": "tutorial-dckr-site-0000-xpresswebapp",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "clientSecret",
-                "pt": "msg",
-                "to": "tutorial-dckr-site-0000-clientsecret",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "username",
-                "pt": "msg",
-                "to": "charlie-security@test.com",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "password",
-                "pt": "msg",
-                "to": "test",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1270,
-        "y": 60,
-        "wires": [
-            [
-                "35e6e21bf9451fb5"
-            ]
-        ]
-    },
-    {
-        "id": "5af4252051e69ea3",
-        "type": "inject",
-        "z": "012382d57316093c",
-        "g": "0d190ad7cc168747",
-        "name": "Charlie",
-        "props": [
-            {
-                "p": "username",
-                "v": "charlie-security@test.com",
-                "vt": "str"
-            },
-            {
-                "p": "password",
-                "v": "test",
-                "vt": "str"
-            },
-            {
-                "p": "orion",
-                "v": "orion",
-                "vt": "flow"
-            },
-            {
-                "p": "orion-ld",
-                "v": "orion-ld",
-                "vt": "flow"
-            },
-            {
-                "p": "keyrock",
-                "v": "keyrock",
-                "vt": "flow"
-            },
-            {
-                "p": "clientSecret",
-                "v": "clientSecret",
-                "vt": "flow"
-            },
-            {
-                "p": "clientId",
-                "v": "clientId",
-                "vt": "flow"
-            },
-            {
-                "p": "target",
-                "v": "link",
-                "vt": "flow"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "x": 1270,
-        "y": 60,
-        "wires": [
-            [
-                "35e6e21bf9451fb5"
-            ]
-        ]
-    },
-    {
-        "id": "b3a9763bd84b2865",
-        "type": "change",
-        "z": "012382d57316093c",
-        "g": "0d190ad7cc168747",
-        "name": "Z",
-        "rules": [
-            {
-                "t": "set",
-                "p": "clientId",
-                "pt": "msg",
-                "to": "tutorial-dckr-site-0000-xpresswebapp",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "clientSecret",
-                "pt": "msg",
-                "to": "tutorial-dckr-site-0000-clientsecret",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "username",
-                "pt": "msg",
-                "to": "zelda@hyrule.com",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "password",
-                "pt": "msg",
-                "to": "test",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1250,
-        "y": 100,
-        "wires": [
-            [
-                "35e6e21bf9451fb5"
-            ]
-        ]
-    },
-    {
-        "id": "aebb7ec3dbb69af5",
-        "type": "inject",
-        "z": "012382d57316093c",
-        "g": "0d190ad7cc168747",
-        "name": "Zelda",
-        "props": [
-            {
-                "p": "username",
-                "v": "zelda@hyrule.com",
-                "vt": "str"
-            },
-            {
-                "p": "password",
-                "v": "test",
-                "vt": "str"
-            },
-            {
-                "p": "orion",
-                "v": "orion",
-                "vt": "flow"
-            },
-            {
-                "p": "orion-ld",
-                "v": "orion-ld",
-                "vt": "flow"
-            },
-            {
-                "p": "keyrock",
-                "v": "keyrock",
-                "vt": "flow"
-            },
-            {
-                "p": "clientSecret",
-                "v": "clientSecret",
-                "vt": "flow"
-            },
-            {
-                "p": "clientId",
-                "v": "clientId",
-                "vt": "flow"
-            },
-            {
-                "p": "target",
-                "v": "link",
-                "vt": "flow"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "x": 1270,
-        "y": 100,
-        "wires": [
-            [
-                "35e6e21bf9451fb5"
-            ]
-        ]
-    },
-    {
-        "id": "34f104caa1ce62ef",
-        "type": "change",
-        "z": "012382d57316093c",
-        "g": "d6241867f1b746eb",
-        "name": "enershare.zapto.org",
-        "rules": [
-            {
-                "t": "set",
-                "p": "orion",
-                "pt": "msg",
-                "to": "https://enershare.zapto.org",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "orion-ld",
-                "pt": "msg",
-                "to": "https://enershare.zapto.org",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "keyrock",
-                "pt": "msg",
-                "to": "https://enershare.zapto.org:3443",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "clientId",
-                "pt": "msg",
-                "to": "tutorial-dckr-site-0000-xpresswebapp",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "clientSecret",
-                "pt": "msg",
-                "to": "tutorial-dckr-site-0000-clientsecret",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "username",
-                "pt": "msg",
-                "to": "alice-the-admin@test.com",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "password",
-                "pt": "msg",
-                "to": "test",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 200,
-        "y": 100,
-        "wires": [
-            [
-                "6f54a385c73aef36"
-            ]
-        ]
-    },
-    {
         "id": "f68193e4e46be8c6",
         "type": "inject",
         "z": "012382d57316093c",
@@ -15343,10 +14331,10 @@
         "onceDelay": 0.1,
         "topic": "",
         "x": 75,
-        "y": 100,
+        "y": 60,
         "wires": [
             [
-                "34f104caa1ce62ef"
+                "0370af94a7bee82c"
             ]
         ],
         "l": false
@@ -15361,19 +14349,19 @@
         "repeat": "",
         "crontab": "",
         "once": true,
-        "onceDelay": 0.1,
+        "onceDelay": "60",
         "topic": "",
         "x": 75,
-        "y": 140,
+        "y": 120,
         "wires": [
             [
-                "d28eca0359d4e56b"
+                "9e5f95402e34f71e"
             ]
         ],
         "l": false
     },
     {
-        "id": "d28eca0359d4e56b",
+        "id": "9e5f95402e34f71e",
         "type": "change",
         "z": "012382d57316093c",
         "g": "d6241867f1b746eb",
@@ -15383,50 +14371,50 @@
                 "t": "set",
                 "p": "orion",
                 "pt": "msg",
-                "to": "http://orion-v2:1026",
+                "to": "http://host.docker.internal/orion",
                 "tot": "str"
             },
             {
                 "t": "set",
-                "p": "orion-ld",
+                "p": "keycloak",
                 "pt": "msg",
-                "to": "http://orion-ld:1026",
+                "to": "http://host.docker.internal:8080",
                 "tot": "str"
             },
             {
                 "t": "set",
-                "p": "keyrock",
+                "p": "client_id",
                 "pt": "msg",
-                "to": "http://host.docker.internal:3005",
+                "to": "orion",
                 "tot": "str"
             },
             {
                 "t": "set",
-                "p": "clientId",
+                "p": "client_secret",
                 "pt": "msg",
-                "to": "tutorial-dckr-site-0000-xpresswebapp",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "clientSecret",
-                "pt": "msg",
-                "to": "tutorial-dckr-site-0000-clientsecret",
+                "to": "u0uEieRqtUVrXPluUAiuvGAZ2Qk4Bco6",
                 "tot": "str"
             },
             {
                 "t": "set",
                 "p": "username",
                 "pt": "msg",
-                "to": "alice-the-admin@test.com",
+                "to": "myuser",
                 "tot": "str"
             },
             {
                 "t": "set",
                 "p": "password",
                 "pt": "msg",
-                "to": "test",
+                "to": "myuser",
                 "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "\"grant_type=password&username=\" & username & \"&password=\" & password & \"&client_id=\" & client_id & \"&client_secret=\" & client_secret",
+                "tot": "jsonata"
             }
         ],
         "action": "",
@@ -15435,12 +14423,510 @@
         "to": "",
         "reg": false,
         "x": 200,
+        "y": 120,
+        "wires": [
+            [
+                "03353ceef9372caf",
+                "71e0a3bf13e8a4f6"
+            ]
+        ]
+    },
+    {
+        "id": "0370af94a7bee82c",
+        "type": "change",
+        "z": "012382d57316093c",
+        "g": "d6241867f1b746eb",
+        "name": "context/orion (Docker)",
+        "rules": [
+            {
+                "t": "set",
+                "p": "orion",
+                "pt": "msg",
+                "to": "http://context/orion",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "keycloak",
+                "pt": "msg",
+                "to": "http://keycloak:8080",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "client_id",
+                "pt": "msg",
+                "to": "orion",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "client_secret",
+                "pt": "msg",
+                "to": "u0uEieRqtUVrXPluUAiuvGAZ2Qk4Bco6",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "username",
+                "pt": "msg",
+                "to": "myuser",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "password",
+                "pt": "msg",
+                "to": "myuser",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "\"grant_type=password&username=\" & username & \"&password=\" & password & \"&client_id=\" & client_id & \"&client_secret=\" & client_secret",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 200,
+        "y": 60,
+        "wires": [
+            [
+                "71e0a3bf13e8a4f6"
+            ]
+        ]
+    },
+    {
+        "id": "23b62d4913c6ff58",
+        "type": "inject",
+        "z": "012382d57316093c",
+        "g": "d6241867f1b746eb",
+        "name": " ",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 435,
+        "y": 60,
+        "wires": [
+            [
+                "343fe759f6025234"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "343fe759f6025234",
+        "type": "change",
+        "z": "012382d57316093c",
+        "g": "d6241867f1b746eb",
+        "name": "test Orion-LD Broker",
+        "rules": [
+            {
+                "t": "set",
+                "p": "orion",
+                "pt": "msg",
+                "to": "https://smartdatamodels.org:1026",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "keycloak",
+                "pt": "msg",
+                "to": "http://keycloak:8080",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "client_id",
+                "pt": "msg",
+                "to": "orion",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "client_secret",
+                "pt": "msg",
+                "to": "u0uEieRqtUVrXPluUAiuvGAZ2Qk4Bco6",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "username",
+                "pt": "msg",
+                "to": "myuser",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "password",
+                "pt": "msg",
+                "to": "myuser",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "\"grant_type=password&username=\" & username & \"&password=\" & password & \"&client_id=\" & client_id & \"&client_secret=\" & client_secret",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 560,
+        "y": 60,
+        "wires": [
+            [
+                "71e0a3bf13e8a4f6"
+            ]
+        ]
+    },
+    {
+        "id": "8d9de5f15e0ad065",
+        "type": "comment",
+        "z": "012382d57316093c",
+        "g": "d6241867f1b746eb",
+        "name": "Keycload OpenID API",
+        "info": "https://www.keycloak.org/securing-apps/oidc-layers",
+        "x": 560,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "ed9f980ea73dba6b",
+        "type": "http request",
+        "z": "012382d57316093c",
+        "g": "c8609bec9ca8c92e",
+        "name": "GET /openid-configuration",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://keycloak:8080/realms/dedalus/.well-known/openid-configuration",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1630,
+        "y": 360,
+        "wires": [
+            [
+                "304d9362abdacb44"
+            ]
+        ]
+    },
+    {
+        "id": "304d9362abdacb44",
+        "type": "debug",
+        "z": "012382d57316093c",
+        "g": "c8609bec9ca8c92e",
+        "name": "openid-configuration",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "payload",
+        "statusType": "msg",
+        "x": 1860,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "efea555006cdd5ba",
+        "type": "http request",
+        "z": "012382d57316093c",
+        "g": "c8609bec9ca8c92e",
+        "name": "GET /userinfo",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://keycloak:8080/realms/dedalus/protocol/openid-connect/userinfo",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [
+            {
+                "keyType": "Authorization",
+                "keyValue": "",
+                "valueType": "msg",
+                "valueValue": "bearer"
+            }
+        ],
+        "x": 1740,
+        "y": 300,
+        "wires": [
+            [
+                "a2647295787624b8"
+            ]
+        ]
+    },
+    {
+        "id": "a2647295787624b8",
+        "type": "debug",
+        "z": "012382d57316093c",
+        "g": "c8609bec9ca8c92e",
+        "name": "userinfo",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "payload.sub",
+        "statusType": "msg",
+        "x": 1900,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "fe789db91657c03b",
+        "type": "inject",
+        "z": "012382d57316093c",
+        "g": "c8609bec9ca8c92e",
+        "name": "Keycloak",
+        "props": [
+            {
+                "p": "keycloak",
+                "v": "keycloak",
+                "vt": "flow"
+            },
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "grant_type=password&username=myuser&password=myuser&client_id=orion&client_secret=u0uEieRqtUVrXPluUAiuvGAZ2Qk4Bco6",
+        "payloadType": "str",
+        "x": 1140,
+        "y": 300,
+        "wires": [
+            [
+                "ed9f980ea73dba6b",
+                "f4f6adb6fbfdcdf2",
+                "0460e309b8890873",
+                "efea555006cdd5ba"
+            ]
+        ]
+    },
+    {
+        "id": "771aad96490e8e8a",
+        "type": "http request",
+        "z": "012382d57316093c",
+        "g": "0d190ad7cc168747",
+        "name": "POST /token",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "{{{keycloak}}}/realms/dedalus/protocol/openid-connect/token",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [
+            {
+                "keyType": "Content-Type",
+                "keyValue": "",
+                "valueType": "other",
+                "valueValue": "application/x-www-form-urlencoded"
+            }
+        ],
+        "x": 1290,
+        "y": 60,
+        "wires": [
+            [
+                "f174df1be7e55d1c"
+            ]
+        ]
+    },
+    {
+        "id": "0bf68b73b9a492d3",
+        "type": "inject",
+        "z": "012382d57316093c",
+        "g": "0d190ad7cc168747",
+        "name": "FIWARE",
+        "props": [
+            {
+                "p": "orion",
+                "v": "orion",
+                "vt": "flow"
+            },
+            {
+                "p": "keycloak",
+                "v": "keycloak",
+                "vt": "flow"
+            },
+            {
+                "p": "payload"
+            },
+            {
+                "p": "link",
+                "v": "link",
+                "vt": "flow"
+            },
+            {
+                "p": "link",
+                "v": "link ? link : '<https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld>; rel=\"http://www.w3.org/ns/json-ld#context\"; type=\"application/ld+json\"'",
+                "vt": "jsonata"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "grant_type=password&username=myuser&password=myuser&client_id=orion&client_secret=u0uEieRqtUVrXPluUAiuvGAZ2Qk4Bco6",
+        "payloadType": "str",
+        "x": 1140,
+        "y": 60,
+        "wires": [
+            [
+                "771aad96490e8e8a"
+            ]
+        ],
+        "icon": "node-red-contrib-fiware_official/fiware.png"
+    },
+    {
+        "id": "f174df1be7e55d1c",
+        "type": "change",
+        "z": "012382d57316093c",
+        "g": "0d190ad7cc168747",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "bearer",
+                "pt": "msg",
+                "to": "\"Bearer \" & payload.access_token",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1160,
         "y": 140,
         "wires": [
             [
-                "6f54a385c73aef36"
+                "b8d8e199f11dc642",
+                "7321916466810f15",
+                "16e47977110f58aa",
+                "43b7aadd9acf57c2",
+                "63637c0445e2e51d",
+                "2767beab154c1e0e"
             ]
         ]
+    },
+    {
+        "id": "d5bb83627813150f",
+        "type": "debug",
+        "z": "012382d57316093c",
+        "g": "c8609bec9ca8c92e",
+        "name": "health",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "statusCode",
+        "statusType": "msg",
+        "x": 1350,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "0460e309b8890873",
+        "type": "http request",
+        "z": "012382d57316093c",
+        "g": "c8609bec9ca8c92e",
+        "name": "GET /health",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://keycloak:9000/health",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1150,
+        "y": 360,
+        "wires": [
+            [
+                "d5bb83627813150f"
+            ]
+        ]
+    },
+    {
+        "id": "f4f6adb6fbfdcdf2",
+        "type": "http request",
+        "z": "012382d57316093c",
+        "g": "c8609bec9ca8c92e",
+        "name": "GET /realms/master",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "{{{keycloak}}}/realms/master",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1400,
+        "y": 300,
+        "wires": [
+            [
+                "5821d6fbd9a1eabc"
+            ]
+        ]
+    },
+    {
+        "id": "5821d6fbd9a1eabc",
+        "type": "debug",
+        "z": "012382d57316093c",
+        "g": "c8609bec9ca8c92e",
+        "name": "realm",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload.realm",
+        "statusType": "msg",
+        "x": 1570,
+        "y": 300,
+        "wires": []
     },
     {
         "id": "84e27798478f2f0c",
