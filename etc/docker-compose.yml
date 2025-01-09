@@ -85,7 +85,7 @@ services:
     # test: "exec 3<>/dev/tcp/127.0.0.1/9000; echo -e 'GET /health/ready HTTP/1.1\r\nHost: localhost\r\nConnection: close\r\n\r\n' >&3; if [ $? -eq 0 ]; then echo 'Healthcheck Successful'; exit 0; else echo 'Healthcheck Failed'; exit 1; fi;"
       test: "exec 3<>/dev/tcp/host.docker.internal/9000; echo -e 'GET /health/ready HTTP/1.1\r\nHost: localhost\r\nConnection: close\r\n\r\n' >&3; cat <&3 | grep -q '\"status\": \"UP\"'"
 
-  # Reverse proxy (Nginx)
+  # Reverse proxy and web Server (Nginx)
   nginx:
     image: nginx #:1.27.3
     hostname: context
@@ -114,7 +114,7 @@ services:
   # OTHER SERVICES #
   ##################
 
-  # Context Provider, Custom IoT Agent, Demo Webapp and Swagger (Node-RED)
+  # Context Provider, Custom IoT Agent, Demo webapp and Swagger (Node-RED)
   node-red:
   # build: node-red
     image: nodered/node-red #:4.0.8

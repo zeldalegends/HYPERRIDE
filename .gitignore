@@ -44,4 +44,5 @@ jspm_packages/
 .gitignore
 .token
 upload-to-github.sh
-#frontends
+# etc
+# frontends

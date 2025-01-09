@@ -937,7 +937,7 @@
         "id": "f246a18ed1e7d299",
         "type": "group",
         "z": "6f835252e7b4d315",
-        "name": "Keycloak & Flow Variables (@context, Orion, Keycloak URLs and token)",
+        "name": "FIWARE & Keycloak Setup",
         "style": {
             "fill": "#ffefbf",
             "label": true
@@ -963,9 +963,9 @@
         "id": "0d5fb5f33c555ea7",
         "type": "group",
         "z": "6f835252e7b4d315",
-        "name": "Custom IoT Agent",
+        "name": "Custom MQTT IoT Agent",
         "style": {
-            "fill": "#bfdbef",
+            "fill": "#dbcbe7",
             "label": true
         },
         "nodes": [
@@ -975,7 +975,6 @@
             "afcbad6864eddf09",
             "5de309c3c5a8540b",
             "1abcfcf64c948ed0",
-            "0ba7447f27de9d8f",
             "c1fd62cf0d75f476",
             "b508b85f235e4c9d",
             "31fac115710b926a",
@@ -986,7 +985,8 @@
             "e9d43cc2cc516c15",
             "74e5a7a516b7ff21",
             "891c52c56afce0cb",
-            "4ad34aa6a519adf2"
+            "4ad34aa6a519adf2",
+            "66272acd128d6ffd"
         ],
         "x": 14,
         "y": 179,
@@ -1034,7 +1034,8 @@
             "18a7baaf8f2b61b9",
             "4ab199e28a16f0d3",
             "34efc0f1b9fbfbee",
-            "d6c5ea750f28b73b"
+            "d6c5ea750f28b73b",
+            "e02df3b6083a7a69"
         ],
         "x": 14,
         "y": 19,
@@ -1045,7 +1046,7 @@
         "id": "caac3623d5f73bbb",
         "type": "group",
         "z": "6f835252e7b4d315",
-        "name": "Orion LD",
+        "name": "Orion LD Context Broker",
         "style": {
             "fill": "#bfdbef",
             "label": true
@@ -1079,6 +1080,87 @@
         "y": 579,
         "w": 692,
         "h": 442
+    },
+    {
+        "id": "4b94c3bd411f5ca8",
+        "type": "group",
+        "z": "6f835252e7b4d315",
+        "name": "Intrusion Detection System",
+        "style": {
+            "fill": "#ffbfbf",
+            "label": true
+        },
+        "nodes": [
+            "3e9222510275c921",
+            "2e4133cc07752741",
+            "28e65589543816cb",
+            "15cc1c5e8952cb55",
+            "46abe8b98a23179b",
+            "4c419a76d2598db6",
+            "c046d7f85b732ade",
+            "55ebf1dea8d0dd16",
+            "f71df4b68ffd88cf",
+            "b550e3ddcdbe5eff",
+            "e9173adcdd6c4a67",
+            "89756fcc07b92a57",
+            "3325263e10d01a91",
+            "83267febf53a4707",
+            "a17900d5c72c7e9b",
+            "b50ffced9f25a18f",
+            "f607ce1a7b234ba6",
+            "28ed652fa970c9ea",
+            "8a6cd21af6365e5f",
+            "a35f23c184de8ac7",
+            "b305fad0208cc669",
+            "8eee21a3762f8925",
+            "c0915085ab4b13dc",
+            "fdbaca011264f8e8",
+            "18d86c24a686a534",
+            "c23e7033b0446a81",
+            "60c392537d0adab5",
+            "617bd3c4a569efc0",
+            "f15323aeb0fabbd5",
+            "a43ef0b1aa88332f",
+            "70e1eb93e778765c",
+            "7473cf32247008f2",
+            "f83fe6dfdc74bba3",
+            "15bdf2895eaf7d26",
+            "f546aad2fd8c5935",
+            "60add1f9426b92ad",
+            "4a84d8e11186032f"
+        ],
+        "x": 14,
+        "y": 1039,
+        "w": 692,
+        "h": 522
+    },
+    {
+        "id": "7f40d81ffc8df887",
+        "type": "group",
+        "z": "6f835252e7b4d315",
+        "name": "Anomaly Detection System",
+        "style": {
+            "fill": "#ffffbf",
+            "label": true
+        },
+        "nodes": [
+            "77647ed409ebc62e",
+            "028cb2d5b172b724",
+            "7e02fb36df982544",
+            "8bd4bb53d52a2727",
+            "99456a2fbc42af66",
+            "7da7cc1eb3e3615f",
+            "489b1f13d133726c",
+            "02c999471e856f5c",
+            "87aa08aabb9a615b",
+            "f2ac6a4df5c8905d",
+            "6e50c11ee3b62167",
+            "a4506531eaa02db5"
+        ],
+        "x": 14,
+        "y": 1579,
+        "w": 692,
+        "h": 302
     },
     {
         "id": "95f6c009.fa934",
@@ -1868,9 +1950,9 @@
         "groupType": "default"
     },
     {
-        "id": "b1791bd64a7f96d2",
+        "id": "1a4cb0419a6cf9d9",
         "type": "ui-group",
-        "name": "Orion-LD Context Broker",
+        "name": "ADS",
         "page": "c27544529a7af06f",
         "width": 6,
         "height": 1,
@@ -1882,13 +1964,213 @@
         "groupType": "default"
     },
     {
-        "id": "1a4cb0419a6cf9d9",
+        "id": "9f99c66a66471fce",
         "type": "ui-group",
-        "name": "Credits",
+        "name": "IDS",
         "page": "c27544529a7af06f",
         "width": 6,
         "height": 1,
         "order": 3,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "18c46582ceac7cdc",
+        "type": "ui-page",
+        "name": "ADS",
+        "ui": "a6553f660d1ea9d9",
+        "path": "/ads",
+        "icon": "flash",
+        "layout": "grid",
+        "theme": "a8fa77ed8e1f758c",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 3,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "c105e5ca54683243",
+        "type": "ui-group",
+        "name": "Anomaly Detection System",
+        "page": "18c46582ceac7cdc",
+        "width": 6,
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "a8b338191bbe657b",
+        "type": "ui-page",
+        "name": "IDS",
+        "ui": "a6553f660d1ea9d9",
+        "path": "/ids",
+        "icon": "security",
+        "layout": "grid",
+        "theme": "a8fa77ed8e1f758c",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 4,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "c1b0bbe64201c399",
+        "type": "ui-group",
+        "name": "Intrusion Detection System",
+        "page": "a8b338191bbe657b",
+        "width": 6,
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "059ca672dd356133",
+        "type": "ui-page",
+        "name": "Orion-LD",
+        "ui": "a6553f660d1ea9d9",
+        "path": "/orion",
+        "icon": "database",
+        "layout": "grid",
+        "theme": "a8fa77ed8e1f758c",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 2,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "b1791bd64a7f96d2",
+        "type": "ui-group",
+        "name": "Context Broker",
+        "page": "059ca672dd356133",
+        "width": 6,
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "ef367b0aef0128cf",
+        "type": "ui-page",
+        "name": "Info",
+        "ui": "a6553f660d1ea9d9",
+        "path": "/info",
+        "icon": "information",
+        "layout": "grid",
+        "theme": "a8fa77ed8e1f758c",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 5,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "52de692b47e65519",
+        "type": "ui-group",
+        "name": "Data Model",
+        "page": "ef367b0aef0128cf",
+        "width": 6,
+        "height": 1,
+        "order": 1,
         "showTitle": false,
         "className": "",
         "visible": "true",
@@ -2590,11 +2872,11 @@
         "z": "87d7e0c384244738",
         "g": "5c04dc2485ae0da2",
         "group": "1a4cb0419a6cf9d9",
-        "order": 1,
-        "width": "5",
+        "order": 3,
+        "width": "2",
         "height": "1",
-        "name": "",
-        "label": "Powered by HYPERRIDE ICT Platform, Alerox ENG 2024",
+        "name": "alessandro.rossi@eng.it",
+        "label": "<a href=\"mailto://alessandro.rossi@eng.it\">alessandro.rossi@eng.it</a>",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "style": false,
@@ -2603,7 +2885,7 @@
         "color": "#717171",
         "wrapText": false,
         "className": "",
-        "x": 270,
+        "x": 170,
         "y": 520,
         "wires": []
     },
@@ -2718,7 +3000,7 @@
         "z": "87d7e0c384244738",
         "g": "5c04dc2485ae0da2",
         "name": "",
-        "group": "1a4cb0419a6cf9d9",
+        "group": "9f99c66a66471fce",
         "order": 2,
         "width": "1",
         "height": "1",
@@ -2799,6 +3081,29 @@
         ]
     },
     {
+        "id": "e02df3b6083a7a69",
+        "type": "ui-text",
+        "z": "87d7e0c384244738",
+        "g": "5c04dc2485ae0da2",
+        "group": "1a4cb0419a6cf9d9",
+        "order": 4,
+        "width": "1",
+        "height": "1",
+        "name": "ENG logo",
+        "label": "<a href=\"https://www.eng.it\" target=\"_blank\"><img width=\"100%\" src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/ENG24-LOGO-FULL-DARK%403x.png/2880px-ENG24-LOGO-FULL-DARK%403x.png\"/></a>",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "x": 360,
+        "y": 520,
+        "wires": []
+    },
+    {
         "id": "f85bce5ddfd72253",
         "type": "inject",
         "z": "6f835252e7b4d315",
@@ -2812,7 +3117,7 @@
             },
             {
                 "p": "keycloak",
-                "v": "http://keycloack:8080",
+                "v": "http://keycloak:8080",
                 "vt": "str"
             },
             {
@@ -2898,7 +3203,7 @@
         "method": "POST",
         "ret": "obj",
         "paytoqs": "ignore",
-        "url": "http://keycloak:8080/realms/dedalus/protocol/openid-connect/token",
+        "url": "{{{keycloak}}}/realms/dedalus/protocol/openid-connect/token",
         "tls": "",
         "persist": false,
         "proxy": "",
@@ -2972,7 +3277,7 @@
         "type": "debug",
         "z": "6f835252e7b4d315",
         "g": "f246a18ed1e7d299",
-        "name": "ver",
+        "name": "status",
         "active": false,
         "tosidebar": true,
         "console": false,
@@ -3225,7 +3530,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "[\n    {\n        \"id\": \"urn:ngsi-ld:MEASUREMENT:id:ASMM:{{{parsed.id}}}\",\n        \"type\": \"DeviceMeasurement\",\n        \"address\": {\n            \"type\": \"Property\",\n            \"value\": {\n                \"streetAddress\": \"Via Bruno Capponi, 100\",\n                \"addressLocality\": \"Terni\",\n                \"addressRegion\": \"Umbria\",\n                \"addressCountry\": \"Italy\",\n                \"postalCode\": \"05100\"\n            }\n        },\n        \"alternateName\": {\n            \"type\": \"Property\",\n            \"value\": \"\"\n        },\n        \"areaServed\": {\n            \"type\": \"Property\",\n            \"value\": \"Umbria region\"\n        },\n        \"controlledProperty\": {\n            \"type\": \"Property\",\n            \"value\": \"{{parsed.property}}\"\n        },\n        \"dataProvider\": {\n            \"type\": \"Property\",\n            \"value\": \"\"\n        },\n        \"dateCreated\": {\n            \"type\": \"Property\",\n            \"value\": \"2024-04-22T22:43:00.000Z\"\n        },\n        \"dateModified\": {\n            \"type\": \"Property\",\n            \"value\": \"{{parsed.timestamp}}\"\n        },\n        \"dateObserved\": {\n            \"type\": \"Property\",\n            \"value\": \"{{parsed.timestamp}}\"\n        },\n        \"description\": {\n            \"type\": \"Property\",\n            \"value\": \"HYPERRIDE Demo measurement values\"\n        },\n        \"deviceType\": {\n            \"type\": \"Property\",\n            \"value\": \"sensor\"\n        },\n        \"location\": {\n            \"type\": \"Property\",\n            \"value\": {\n                \"type\": \"Point\",\n                \"coordinates\": [\n                    42.5576098,\n                    12.5283058\n                ]\n            }\n        },\n        \"measurementType\": {\n            \"type\": \"Property\",\n            \"value\": \"{{parsed.type}}\"\n        },\n        \"name\": {\n            \"type\": \"Property\",\n            \"value\": \"Simple measurement\"\n        },\n        \"numValue\": {\n            \"type\": \"Property\",\n            \"value\": {{parsed.value}},\n            \"unitCode\": \"{{parsed.unit}}\"\n        },\n        \"outlier\": {\n            \"type\": \"Property\",\n            \"value\": true\n        },\n        \"owner\": {\n            \"type\": \"Property\",\n            \"value\": []\n        },\n        \"refDevice\": {\n            \"type\": \"Property\",\n            \"value\": \"urn:ngsi-ld:MEASUREMENT:refDevice:ASMD:{{{parsed.id}}}\"\n        },\n        \"seeAlso\": {\n            \"type\": \"Property\",\n            \"value\": []\n        },\n        \"source\": {\n            \"type\": \"Property\",\n            \"value\": \"ASM Terni S.p.a.\"\n        },\n        \"textValue\": {\n            \"type\": \"Property\",\n            \"value\": \"\"\n        },\n        \"unit\": {\n            \"type\": \"Property\",\n            \"value\": \"{{parsed.unit}}\"\n        },\n        \"@context\": [\n            \"{{{context}}}\"\n        ]\n    }\n]",
+        "template": "[\n    {\n        \"id\": \"urn:ngsi-ld:MEASUREMENT:id:ASM:{{{parsed.id}}}\",\n        \"type\": \"DeviceMeasurement\",\n        \"address\": {\n            \"type\": \"Property\",\n            \"value\": {\n                \"streetAddress\": \"Via Bruno Capponi, 100\",\n                \"addressLocality\": \"Terni\",\n                \"addressRegion\": \"Umbria\",\n                \"addressCountry\": \"Italy\",\n                \"postalCode\": \"05100\"\n            }\n        },\n        \"alternateName\": {\n            \"type\": \"Property\",\n            \"value\": \"\"\n        },\n        \"areaServed\": {\n            \"type\": \"Property\",\n            \"value\": \"Terni, Umbria\"\n        },\n        \"controlledProperty\": {\n            \"type\": \"Property\",\n            \"value\": \"{{parsed.property}}\"\n        },\n        \"dataProvider\": {\n            \"type\": \"Property\",\n            \"value\": \"\"\n        },\n        \"dateCreated\": {\n            \"type\": \"Property\",\n            \"value\": \"2024-04-22T22:43:00.000Z\"\n        },\n        \"dateModified\": {\n            \"type\": \"Property\",\n            \"value\": \"{{parsed.timestamp}}\"\n        },\n        \"dateObserved\": {\n            \"type\": \"Property\",\n            \"value\": \"{{parsed.timestamp}}\"\n        },\n        \"description\": {\n            \"type\": \"Property\",\n            \"value\": \"HYPERRIDE Demo measurement values\"\n        },\n        \"deviceType\": {\n            \"type\": \"Property\",\n            \"value\": \"sensor\"\n        },\n        \"location\": {\n            \"type\": \"Property\",\n            \"value\": {\n                \"type\": \"Point\",\n                \"coordinates\": [\n                    42.569,\n                    12.608\n                ]\n            }\n        },\n        \"measurementType\": {\n            \"type\": \"Property\",\n            \"value\": \"{{parsed.type}}\"\n        },\n        \"name\": {\n            \"type\": \"Property\",\n            \"value\": \"Simple measurement\"\n        },\n        \"numValue\": {\n            \"type\": \"Property\",\n            \"value\": {{parsed.value}},\n            \"unitCode\": \"{{parsed.unit}}\"\n        },\n        \"outlier\": {\n            \"type\": \"Property\",\n            \"value\": true\n        },\n        \"owner\": {\n            \"type\": \"Property\",\n            \"value\": []\n        },\n        \"refDevice\": {\n            \"type\": \"Property\",\n            \"value\": \"urn:ngsi-ld:DEVICE:refDevice:ASM:{{{parsed.id}}}\"\n        },\n        \"seeAlso\": {\n            \"type\": \"Property\",\n            \"value\": []\n        },\n        \"source\": {\n            \"type\": \"Property\",\n            \"value\": \"ASM Terni S.p.a.\"\n        },\n        \"textValue\": {\n            \"type\": \"Property\",\n            \"value\": \"\"\n        },\n        \"unit\": {\n            \"type\": \"Property\",\n            \"value\": \"{{parsed.unit}}\"\n        },\n        \"@context\": [\n            \"{{{context}}}\"\n        ]\n    }\n]",
         "output": "json",
         "x": 300,
         "y": 280,
@@ -3268,23 +3573,13 @@
         "name": "entity update",
         "mode": "link",
         "links": [
-            "a4f3b3803658b171"
+            "a4f3b3803658b171",
+            "77647ed409ebc62e"
         ],
         "x": 590,
         "y": 520,
         "wires": [],
         "l": true
-    },
-    {
-        "id": "0ba7447f27de9d8f",
-        "type": "comment",
-        "z": "6f835252e7b4d315",
-        "g": "0d5fb5f33c555ea7",
-        "name": "Data Model",
-        "info": "<!-- 10-Header -->\n    \n[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png \"Logo\")](https://smartdatamodels.org)    \n\nEntity: DeviceMeasurement    \n=========================\n<!-- /10-Header -->\n    \n<!-- 15-License -->\n    \n\n[Open License](https://github.com/smart-data-models//dataModel.Device/blob/master/DeviceMeasurement/LICENSE.md)    \n\n[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)    \n<!-- /15-License -->\n    \n<!-- 20-Description -->\n    \n\nGlobal description: **Description of a generic measurement entity coming from a device or other data source.**    \n\nversion: 0.1.0    \n<!-- /20-Description -->\n    \n<!-- 30-PropertiesList -->\n    \n\n## List of properties    \n\n<sup><sub>[*] If there is not a type in an attribute is because it could have several types or different formats/patterns</sub></sup>    \n- `address[object]`: The mailing address  . Model: [https://schema.org/address](https://schema.org/address)\n\t- `addressCountry[string]`: The country. For example, Spain  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)    \n\t- `addressLocality[string]`: The locality in which the street address is, and which is in the region  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)    \n\t- `addressRegion[string]`: The region in which the locality is, and which is in the country  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)    \n\t- `district[string]`: A district is a type of administrative division that, in some countries, is managed by the local government      \n\t- `postOfficeBoxNumber[string]`: The post office box number for PO box addresses. For example, 03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)    \n\t- `postalCode[string]`: The postal code. For example, 24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)    \n\t- `streetAddress[string]`: The street address  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)    \n- `alternateName[string]`: An alternative name for this item  \n- `areaServed[string]`: The geographic area where a service or offered item is provided  . Model: [https://schema.org/Text](https://schema.org/Text)\n- `controlledProperty[string]`: Property being measured by the device  . Model: [https://schema.org/Text](https://schema.org/Text)\n- `dataProvider[string]`: A sequence of characters identifying the provider of the harmonised data entity  \n- `dateCreated[date-time]`: Entity creation timestamp. This will usually be allocated by the storage platform  \n- `dateModified[date-time]`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform  \n- `dateObserved[date-time]`: The date and time of this observation in ISO8601 UTC format  . Model: [https://schema.org/Text](https://schema.org/Text)\n- `description[string]`: A description of this item  \n- `deviceType[string]`: Type of device taking the measurement  . Model: [https://schema.org/Text](https://schema.org/Text)\n- `id[*]`: Unique identifier of the entity  \n- `location[*]`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  \n- `measurementType[string]`: The type of measurement to be taken  \n- `name[string]`: The name of this item  \n- `numValue[number]`: Numerical value of the measurement  . Model: [https://schema.org/Number](https://schema.org/Number)\n- `outlier[boolean]`: Value for marking the measurement to be specially processed  . Model: [https://schema.org/Boolean](https://schema.org/Boolean)\n- `owner[array]`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  \n- `refDevice[*]`: Device taking the measurement  \n- `seeAlso[*]`: list of uri pointing to additional resources about the item  \n- `source[string]`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object  \n- `textValue[string]`: Textual value of the measurement  . Model: [https://schema.org/Text](https://schema.org/Text)\n- `type[string]`: NGSI Entity type. It has to be Measurement  \n- `unit[string]`: Units of the measurement. In case of use of an acronym use units accepted in [CEFACT](https://www.unece.org/cefact.html) code  \n<!-- /30-PropertiesList -->\n    \n<!-- 35-RequiredProperties -->\n    \n\nRequired properties    \n- `id`  \n- `type`  \n<!-- /35-RequiredProperties -->\n    \n<!-- 40-RequiredProperties -->\n    \n\nNGSIv2 and NGSI-LD standards have ways of including units in every property. However there is a proeprty call 'Unit' for compatibility reasons. It is optional.    \n<!-- /40-RequiredProperties -->\n    \n<!-- 50-DataModelHeader -->\n    \n\n## Data Model description of properties    \n\nSorted alphabetically (click for details)    \n<!-- /50-DataModelHeader -->\n    \n<!-- 60-ModelYaml -->\n    \n<details><summary><strong>full yaml details</strong></summary>      \n\n```yaml    \nDeviceMeasurement:      \n  description: Description of a generic measurement entity coming from a device or other data source.      \n  properties:      \n    address:      \n      description: The mailing address      \n      properties:      \n        addressCountry:      \n          description: 'The country. For example, Spain'      \n          type: string      \n          x-ngsi:      \n            model: https://schema.org/addressCountry      \n            type: Property      \n        addressLocality:      \n          description: 'The locality in which the street address is, and which is in the region'      \n          type: string      \n          x-ngsi:      \n            model: https://schema.org/addressLocality      \n            type: Property      \n        addressRegion:      \n          description: 'The region in which the locality is, and which is in the country'      \n          type: string      \n          x-ngsi:      \n            model: https://schema.org/addressRegion      \n            type: Property      \n        district:      \n          description: 'A district is a type of administrative division that, in some countries, is managed by the local government'      \n          type: string      \n          x-ngsi:      \n            type: Property      \n        postOfficeBoxNumber:      \n          description: 'The post office box number for PO box addresses. For example, 03578'      \n          type: string      \n          x-ngsi:      \n            model: https://schema.org/postOfficeBoxNumber      \n            type: Property      \n        postalCode:      \n          description: 'The postal code. For example, 24004'      \n          type: string      \n          x-ngsi:      \n            model: https://schema.org/https://schema.org/postalCode      \n            type: Property      \n        streetAddress:      \n          description: The street address      \n          type: string      \n          x-ngsi:      \n            model: https://schema.org/streetAddress      \n            type: Property      \n        streetNr:      \n          description: Number identifying a specific property on a public street      \n          type: string      \n          x-ngsi:      \n            type: Property      \n      type: object      \n      x-ngsi:      \n        model: https://schema.org/address      \n        type: Property      \n    alternateName:      \n      description: An alternative name for this item      \n      type: string      \n      x-ngsi:      \n        type: Property      \n    areaServed:      \n      description: The geographic area where a service or offered item is provided      \n      type: string      \n      x-ngsi:      \n        model: https://schema.org/Text      \n        type: Property      \n    controlledProperty:      \n      description: Property being measured by the device      \n      type: string      \n      x-ngsi:      \n        model: https://schema.org/Text      \n        type: Property      \n    dataProvider:      \n      description: A sequence of characters identifying the provider of the harmonised data entity      \n      type: string      \n      x-ngsi:      \n        type: Property      \n    dateCreated:      \n      description: Entity creation timestamp. This will usually be allocated by the storage platform      \n      format: date-time      \n      type: string      \n      x-ngsi:      \n        type: Property      \n    dateModified:      \n      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform      \n      format: date-time      \n      type: string      \n      x-ngsi:      \n        type: Property      \n    dateObserved:      \n      description: The date and time of this observation in ISO8601 UTC format      \n      format: date-time      \n      type: string      \n      x-ngsi:      \n        model: https://schema.org/Text      \n        type: Property      \n    description:      \n      description: A description of this item      \n      type: string      \n      x-ngsi:      \n        type: Property      \n    deviceType:      \n      description: Type of device taking the measurement      \n      type: string      \n      x-ngsi:      \n        model: https://schema.org/Text      \n        type: Property      \n    id:      \n      anyOf:      \n        - description: Identifier format of any NGSI entity      \n          maxLength: 256      \n          minLength: 1      \n          pattern: ^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$      \n          type: string      \n          x-ngsi:      \n            type: Property      \n        - description: Identifier format of any NGSI entity      \n          format: uri      \n          type: string      \n          x-ngsi:      \n            type: Property      \n      description: Unique identifier of the entity      \n      x-ngsi:      \n        type: Property      \n    location:      \n      description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'      \n      oneOf:      \n        - description: Geojson reference to the item. Point      \n          properties:      \n            bbox:      \n              items:      \n                type: number      \n              minItems: 4      \n              type: array      \n            coordinates:      \n              items:      \n                type: number      \n              minItems: 2      \n              type: array      \n            type:      \n              enum:      \n                - Point      \n              type: string      \n          required:      \n            - type      \n            - coordinates      \n          title: GeoJSON Point      \n          type: object      \n          x-ngsi:      \n            type: GeoProperty      \n        - description: Geojson reference to the item. LineString      \n          properties:      \n            bbox:      \n              items:      \n                type: number      \n              minItems: 4      \n              type: array      \n            coordinates:      \n              items:      \n                items:      \n                  type: number      \n                minItems: 2      \n                type: array      \n              minItems: 2      \n              type: array      \n            type:      \n              enum:      \n                - LineString      \n              type: string      \n          required:      \n            - type      \n            - coordinates      \n          title: GeoJSON LineString      \n          type: object      \n          x-ngsi:      \n            type: GeoProperty      \n        - description: Geojson reference to the item. Polygon      \n          properties:      \n            bbox:      \n              items:      \n                type: number      \n              minItems: 4      \n              type: array      \n            coordinates:      \n              items:      \n                items:      \n                  items:      \n                    type: number      \n                  minItems: 2      \n                  type: array      \n                minItems: 4      \n                type: array      \n              type: array      \n            type:      \n              enum:      \n                - Polygon      \n              type: string      \n          required:      \n            - type      \n            - coordinates      \n          title: GeoJSON Polygon      \n          type: object      \n          x-ngsi:      \n            type: GeoProperty      \n        - description: Geojson reference to the item. MultiPoint      \n          properties:      \n            bbox:      \n              items:      \n                type: number      \n              minItems: 4      \n              type: array      \n            coordinates:      \n              items:      \n                items:      \n                  type: number      \n                minItems: 2      \n                type: array      \n              type: array      \n            type:      \n              enum:      \n                - MultiPoint      \n              type: string      \n          required:      \n            - type      \n            - coordinates      \n          title: GeoJSON MultiPoint      \n          type: object      \n          x-ngsi:      \n            type: GeoProperty      \n        - description: Geojson reference to the item. MultiLineString      \n          properties:      \n            bbox:      \n              items:      \n                type: number      \n              minItems: 4      \n              type: array      \n            coordinates:      \n              items:      \n                items:      \n                  items:      \n                    type: number      \n                  minItems: 2      \n                  type: array      \n                minItems: 2      \n                type: array      \n              type: array      \n            type:      \n              enum:      \n                - MultiLineString      \n              type: string      \n          required:      \n            - type      \n            - coordinates      \n          title: GeoJSON MultiLineString      \n          type: object      \n          x-ngsi:      \n            type: GeoProperty      \n        - description: Geojson reference to the item. MultiLineString      \n          properties:      \n            bbox:      \n              items:      \n                type: number      \n              minItems: 4      \n              type: array      \n            coordinates:      \n              items:      \n                items:      \n                  items:      \n                    items:      \n                      type: number      \n                    minItems: 2      \n                    type: array      \n                  minItems: 4      \n                  type: array      \n                type: array      \n              type: array      \n            type:      \n              enum:      \n                - MultiPolygon      \n              type: string      \n          required:      \n            - type      \n            - coordinates      \n          title: GeoJSON MultiPolygon      \n          type: object      \n          x-ngsi:      \n            type: GeoProperty      \n      x-ngsi:      \n        type: GeoProperty      \n    measurementType:      \n      description: The type of measurement to be taken      \n      type: string      \n      x-ngsi:      \n        type: Property      \n    name:      \n      description: The name of this item      \n      type: string      \n      x-ngsi:      \n        type: Property      \n    numValue:      \n      description: Numerical value of the measurement      \n      type: number      \n      x-ngsi:      \n        model: https://schema.org/Number      \n        type: Property      \n    outlier:      \n      description: Value for marking the measurement to be specially processed      \n      type: boolean      \n      x-ngsi:      \n        model: https://schema.org/Boolean      \n        type: Property      \n    owner:      \n      description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)      \n      items:      \n        anyOf:      \n          - description: Identifier format of any NGSI entity      \n            maxLength: 256      \n            minLength: 1      \n            pattern: ^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$      \n            type: string      \n            x-ngsi:      \n              type: Property      \n          - description: Identifier format of any NGSI entity      \n            format: uri      \n            type: string      \n            x-ngsi:      \n              type: Property      \n        description: Unique identifier of the entity      \n        x-ngsi:      \n          type: Property      \n      type: array      \n      x-ngsi:      \n        type: Property      \n    refDevice:      \n      anyOf:      \n        - description: Identifier format of any NGSI entity      \n          maxLength: 256      \n          minLength: 1      \n          pattern: ^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$      \n          type: string      \n          x-ngsi:      \n            type: Property      \n        - description: Identifier format of any NGSI entity      \n          format: uri      \n          type: string      \n          x-ngsi:      \n            type: Property      \n      description: Device taking the measurement      \n      x-ngsi:      \n        type: Relationship      \n    seeAlso:      \n      description: list of uri pointing to additional resources about the item      \n      oneOf:      \n        - items:      \n            format: uri      \n            type: string      \n          minItems: 1      \n          type: array      \n        - format: uri      \n          type: string      \n      x-ngsi:      \n        type: Property      \n    source:      \n      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object'      \n      type: string      \n      x-ngsi:      \n        type: Property      \n    textValue:      \n      description: Textual value of the measurement      \n      type: string      \n      x-ngsi:      \n        model: https://schema.org/Text      \n        type: Property      \n    type:      \n      description: NGSI Entity type. It has to be Measurement      \n      enum:      \n        - DeviceMeasurement      \n      type: string      \n      x-ngsi:      \n        type: Property      \n    unit:      \n      description: 'Units of the measurement. In case of use of an acronym use units accepted in [CEFACT](https://www.unece.org/cefact.html) code'      \n      type: string      \n      x-ngsi:      \n        type: Property      \n  required:      \n    - id      \n    - type      \n  type: object      \n  x-derived-from: \"\"      \n  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'      \n  x-license-url: https://github.com/smart-data-models/dataModel.Device/blob/master/DeviceMeasurement/LICENSE.md      \n  x-model-schema: https://smart-data-models.github.io/dataModel.Device/DeviceMeasurement/schema.json      \n  x-model-tags: \"\"      \n  x-version: 0.1.0      \n```    \n</details>      \n<!-- /60-ModelYaml -->\n    \n<!-- 70-MiddleNotes -->\n    \n<!-- /70-MiddleNotes -->\n    \n<!-- 80-Examples -->\n    \n\n## Example payloads      \n\n#### DeviceMeasurement NGSI-v2 key-values Example      \n\nHere is an example of a DeviceMeasurement in JSON-LD format as key-values. This is compatible with NGSI-v2 when  using `options=keyValues` and returns the context data of an individual entity.    \n<details><summary><strong>show/hide example</strong></summary>      \n\n```json  \n\n{  \n  \"id\": \"urn:ngsi-ld:MEASUREMENT:id:PMZY:77452386\",  \n  \"dateCreated\": \"2021-09-03T07:33:18Z\",  \n  \"dateModified\": \"2021-09-03T07:33:18Z\",  \n  \"source\": \"Datacenter\",  \n  \"name\": \"Simple measurement\",  \n  \"alternateName\": \"\",  \n  \"description\": \"DAta center measurement values\",  \n  \"dataProvider\": \"\",  \n  \"owner\": [  \n    \"urn:ngsi-ld:MEASUREMENT:seeAlso:owner:00001\"  \n  ],  \n  \"seeAlso\": [  \n    \"urn:ngsi-ld:MEASUREMENT:seeAlso:ZMHH:32977\"  \n  ],  \n  \"location\": {  \n    \"type\": \"Point\",  \n    \"coordinates\": [  \n      60.170833,  \n      24.9375  \n    ]  \n  },  \n  \"address\": {  \n    \"streetAddress\": \"Pohjoisesplanadi 11-13 \",  \n    \"addressLocality\": \"Helsinki\",  \n    \"addressRegion\": \"Helsinki\",  \n    \"addressCountry\": \"Finland\",  \n    \"postalCode\": \"00099\",  \n    \"postOfficeBoxNumber\": \"1\"  \n  },  \n  \"areaServed\": \"Helsinki council\",  \n  \"type\": \"DeviceMeasurement\",  \n  \"numValue\": 55.2,  \n  \"textValue\": \"\",  \n  \"controlledProperty\": \"humidity\",  \n  \"refDevice\": \"urn:ngsi-ld:MEASUREMENT:refDevice:ZMHH:32871158\",  \n  \"deviceType\": \"sensor\",  \n  \"measurementType\": \"FillingLevelSensor\",  \n  \"dateObserved\": \"2021-09-03T07:33:18Z\",  \n  \"outlier\": true,  \n  \"unit\": \"UDT0000016\"  \n}  \n```  \n</details>    \n\n#### DeviceMeasurement NGSI-v2 normalized Example      \n\nHere is an example of a DeviceMeasurement in JSON-LD format as normalized. This is compatible with NGSI-v2 when not using options and returns the context data of an individual entity.    \n<details><summary><strong>show/hide example</strong></summary>      \n\n```json  \n\n{  \n  \"id\": \"urn:ngsi-ld:MEASUREMENT:id:PMZY:77452386\",  \n  \"type\": \"DeviceMeasurement\",  \n  \"dateCreated\": {  \n    \"type\": \"DateTime\",  \n    \"value\": \"2021-09-03T07:33:18Z\"  \n  },  \n  \"dateModified\": {  \n    \"type\": \"DateTime\",  \n    \"value\": \"2021-09-03T07:33:18Z\"  \n  },  \n  \"source\": {  \n    \"type\": \"Text\",  \n    \"value\": \"Datacenter\"  \n  },  \n  \"name\": {  \n    \"type\": \"Text\",  \n    \"value\": \"Simple measurement\"  \n  },  \n  \"alternateName\": {  \n    \"type\": \"Text\",  \n    \"value\": \"\"  \n  },  \n  \"description\": {  \n    \"type\": \"Text\",  \n    \"value\": \"DAta center measurement values\"  \n  },  \n  \"dataProvider\": {  \n    \"type\": \"Text\",  \n    \"value\": \"\"  \n  },  \n  \"owner\": {  \n    \"type\": \"StructuredValue\",  \n    \"value\": []  \n  },  \n  \"seeAlso\": {  \n    \"type\": \"StructuredValue\",  \n    \"value\": [  \n      \"urn:ngsi-ld:MEASUREMENT:seeAlso:ZMHH:32977\"  \n    ]  \n  },  \n  \"location\": {  \n    \"type\": \"geo:json\",  \n    \"value\": {  \n      \"type\": \"Point\",  \n      \"coordinates\": [  \n        60.170833,  \n        24.9375  \n      ]  \n    }  \n  },  \n  \"address\": {  \n    \"type\": \"StructuredValue\",  \n    \"value\": {  \n      \"streetAddress\": \"Pohjoisesplanadi 11-13 \",  \n      \"addressLocality\": \"Helsinki\",  \n      \"addressRegion\": \"Helsinki\",  \n      \"addressCountry\": \"Finland\",  \n      \"postalCode\": \"00099\",  \n      \"postOfficeBoxNumber\": \"1\"  \n    }  \n  },  \n  \"areaServed\": {  \n    \"type\": \"Text\",  \n    \"value\": \"Helsinki council\"  \n  },  \n  \"numValue\": {  \n    \"type\": \"Number\",  \n    \"value\": 55.2  \n  },  \n  \"textValue\": {  \n    \"type\": \"Text\",  \n    \"value\": \"\"  \n  },  \n  \"controlledProperty\": {  \n    \"type\": \"Text\",  \n    \"value\": \"humidity\"  \n  },  \n  \"refDevice\": {  \n    \"type\": \"Text\",  \n    \"value\": \"urn:ngsi-ld:MEASUREMENT:refDevice:ZMHH:32871158\"  \n  },  \n  \"deviceType\": {  \n    \"type\": \"Text\",  \n    \"value\": \"sensor\"  \n  },  \n  \"measurementType\": {  \n    \"type\": \"Text\",  \n    \"value\": \"FillingLevelSensor\"  \n  },  \n  \"dateObserved\": {  \n    \"type\": \"DateTime\",  \n    \"value\": \"2021-09-03T07:33:18Z\"  \n  },  \n  \"outlier\": {  \n    \"type\": \"Boolean\",  \n    \"value\": true  \n  },  \n  \"unit\": {  \n    \"type\": \"Text\",  \n    \"value\": \"UDT0000016\"  \n  }  \n}  \n```  \n</details>    \n\n#### DeviceMeasurement NGSI-LD key-values Example      \n\nHere is an example of a DeviceMeasurement in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.    \n<details><summary><strong>show/hide example</strong></summary>      \n\n```json  \n\n{  \n  \"id\": \"urn:ngsi-ld:MEASUREMENT:id:PMZY:77452386\",  \n  \"type\": \"DeviceMeasurement\",  \n  \"address\": {  \n    \"streetAddress\": \"Pohjoisesplanadi 11-13 \",  \n    \"addressLocality\": \"Helsinki\",  \n    \"addressRegion\": \"Helsinki\",  \n    \"addressCountry\": \"Finland\",  \n    \"postalCode\": \"00099\",  \n    \"postOfficeBoxNumber\": \"1\"  \n  },  \n  \"alternateName\": \"\",  \n  \"areaServed\": \"Helsinki council\",  \n  \"controlledProperty\": \"humidity\",  \n  \"dataProvider\": \"\",  \n  \"dateCreated\": \"2021-09-03T07:33:18Z\",  \n  \"dateModified\": \"2021-09-03T07:33:18Z\",  \n  \"dateObserved\": \"2021-09-03T07:33:18Z\",  \n  \"description\": \"DAta center measurement values\",  \n  \"deviceType\": \"sensor\",  \n  \"location\": {  \n    \"type\": \"Point\",  \n    \"coordinates\": [  \n      60.170833,  \n      24.9375  \n    ]  \n  },  \n  \"measurementType\": \"FillingLevelSensor\",  \n  \"name\": \"Simple measurement\",  \n  \"numValue\": 55.2,  \n  \"outlier\": true,  \n  \"refDevice\": \"urn:ngsi-ld:MEASUREMENT:refDevice:ZMHH:32871158\",  \n  \"owner\": [  \n    \"urn:ngsi-ld:MEASUREMENT:seeAlso:owner:00001\"  \n  ],  \n  \"seeAlso\": [  \n    \"urn:ngsi-ld:MEASUREMENT:seeAlso:ZMHH:32977\"  \n  ],  \n  \"source\": \"Datacenter\",  \n  \"textValue\": \"\",  \n  \"unit\": \"UDT0000016\",  \n  \"@context\": [  \n    \"https://raw.githubusercontent.com/smart-data-models/dataModel.Device/master/context.jsonld\"  \n  ]  \n}  \n```  \n</details>    \n\n#### DeviceMeasurement NGSI-LD normalized Example      \n\nHere is an example of a DeviceMeasurement in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.    \n<details><summary><strong>show/hide example</strong></summary>      \n\n```json  \n\n{  \n    \"id\": \"urn:ngsi-ld:MEASUREMENT:id:PMZY:77452386\",  \n    \"type\": \"DeviceMeasurement\",  \n    \"address\": {  \n        \"type\": \"Property\",  \n        \"value\": {  \n            \"streetAddress\": \"Pohjoisesplanadi 11-13 \",  \n            \"addressLocality\": \"Helsinki\",  \n            \"addressRegion\": \"Helsinki\",  \n            \"addressCountry\": \"Finland\",  \n            \"postalCode\": \"00099\",  \n            \"postOfficeBoxNumber\": \"1\"  \n        }  \n    },  \n    \"alternateName\": {  \n        \"type\": \"Property\",  \n        \"value\": \"\"  \n    },  \n    \"areaServed\": {  \n        \"type\": \"Property\",  \n        \"value\": \"Helsinki council\"  \n    },  \n    \"controlledProperty\": {  \n        \"type\": \"Property\",  \n        \"value\": \"humidity\"  \n    },  \n    \"dataProvider\": {  \n        \"type\": \"Property\",  \n        \"value\": \"\"  \n    },  \n    \"dateCreated\": {  \n        \"type\": \"Property\",  \n        \"value\": \"2021-09-03T07:33:18Z\"  \n    },  \n    \"dateModified\": {  \n        \"type\": \"Property\",  \n        \"value\": \"2021-09-03T07:33:18Z\"  \n    },  \n    \"dateObserved\": {  \n        \"type\": \"Property\",  \n        \"value\": \"2021-09-03T07:33:18Z\"  \n    },  \n    \"description\": {  \n        \"type\": \"Property\",  \n        \"value\": \"DAta center measurement values\"  \n    },  \n    \"deviceType\": {  \n        \"type\": \"Property\",  \n        \"value\": \"sensor\"  \n    },  \n    \"location\": {  \n        \"type\": \"Property\",  \n        \"value\": {  \n            \"type\": \"Point\",  \n            \"coordinates\": [  \n                60.170833,  \n                24.9375  \n            ]  \n        }  \n    },  \n    \"measurementType\": {  \n        \"type\": \"Property\",  \n        \"value\": \"FillingLevelSensor\"  \n    },  \n    \"name\": {  \n        \"type\": \"Property\",  \n        \"value\": \"Simple measurement\"  \n    },  \n    \"numValue\": {  \n        \"type\": \"Property\",  \n        \"value\": 55.2  \n    },  \n    \"outlier\": {  \n        \"type\": \"Property\",  \n        \"value\": true  \n    },  \n    \"owner\": {  \n        \"type\": \"Property\",  \n        \"value\": []  \n    },  \n    \"refDevice\": {  \n        \"type\": \"Property\",  \n        \"value\": \"urn:ngsi-ld:MEASUREMENT:refDevice:ZMHH:32871158\"  \n    },  \n    \"seeAlso\": {  \n        \"type\": \"Property\",  \n        \"value\": []  \n    },  \n    \"source\": {  \n        \"type\": \"Property\",  \n        \"value\": \"Datacenter\"  \n    },  \n    \"textValue\": {  \n        \"type\": \"Property\",  \n        \"value\": \"\"  \n    },  \n    \"unit\": {  \n        \"type\": \"Property\",  \n        \"value\": \"UDT0000016\"  \n    },  \n    \"@context\": [  \n        \"https://raw.githubusercontent.com/smart-data-models/dataModel.Device/master/context.jsonld\"  \n    ]  \n}  \n```  \n</details><!-- /80-Examples -->\n    \n<!-- 90-FooterNotes -->\n    \n<!-- /90-FooterNotes -->\n    \n<!-- 95-Units -->\n    \n\nSee [FAQ 10](https://smartdatamodels.org/index.php/faqs/) to get an answer on how to deal with magnitude units    \n<!-- /95-Units -->\n    \n<!-- 97-LastFooter -->\n    \n---    \n\n[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->\n    \nSource: https://github.com/smart-data-models/dataModel.Device/blob/master/DeviceMeasurement/doc/spec.md",
-        "x": 590,
-        "y": 220,
-        "wires": []
     },
     {
         "id": "c1fd62cf0d75f476",
@@ -3725,12 +4020,12 @@
         "group": "b1791bd64a7f96d2",
         "page": "",
         "ui": "",
-        "name": "Orion LD",
+        "name": "Orion-LD",
         "order": 1,
         "width": 0,
         "height": 0,
         "head": "",
-        "format": "<ul style=\"font-size:14px\">\n    <li v-for=\"item in msg.payload\">\n        <b><font color=\"#0094ce\">&nbsp;{{item.id}}</font></b>\n        <ul>\n            <li v-for=\"(value, key) in item\"><b>&nbsp;{{key}}</b>: {{value}}</li>\n        </ul>\n    </li>\n</ul>",
+        "format": "<div v-if=\"msg.payload === 'Unauthorized'\">\n  <b style=\"color:red\">UNAUTHORIZED</b>\n</div>\n<div v-else>\n    <ul style=\"font-size:14px\">\n        <li v-for=\"item in msg.payload\">\n            <b><font color=\"#0094ce\">&nbsp;{{item.id}}</font></b>\n            <ul>\n                <li v-for=\"(value, key) in item\"><b>&nbsp;{{key}}</b>: {{value}}</li>\n            </ul>\n        </li>\n    </ul>\n</div>",
         "storeOutMessages": true,
         "passthru": true,
         "resendOnRefresh": true,
@@ -3817,7 +4112,8 @@
         "g": "caac3623d5f73bbb",
         "name": "dump orion",
         "links": [
-            "5de309c3c5a8540b"
+            "5de309c3c5a8540b",
+            "70e1eb93e778765c"
         ],
         "x": 160,
         "y": 820,
@@ -4329,6 +4625,1414 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "3e9222510275c921",
+        "type": "ui-button",
+        "z": "6f835252e7b4d315",
+        "g": "4b94c3bd411f5ca8",
+        "group": "9f99c66a66471fce",
+        "name": "",
+        "label": "Realm",
+        "order": 7,
+        "width": "1",
+        "height": "1",
+        "emulateClick": true,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "grant_type=password&username=myuser&password=myuser&client_id=orion&client_secret=u0uEieRqtUVrXPluUAiuvGAZ2Qk4Bco6",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 150,
+        "y": 1220,
+        "wires": [
+            [
+                "f71df4b68ffd88cf"
+            ]
+        ]
+    },
+    {
+        "id": "2e4133cc07752741",
+        "type": "ui-button",
+        "z": "6f835252e7b4d315",
+        "g": "4b94c3bd411f5ca8",
+        "group": "9f99c66a66471fce",
+        "name": "",
+        "label": "Token",
+        "order": 8,
+        "width": "1",
+        "height": "1",
+        "emulateClick": true,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "{\"access_token\": \"fake\"}",
+        "payloadType": "json",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 150,
+        "y": 1280,
+        "wires": [
+            [
+                "18d86c24a686a534",
+                "4a84d8e11186032f"
+            ]
+        ]
+    },
+    {
+        "id": "28e65589543816cb",
+        "type": "ui-button",
+        "z": "6f835252e7b4d315",
+        "g": "4b94c3bd411f5ca8",
+        "group": "9f99c66a66471fce",
+        "name": "",
+        "label": "Password",
+        "order": 4,
+        "width": "1",
+        "height": "1",
+        "emulateClick": true,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "grant_type=password&username=myuser&password=fake&client_id=orion&client_secret=u0uEieRqtUVrXPluUAiuvGAZ2Qk4Bco6",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 160,
+        "y": 1080,
+        "wires": [
+            [
+                "4c419a76d2598db6"
+            ]
+        ]
+    },
+    {
+        "id": "15cc1c5e8952cb55",
+        "type": "ui-button",
+        "z": "6f835252e7b4d315",
+        "g": "4b94c3bd411f5ca8",
+        "group": "9f99c66a66471fce",
+        "name": "",
+        "label": "Client id",
+        "order": 5,
+        "width": "1",
+        "height": "1",
+        "emulateClick": true,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "grant_type=password&username=myuser&password=myuser&client_id=fake&client_secret=u0uEieRqtUVrXPluUAiuvGAZ2Qk4Bco6",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 160,
+        "y": 1120,
+        "wires": [
+            [
+                "4c419a76d2598db6"
+            ]
+        ]
+    },
+    {
+        "id": "46abe8b98a23179b",
+        "type": "ui-button",
+        "z": "6f835252e7b4d315",
+        "g": "4b94c3bd411f5ca8",
+        "group": "9f99c66a66471fce",
+        "name": "",
+        "label": "Secret",
+        "order": 6,
+        "width": "1",
+        "height": "1",
+        "emulateClick": true,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "grant_type=password&username=myuser&password=myuser&client_id=orion&client_secret=fake",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 150,
+        "y": 1160,
+        "wires": [
+            [
+                "4c419a76d2598db6"
+            ]
+        ]
+    },
+    {
+        "id": "4c419a76d2598db6",
+        "type": "http request",
+        "z": "6f835252e7b4d315",
+        "g": "4b94c3bd411f5ca8",
+        "name": "POST /token",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://keycloak:8080/realms/dedalus/protocol/openid-connect/token",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [
+            {
+                "keyType": "Content-Type",
+                "keyValue": "",
+                "valueType": "other",
+                "valueValue": "application/x-www-form-urlencoded"
+            }
+        ],
+        "x": 350,
+        "y": 1080,
+        "wires": [
+            [
+                "c046d7f85b732ade",
+                "55ebf1dea8d0dd16",
+                "fdbaca011264f8e8"
+            ]
+        ]
+    },
+    {
+        "id": "c046d7f85b732ade",
+        "type": "debug",
+        "z": "6f835252e7b4d315",
+        "g": "4b94c3bd411f5ca8",
+        "name": "set flow.access_token",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "statusCode & \" - \" & payload.error",
+        "statusType": "jsonata",
+        "x": 560,
+        "y": 1080,
+        "wires": []
+    },
+    {
+        "id": "55ebf1dea8d0dd16",
+        "type": "change",
+        "z": "6f835252e7b4d315",
+        "g": "4b94c3bd411f5ca8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "access_token",
+                "pt": "flow",
+                "to": "payload.access_token",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 560,
+        "y": 1080,
+        "wires": [
+            []
+        ],
+        "icon": "node-red-contrib-fiware_official/fiware.png"
+    },
+    {
+        "id": "f71df4b68ffd88cf",
+        "type": "http request",
+        "z": "6f835252e7b4d315",
+        "g": "4b94c3bd411f5ca8",
+        "name": "POST /token",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://keycloak:8080/realms/fake/protocol/openid-connect/token",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [
+            {
+                "keyType": "Content-Type",
+                "keyValue": "",
+                "valueType": "other",
+                "valueValue": "application/x-www-form-urlencoded"
+            }
+        ],
+        "x": 350,
+        "y": 1220,
+        "wires": [
+            [
+                "b550e3ddcdbe5eff",
+                "e9173adcdd6c4a67",
+                "fdbaca011264f8e8"
+            ]
+        ]
+    },
+    {
+        "id": "b550e3ddcdbe5eff",
+        "type": "debug",
+        "z": "6f835252e7b4d315",
+        "g": "4b94c3bd411f5ca8",
+        "name": "set flow.access_token",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "statusCode & \" - \" & payload.error",
+        "statusType": "jsonata",
+        "x": 560,
+        "y": 1220,
+        "wires": []
+    },
+    {
+        "id": "e9173adcdd6c4a67",
+        "type": "change",
+        "z": "6f835252e7b4d315",
+        "g": "4b94c3bd411f5ca8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "access_token",
+                "pt": "flow",
+                "to": "payload.access_token",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 560,
+        "y": 1220,
+        "wires": [
+            []
+        ],
+        "icon": "node-red-contrib-fiware_official/fiware.png"
+    },
+    {
+        "id": "89756fcc07b92a57",
+        "type": "inject",
+        "z": "6f835252e7b4d315",
+        "g": "4b94c3bd411f5ca8",
+        "name": "",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 75,
+        "y": 1080,
+        "wires": [
+            [
+                "28e65589543816cb"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "3325263e10d01a91",
+        "type": "inject",
+        "z": "6f835252e7b4d315",
+        "g": "4b94c3bd411f5ca8",
+        "name": "",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 75,
+        "y": 1120,
+        "wires": [
+            [
+                "15cc1c5e8952cb55"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "83267febf53a4707",
+        "type": "inject",
+        "z": "6f835252e7b4d315",
+        "g": "4b94c3bd411f5ca8",
+        "name": "",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 75,
+        "y": 1160,
+        "wires": [
+            [
+                "46abe8b98a23179b"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "a17900d5c72c7e9b",
+        "type": "inject",
+        "z": "6f835252e7b4d315",
+        "g": "4b94c3bd411f5ca8",
+        "name": "",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 75,
+        "y": 1220,
+        "wires": [
+            [
+                "3e9222510275c921"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "b50ffced9f25a18f",
+        "type": "inject",
+        "z": "6f835252e7b4d315",
+        "g": "4b94c3bd411f5ca8",
+        "name": "",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 75,
+        "y": 1280,
+        "wires": [
+            [
+                "2e4133cc07752741"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "f607ce1a7b234ba6",
+        "type": "debug",
+        "z": "6f835252e7b4d315",
+        "g": "4b94c3bd411f5ca8",
+        "name": "set flow.access_token",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload.access_token",
+        "statusType": "msg",
+        "x": 560,
+        "y": 1340,
+        "wires": []
+    },
+    {
+        "id": "28ed652fa970c9ea",
+        "type": "change",
+        "z": "6f835252e7b4d315",
+        "g": "4b94c3bd411f5ca8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "access_token",
+                "pt": "flow",
+                "to": "payload.access_token",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 560,
+        "y": 1340,
+        "wires": [
+            []
+        ],
+        "icon": "node-red-contrib-fiware_official/fiware.png"
+    },
+    {
+        "id": "8a6cd21af6365e5f",
+        "type": "http request",
+        "z": "6f835252e7b4d315",
+        "g": "4b94c3bd411f5ca8",
+        "name": "POST /token",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://keycloak:8080/realms/dedalus/protocol/openid-connect/token",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [
+            {
+                "keyType": "Content-Type",
+                "keyValue": "",
+                "valueType": "other",
+                "valueValue": "application/x-www-form-urlencoded"
+            }
+        ],
+        "x": 350,
+        "y": 1340,
+        "wires": [
+            [
+                "28ed652fa970c9ea",
+                "f607ce1a7b234ba6",
+                "fdbaca011264f8e8"
+            ]
+        ]
+    },
+    {
+        "id": "a35f23c184de8ac7",
+        "type": "ui-button",
+        "z": "6f835252e7b4d315",
+        "g": "4b94c3bd411f5ca8",
+        "group": "9f99c66a66471fce",
+        "name": "",
+        "label": "",
+        "order": 9,
+        "width": "1",
+        "height": "1",
+        "emulateClick": true,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "restore",
+        "iconPosition": "left",
+        "payload": "grant_type=password&username=myuser&password=myuser&client_id=orion&client_secret=u0uEieRqtUVrXPluUAiuvGAZ2Qk4Bco6",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "green",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 150,
+        "y": 1340,
+        "wires": [
+            [
+                "8a6cd21af6365e5f"
+            ]
+        ]
+    },
+    {
+        "id": "b305fad0208cc669",
+        "type": "inject",
+        "z": "6f835252e7b4d315",
+        "g": "4b94c3bd411f5ca8",
+        "name": "",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 75,
+        "y": 1340,
+        "wires": [
+            [
+                "a35f23c184de8ac7"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "8eee21a3762f8925",
+        "type": "catch",
+        "z": "6f835252e7b4d315",
+        "d": true,
+        "g": "4b94c3bd411f5ca8",
+        "name": "",
+        "scope": [
+            "c1fd62cf0d75f476"
+        ],
+        "uncaught": false,
+        "x": 90,
+        "y": 1400,
+        "wires": [
+            [
+                "c0915085ab4b13dc"
+            ]
+        ]
+    },
+    {
+        "id": "c0915085ab4b13dc",
+        "type": "debug",
+        "z": "6f835252e7b4d315",
+        "d": true,
+        "g": "4b94c3bd411f5ca8",
+        "name": "set msg.payload",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "payload",
+        "statusType": "msg",
+        "x": 140,
+        "y": 1460,
+        "wires": []
+    },
+    {
+        "id": "fdbaca011264f8e8",
+        "type": "change",
+        "z": "6f835252e7b4d315",
+        "g": "4b94c3bd411f5ca8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "statusCode & \" - \" & (payload.error ? payload.error : (payload.access_token ? \"Token OK\" : payload))",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 340,
+        "y": 1400,
+        "wires": [
+            [
+                "60c392537d0adab5",
+                "617bd3c4a569efc0",
+                "a43ef0b1aa88332f",
+                "7473cf32247008f2"
+            ]
+        ]
+    },
+    {
+        "id": "18d86c24a686a534",
+        "type": "debug",
+        "z": "6f835252e7b4d315",
+        "g": "4b94c3bd411f5ca8",
+        "name": "set flow.access_token",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload.access_token",
+        "statusType": "msg",
+        "x": 560,
+        "y": 1280,
+        "wires": []
+    },
+    {
+        "id": "c23e7033b0446a81",
+        "type": "change",
+        "z": "6f835252e7b4d315",
+        "g": "4b94c3bd411f5ca8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "access_token",
+                "pt": "flow",
+                "to": "payload.access_token",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 560,
+        "y": 1280,
+        "wires": [
+            []
+        ],
+        "icon": "node-red-contrib-fiware_official/fiware.png"
+    },
+    {
+        "id": "60c392537d0adab5",
+        "type": "debug",
+        "z": "6f835252e7b4d315",
+        "g": "4b94c3bd411f5ca8",
+        "name": "Powered by Keycloak",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 560,
+        "y": 1400,
+        "wires": []
+    },
+    {
+        "id": "617bd3c4a569efc0",
+        "type": "ui-text",
+        "z": "6f835252e7b4d315",
+        "g": "4b94c3bd411f5ca8",
+        "group": "9f99c66a66471fce",
+        "order": 1,
+        "width": "4",
+        "height": "1",
+        "name": "",
+        "label": "Powered by Keycloak",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "Arial,Arial,Helvetica,sans-serif",
+        "fontSize": "16",
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "x": 560,
+        "y": 1400,
+        "wires": []
+    },
+    {
+        "id": "f15323aeb0fabbd5",
+        "type": "ui-gauge",
+        "z": "6f835252e7b4d315",
+        "g": "4b94c3bd411f5ca8",
+        "name": "",
+        "group": "9f99c66a66471fce",
+        "order": 3,
+        "width": "1",
+        "height": "1",
+        "gtype": "gauge-tile",
+        "gstyle": "needle",
+        "title": "IDS",
+        "units": "units",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c"
+            },
+            {
+                "from": "300",
+                "color": "#ea5353"
+            }
+        ],
+        "min": 0,
+        "max": "600",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 510,
+        "y": 1460,
+        "wires": []
+    },
+    {
+        "id": "a43ef0b1aa88332f",
+        "type": "change",
+        "z": "6f835252e7b4d315",
+        "g": "4b94c3bd411f5ca8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "statusCode",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 340,
+        "y": 1460,
+        "wires": [
+            [
+                "f15323aeb0fabbd5",
+                "70e1eb93e778765c"
+            ]
+        ]
+    },
+    {
+        "id": "70e1eb93e778765c",
+        "type": "link out",
+        "z": "6f835252e7b4d315",
+        "g": "4b94c3bd411f5ca8",
+        "name": "ids",
+        "mode": "link",
+        "links": [
+            "a4f3b3803658b171"
+        ],
+        "x": 630,
+        "y": 1460,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "77647ed409ebc62e",
+        "type": "link in",
+        "z": "6f835252e7b4d315",
+        "g": "7f40d81ffc8df887",
+        "name": "check entity",
+        "links": [
+            "5de309c3c5a8540b"
+        ],
+        "x": 110,
+        "y": 1740,
+        "wires": [
+            [
+                "028cb2d5b172b724"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "028cb2d5b172b724",
+        "type": "switch",
+        "z": "6f835252e7b4d315",
+        "g": "7f40d81ffc8df887",
+        "name": "",
+        "property": "payload.numValue.value",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "lte",
+                "v": "0.5",
+                "vt": "num"
+            },
+            {
+                "t": "gte",
+                "v": "3.0",
+                "vt": "num"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 3,
+        "x": 250,
+        "y": 1740,
+        "wires": [
+            [
+                "8bd4bb53d52a2727",
+                "489b1f13d133726c",
+                "f2ac6a4df5c8905d"
+            ],
+            [
+                "99456a2fbc42af66",
+                "489b1f13d133726c",
+                "f2ac6a4df5c8905d"
+            ],
+            [
+                "7da7cc1eb3e3615f",
+                "6e50c11ee3b62167"
+            ]
+        ]
+    },
+    {
+        "id": "7e02fb36df982544",
+        "type": "ui-text",
+        "z": "6f835252e7b4d315",
+        "g": "7f40d81ffc8df887",
+        "group": "1a4cb0419a6cf9d9",
+        "order": 1,
+        "width": "5",
+        "height": "1",
+        "name": "",
+        "label": "Powered by HYPERRIDE ICT Platform",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "x": 530,
+        "y": 1840,
+        "wires": []
+    },
+    {
+        "id": "8bd4bb53d52a2727",
+        "type": "change",
+        "z": "6f835252e7b4d315",
+        "g": "7f40d81ffc8df887",
+        "name": "Under power",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Under power",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 450,
+        "y": 1700,
+        "wires": [
+            [
+                "7e02fb36df982544"
+            ]
+        ]
+    },
+    {
+        "id": "99456a2fbc42af66",
+        "type": "change",
+        "z": "6f835252e7b4d315",
+        "g": "7f40d81ffc8df887",
+        "name": "Over power",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Over power",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 450,
+        "y": 1740,
+        "wires": [
+            [
+                "7e02fb36df982544"
+            ]
+        ]
+    },
+    {
+        "id": "7da7cc1eb3e3615f",
+        "type": "change",
+        "z": "6f835252e7b4d315",
+        "g": "7f40d81ffc8df887",
+        "name": "Power OK",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Power OK",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 450,
+        "y": 1780,
+        "wires": [
+            [
+                "7e02fb36df982544"
+            ]
+        ]
+    },
+    {
+        "id": "489b1f13d133726c",
+        "type": "ui-table",
+        "z": "6f835252e7b4d315",
+        "g": "7f40d81ffc8df887",
+        "group": "c105e5ca54683243",
+        "name": "",
+        "label": "ADS events",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "maxrows": "5",
+        "passthru": false,
+        "autocols": true,
+        "showSearch": true,
+        "selectionType": "none",
+        "columns": [],
+        "mobileBreakpoint": "sm",
+        "mobileBreakpointType": "defaults",
+        "action": "append",
+        "x": 270,
+        "y": 1840,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7473cf32247008f2",
+        "type": "switch",
+        "z": "6f835252e7b4d315",
+        "g": "4b94c3bd411f5ca8",
+        "name": "statusCode?",
+        "property": "statusCode",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gte",
+                "v": "300",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 130,
+        "y": 1520,
+        "wires": [
+            [
+                "15bdf2895eaf7d26"
+            ]
+        ]
+    },
+    {
+        "id": "f83fe6dfdc74bba3",
+        "type": "ui-table",
+        "z": "6f835252e7b4d315",
+        "g": "4b94c3bd411f5ca8",
+        "group": "c1b0bbe64201c399",
+        "name": "",
+        "label": "IDS events",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "maxrows": "5",
+        "passthru": false,
+        "autocols": true,
+        "showSearch": true,
+        "selectionType": "none",
+        "columns": [],
+        "mobileBreakpoint": "sm",
+        "mobileBreakpointType": "defaults",
+        "action": "append",
+        "x": 610,
+        "y": 1520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "15bdf2895eaf7d26",
+        "type": "change",
+        "z": "6f835252e7b4d315",
+        "g": "4b94c3bd411f5ca8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"timestamp\": $now(), \"detection\": payload.error ? payload.error : payload}",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 300,
+        "y": 1520,
+        "wires": [
+            [
+                "f83fe6dfdc74bba3"
+            ]
+        ]
+    },
+    {
+        "id": "f546aad2fd8c5935",
+        "type": "inject",
+        "z": "6f835252e7b4d315",
+        "g": "4b94c3bd411f5ca8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "[]",
+        "payloadType": "json",
+        "x": 470,
+        "y": 1520,
+        "wires": [
+            [
+                "f83fe6dfdc74bba3"
+            ]
+        ]
+    },
+    {
+        "id": "60add1f9426b92ad",
+        "type": "ui-button",
+        "z": "6f835252e7b4d315",
+        "g": "4b94c3bd411f5ca8",
+        "group": "c1b0bbe64201c399",
+        "name": "",
+        "label": "Clear",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "delete",
+        "iconPosition": "left",
+        "payload": "[]",
+        "payloadType": "json",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 470,
+        "y": 1520,
+        "wires": [
+            [
+                "f83fe6dfdc74bba3"
+            ]
+        ]
+    },
+    {
+        "id": "02c999471e856f5c",
+        "type": "inject",
+        "z": "6f835252e7b4d315",
+        "g": "7f40d81ffc8df887",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "[]",
+        "payloadType": "json",
+        "x": 110,
+        "y": 1840,
+        "wires": [
+            [
+                "489b1f13d133726c"
+            ]
+        ]
+    },
+    {
+        "id": "87aa08aabb9a615b",
+        "type": "ui-gauge",
+        "z": "6f835252e7b4d315",
+        "g": "7f40d81ffc8df887",
+        "name": "",
+        "group": "1a4cb0419a6cf9d9",
+        "order": 2,
+        "width": "1",
+        "height": "1",
+        "gtype": "gauge-tile",
+        "gstyle": "needle",
+        "title": "ADS",
+        "units": "units",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#ea5353"
+            },
+            {
+                "from": "1",
+                "color": "#5cd65c"
+            }
+        ],
+        "min": 0,
+        "max": "1",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 630,
+        "y": 1640,
+        "wires": []
+    },
+    {
+        "id": "f2ac6a4df5c8905d",
+        "type": "change",
+        "z": "6f835252e7b4d315",
+        "g": "7f40d81ffc8df887",
+        "name": "false",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 430,
+        "y": 1620,
+        "wires": [
+            [
+                "87aa08aabb9a615b"
+            ]
+        ]
+    },
+    {
+        "id": "6e50c11ee3b62167",
+        "type": "change",
+        "z": "6f835252e7b4d315",
+        "g": "7f40d81ffc8df887",
+        "name": "true",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 430,
+        "y": 1660,
+        "wires": [
+            [
+                "87aa08aabb9a615b"
+            ]
+        ]
+    },
+    {
+        "id": "4a84d8e11186032f",
+        "type": "change",
+        "z": "6f835252e7b4d315",
+        "g": "4b94c3bd411f5ca8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Unauthorized",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "statusCode",
+                "pt": "msg",
+                "to": "401",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 340,
+        "y": 1280,
+        "wires": [
+            [
+                "c23e7033b0446a81",
+                "fdbaca011264f8e8"
+            ]
+        ]
+    },
+    {
+        "id": "a4506531eaa02db5",
+        "type": "ui-button",
+        "z": "6f835252e7b4d315",
+        "g": "7f40d81ffc8df887",
+        "group": "c105e5ca54683243",
+        "name": "",
+        "label": "Clear",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "emulateClick": true,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "delete",
+        "iconPosition": "left",
+        "payload": "[]",
+        "payloadType": "json",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 110,
+        "y": 1840,
+        "wires": [
+            [
+                "489b1f13d133726c"
+            ]
+        ]
+    },
+    {
+        "id": "66272acd128d6ffd",
+        "type": "ui-markdown",
+        "z": "6f835252e7b4d315",
+        "g": "0d5fb5f33c555ea7",
+        "group": "52de692b47e65519",
+        "name": "Data Model",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "content": "<!-- 10-Header -->\n    \n[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png \"Logo\")](https://smartdatamodels.org)    \n\nEntity: DeviceMeasurement    \n=========================\n<!-- /10-Header -->\n    \n<!-- 15-License -->\n    \n\n[Open License](https://github.com/smart-data-models//dataModel.Device/blob/master/DeviceMeasurement/LICENSE.md)    \n\n[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)    \n<!-- /15-License -->\n    \n<!-- 20-Description -->\n    \n\nGlobal description: **Description of a generic measurement entity coming from a device or other data source.**    \n\nversion: 0.1.0    \n<!-- /20-Description -->\n    \n<!-- 30-PropertiesList -->\n    \n\n## List of properties    \n\n<sup><sub>[*] If there is not a type in an attribute is because it could have several types or different formats/patterns</sub></sup>    \n- `address[object]`: The mailing address  . Model: [https://schema.org/address](https://schema.org/address)\n\t- `addressCountry[string]`: The country. For example, Spain  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)    \n\t- `addressLocality[string]`: The locality in which the street address is, and which is in the region  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)    \n\t- `addressRegion[string]`: The region in which the locality is, and which is in the country  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)    \n\t- `district[string]`: A district is a type of administrative division that, in some countries, is managed by the local government      \n\t- `postOfficeBoxNumber[string]`: The post office box number for PO box addresses. For example, 03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)    \n\t- `postalCode[string]`: The postal code. For example, 24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)    \n\t- `streetAddress[string]`: The street address  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)    \n- `alternateName[string]`: An alternative name for this item  \n- `areaServed[string]`: The geographic area where a service or offered item is provided  . Model: [https://schema.org/Text](https://schema.org/Text)\n- `controlledProperty[string]`: Property being measured by the device  . Model: [https://schema.org/Text](https://schema.org/Text)\n- `dataProvider[string]`: A sequence of characters identifying the provider of the harmonised data entity  \n- `dateCreated[date-time]`: Entity creation timestamp. This will usually be allocated by the storage platform  \n- `dateModified[date-time]`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform  \n- `dateObserved[date-time]`: The date and time of this observation in ISO8601 UTC format  . Model: [https://schema.org/Text](https://schema.org/Text)\n- `description[string]`: A description of this item  \n- `deviceType[string]`: Type of device taking the measurement  . Model: [https://schema.org/Text](https://schema.org/Text)\n- `id[*]`: Unique identifier of the entity  \n- `location[*]`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  \n- `measurementType[string]`: The type of measurement to be taken  \n- `name[string]`: The name of this item  \n- `numValue[number]`: Numerical value of the measurement  . Model: [https://schema.org/Number](https://schema.org/Number)\n- `outlier[boolean]`: Value for marking the measurement to be specially processed  . Model: [https://schema.org/Boolean](https://schema.org/Boolean)\n- `owner[array]`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  \n- `refDevice[*]`: Device taking the measurement  \n- `seeAlso[*]`: list of uri pointing to additional resources about the item  \n- `source[string]`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object  \n- `textValue[string]`: Textual value of the measurement  . Model: [https://schema.org/Text](https://schema.org/Text)\n- `type[string]`: NGSI Entity type. It has to be Measurement  \n- `unit[string]`: Units of the measurement. In case of use of an acronym use units accepted in [CEFACT](https://www.unece.org/cefact.html) code  \n<!-- /30-PropertiesList -->\n    \n<!-- 35-RequiredProperties -->\n    \n\nRequired properties    \n- `id`  \n- `type`  \n<!-- /35-RequiredProperties -->\n    \n<!-- 40-RequiredProperties -->\n    \n\nNGSIv2 and NGSI-LD standards have ways of including units in every property. However there is a proeprty call 'Unit' for compatibility reasons. It is optional.    \n<!-- /40-RequiredProperties -->\n    \n<!-- 50-DataModelHeader -->\n    \n\n## Data Model description of properties    \n\nSorted alphabetically (click for details)    \n<!-- /50-DataModelHeader -->\n    \n<!-- 60-ModelYaml -->\n    \n<details><summary><strong>full yaml details</strong></summary>      \n\n```yaml    \nDeviceMeasurement:      \n  description: Description of a generic measurement entity coming from a device or other data source.      \n  properties:      \n    address:      \n      description: The mailing address      \n      properties:      \n        addressCountry:      \n          description: 'The country. For example, Spain'      \n          type: string      \n          x-ngsi:      \n            model: https://schema.org/addressCountry      \n            type: Property      \n        addressLocality:      \n          description: 'The locality in which the street address is, and which is in the region'      \n          type: string      \n          x-ngsi:      \n            model: https://schema.org/addressLocality      \n            type: Property      \n        addressRegion:      \n          description: 'The region in which the locality is, and which is in the country'      \n          type: string      \n          x-ngsi:      \n            model: https://schema.org/addressRegion      \n            type: Property      \n        district:      \n          description: 'A district is a type of administrative division that, in some countries, is managed by the local government'      \n          type: string      \n          x-ngsi:      \n            type: Property      \n        postOfficeBoxNumber:      \n          description: 'The post office box number for PO box addresses. For example, 03578'      \n          type: string      \n          x-ngsi:      \n            model: https://schema.org/postOfficeBoxNumber      \n            type: Property      \n        postalCode:      \n          description: 'The postal code. For example, 24004'      \n          type: string      \n          x-ngsi:      \n            model: https://schema.org/https://schema.org/postalCode      \n            type: Property      \n        streetAddress:      \n          description: The street address      \n          type: string      \n          x-ngsi:      \n            model: https://schema.org/streetAddress      \n            type: Property      \n        streetNr:      \n          description: Number identifying a specific property on a public street      \n          type: string      \n          x-ngsi:      \n            type: Property      \n      type: object      \n      x-ngsi:      \n        model: https://schema.org/address      \n        type: Property      \n    alternateName:      \n      description: An alternative name for this item      \n      type: string      \n      x-ngsi:      \n        type: Property      \n    areaServed:      \n      description: The geographic area where a service or offered item is provided      \n      type: string      \n      x-ngsi:      \n        model: https://schema.org/Text      \n        type: Property      \n    controlledProperty:      \n      description: Property being measured by the device      \n      type: string      \n      x-ngsi:      \n        model: https://schema.org/Text      \n        type: Property      \n    dataProvider:      \n      description: A sequence of characters identifying the provider of the harmonised data entity      \n      type: string      \n      x-ngsi:      \n        type: Property      \n    dateCreated:      \n      description: Entity creation timestamp. This will usually be allocated by the storage platform      \n      format: date-time      \n      type: string      \n      x-ngsi:      \n        type: Property      \n    dateModified:      \n      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform      \n      format: date-time      \n      type: string      \n      x-ngsi:      \n        type: Property      \n    dateObserved:      \n      description: The date and time of this observation in ISO8601 UTC format      \n      format: date-time      \n      type: string      \n      x-ngsi:      \n        model: https://schema.org/Text      \n        type: Property      \n    description:      \n      description: A description of this item      \n      type: string      \n      x-ngsi:      \n        type: Property      \n    deviceType:      \n      description: Type of device taking the measurement      \n      type: string      \n      x-ngsi:      \n        model: https://schema.org/Text      \n        type: Property      \n    id:      \n      anyOf:      \n        - description: Identifier format of any NGSI entity      \n          maxLength: 256      \n          minLength: 1      \n          pattern: ^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$      \n          type: string      \n          x-ngsi:      \n            type: Property      \n        - description: Identifier format of any NGSI entity      \n          format: uri      \n          type: string      \n          x-ngsi:      \n            type: Property      \n      description: Unique identifier of the entity      \n      x-ngsi:      \n        type: Property      \n    location:      \n      description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'      \n      oneOf:      \n        - description: Geojson reference to the item. Point      \n          properties:      \n            bbox:      \n              items:      \n                type: number      \n              minItems: 4      \n              type: array      \n            coordinates:      \n              items:      \n                type: number      \n              minItems: 2      \n              type: array      \n            type:      \n              enum:      \n                - Point      \n              type: string      \n          required:      \n            - type      \n            - coordinates      \n          title: GeoJSON Point      \n          type: object      \n          x-ngsi:      \n            type: GeoProperty      \n        - description: Geojson reference to the item. LineString      \n          properties:      \n            bbox:      \n              items:      \n                type: number      \n              minItems: 4      \n              type: array      \n            coordinates:      \n              items:      \n                items:      \n                  type: number      \n                minItems: 2      \n                type: array      \n              minItems: 2      \n              type: array      \n            type:      \n              enum:      \n                - LineString      \n              type: string      \n          required:      \n            - type      \n            - coordinates      \n          title: GeoJSON LineString      \n          type: object      \n          x-ngsi:      \n            type: GeoProperty      \n        - description: Geojson reference to the item. Polygon      \n          properties:      \n            bbox:      \n              items:      \n                type: number      \n              minItems: 4      \n              type: array      \n            coordinates:      \n              items:      \n                items:      \n                  items:      \n                    type: number      \n                  minItems: 2      \n                  type: array      \n                minItems: 4      \n                type: array      \n              type: array      \n            type:      \n              enum:      \n                - Polygon      \n              type: string      \n          required:      \n            - type      \n            - coordinates      \n          title: GeoJSON Polygon      \n          type: object      \n          x-ngsi:      \n            type: GeoProperty      \n        - description: Geojson reference to the item. MultiPoint      \n          properties:      \n            bbox:      \n              items:      \n                type: number      \n              minItems: 4      \n              type: array      \n            coordinates:      \n              items:      \n                items:      \n                  type: number      \n                minItems: 2      \n                type: array      \n              type: array      \n            type:      \n              enum:      \n                - MultiPoint      \n              type: string      \n          required:      \n            - type      \n            - coordinates      \n          title: GeoJSON MultiPoint      \n          type: object      \n          x-ngsi:      \n            type: GeoProperty      \n        - description: Geojson reference to the item. MultiLineString      \n          properties:      \n            bbox:      \n              items:      \n                type: number      \n              minItems: 4      \n              type: array      \n            coordinates:      \n              items:      \n                items:      \n                  items:      \n                    type: number      \n                  minItems: 2      \n                  type: array      \n                minItems: 2      \n                type: array      \n              type: array      \n            type:      \n              enum:      \n                - MultiLineString      \n              type: string      \n          required:      \n            - type      \n            - coordinates      \n          title: GeoJSON MultiLineString      \n          type: object      \n          x-ngsi:      \n            type: GeoProperty      \n        - description: Geojson reference to the item. MultiLineString      \n          properties:      \n            bbox:      \n              items:      \n                type: number      \n              minItems: 4      \n              type: array      \n            coordinates:      \n              items:      \n                items:      \n                  items:      \n                    items:      \n                      type: number      \n                    minItems: 2      \n                    type: array      \n                  minItems: 4      \n                  type: array      \n                type: array      \n              type: array      \n            type:      \n              enum:      \n                - MultiPolygon      \n              type: string      \n          required:      \n            - type      \n            - coordinates      \n          title: GeoJSON MultiPolygon      \n          type: object      \n          x-ngsi:      \n            type: GeoProperty      \n      x-ngsi:      \n        type: GeoProperty      \n    measurementType:      \n      description: The type of measurement to be taken      \n      type: string      \n      x-ngsi:      \n        type: Property      \n    name:      \n      description: The name of this item      \n      type: string      \n      x-ngsi:      \n        type: Property      \n    numValue:      \n      description: Numerical value of the measurement      \n      type: number      \n      x-ngsi:      \n        model: https://schema.org/Number      \n        type: Property      \n    outlier:      \n      description: Value for marking the measurement to be specially processed      \n      type: boolean      \n      x-ngsi:      \n        model: https://schema.org/Boolean      \n        type: Property      \n    owner:      \n      description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)      \n      items:      \n        anyOf:      \n          - description: Identifier format of any NGSI entity      \n            maxLength: 256      \n            minLength: 1      \n            pattern: ^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$      \n            type: string      \n            x-ngsi:      \n              type: Property      \n          - description: Identifier format of any NGSI entity      \n            format: uri      \n            type: string      \n            x-ngsi:      \n              type: Property      \n        description: Unique identifier of the entity      \n        x-ngsi:      \n          type: Property      \n      type: array      \n      x-ngsi:      \n        type: Property      \n    refDevice:      \n      anyOf:      \n        - description: Identifier format of any NGSI entity      \n          maxLength: 256      \n          minLength: 1      \n          pattern: ^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$      \n          type: string      \n          x-ngsi:      \n            type: Property      \n        - description: Identifier format of any NGSI entity      \n          format: uri      \n          type: string      \n          x-ngsi:      \n            type: Property      \n      description: Device taking the measurement      \n      x-ngsi:      \n        type: Relationship      \n    seeAlso:      \n      description: list of uri pointing to additional resources about the item      \n      oneOf:      \n        - items:      \n            format: uri      \n            type: string      \n          minItems: 1      \n          type: array      \n        - format: uri      \n          type: string      \n      x-ngsi:      \n        type: Property      \n    source:      \n      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object'      \n      type: string      \n      x-ngsi:      \n        type: Property      \n    textValue:      \n      description: Textual value of the measurement      \n      type: string      \n      x-ngsi:      \n        model: https://schema.org/Text      \n        type: Property      \n    type:      \n      description: NGSI Entity type. It has to be Measurement      \n      enum:      \n        - DeviceMeasurement      \n      type: string      \n      x-ngsi:      \n        type: Property      \n    unit:      \n      description: 'Units of the measurement. In case of use of an acronym use units accepted in [CEFACT](https://www.unece.org/cefact.html) code'      \n      type: string      \n      x-ngsi:      \n        type: Property      \n  required:      \n    - id      \n    - type      \n  type: object      \n  x-derived-from: \"\"      \n  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'      \n  x-license-url: https://github.com/smart-data-models/dataModel.Device/blob/master/DeviceMeasurement/LICENSE.md      \n  x-model-schema: https://smart-data-models.github.io/dataModel.Device/DeviceMeasurement/schema.json      \n  x-model-tags: \"\"      \n  x-version: 0.1.0      \n```    \n</details>      \n<!-- /60-ModelYaml -->\n    \n<!-- 70-MiddleNotes -->\n    \n<!-- /70-MiddleNotes -->\n    \n<!-- 80-Examples -->\n    \n\n## Example payloads      \n\n#### DeviceMeasurement NGSI-v2 key-values Example      \n\nHere is an example of a DeviceMeasurement in JSON-LD format as key-values. This is compatible with NGSI-v2 when  using `options=keyValues` and returns the context data of an individual entity.    \n<details><summary><strong>show/hide example</strong></summary>      \n\n```json  \n\n{  \n  \"id\": \"urn:ngsi-ld:MEASUREMENT:id:PMZY:77452386\",  \n  \"dateCreated\": \"2021-09-03T07:33:18Z\",  \n  \"dateModified\": \"2021-09-03T07:33:18Z\",  \n  \"source\": \"Datacenter\",  \n  \"name\": \"Simple measurement\",  \n  \"alternateName\": \"\",  \n  \"description\": \"DAta center measurement values\",  \n  \"dataProvider\": \"\",  \n  \"owner\": [  \n    \"urn:ngsi-ld:MEASUREMENT:seeAlso:owner:00001\"  \n  ],  \n  \"seeAlso\": [  \n    \"urn:ngsi-ld:MEASUREMENT:seeAlso:ZMHH:32977\"  \n  ],  \n  \"location\": {  \n    \"type\": \"Point\",  \n    \"coordinates\": [  \n      60.170833,  \n      24.9375  \n    ]  \n  },  \n  \"address\": {  \n    \"streetAddress\": \"Pohjoisesplanadi 11-13 \",  \n    \"addressLocality\": \"Helsinki\",  \n    \"addressRegion\": \"Helsinki\",  \n    \"addressCountry\": \"Finland\",  \n    \"postalCode\": \"00099\",  \n    \"postOfficeBoxNumber\": \"1\"  \n  },  \n  \"areaServed\": \"Helsinki council\",  \n  \"type\": \"DeviceMeasurement\",  \n  \"numValue\": 55.2,  \n  \"textValue\": \"\",  \n  \"controlledProperty\": \"humidity\",  \n  \"refDevice\": \"urn:ngsi-ld:MEASUREMENT:refDevice:ZMHH:32871158\",  \n  \"deviceType\": \"sensor\",  \n  \"measurementType\": \"FillingLevelSensor\",  \n  \"dateObserved\": \"2021-09-03T07:33:18Z\",  \n  \"outlier\": true,  \n  \"unit\": \"UDT0000016\"  \n}  \n```  \n</details>    \n\n#### DeviceMeasurement NGSI-v2 normalized Example      \n\nHere is an example of a DeviceMeasurement in JSON-LD format as normalized. This is compatible with NGSI-v2 when not using options and returns the context data of an individual entity.    \n<details><summary><strong>show/hide example</strong></summary>      \n\n```json  \n\n{  \n  \"id\": \"urn:ngsi-ld:MEASUREMENT:id:PMZY:77452386\",  \n  \"type\": \"DeviceMeasurement\",  \n  \"dateCreated\": {  \n    \"type\": \"DateTime\",  \n    \"value\": \"2021-09-03T07:33:18Z\"  \n  },  \n  \"dateModified\": {  \n    \"type\": \"DateTime\",  \n    \"value\": \"2021-09-03T07:33:18Z\"  \n  },  \n  \"source\": {  \n    \"type\": \"Text\",  \n    \"value\": \"Datacenter\"  \n  },  \n  \"name\": {  \n    \"type\": \"Text\",  \n    \"value\": \"Simple measurement\"  \n  },  \n  \"alternateName\": {  \n    \"type\": \"Text\",  \n    \"value\": \"\"  \n  },  \n  \"description\": {  \n    \"type\": \"Text\",  \n    \"value\": \"DAta center measurement values\"  \n  },  \n  \"dataProvider\": {  \n    \"type\": \"Text\",  \n    \"value\": \"\"  \n  },  \n  \"owner\": {  \n    \"type\": \"StructuredValue\",  \n    \"value\": []  \n  },  \n  \"seeAlso\": {  \n    \"type\": \"StructuredValue\",  \n    \"value\": [  \n      \"urn:ngsi-ld:MEASUREMENT:seeAlso:ZMHH:32977\"  \n    ]  \n  },  \n  \"location\": {  \n    \"type\": \"geo:json\",  \n    \"value\": {  \n      \"type\": \"Point\",  \n      \"coordinates\": [  \n        60.170833,  \n        24.9375  \n      ]  \n    }  \n  },  \n  \"address\": {  \n    \"type\": \"StructuredValue\",  \n    \"value\": {  \n      \"streetAddress\": \"Pohjoisesplanadi 11-13 \",  \n      \"addressLocality\": \"Helsinki\",  \n      \"addressRegion\": \"Helsinki\",  \n      \"addressCountry\": \"Finland\",  \n      \"postalCode\": \"00099\",  \n      \"postOfficeBoxNumber\": \"1\"  \n    }  \n  },  \n  \"areaServed\": {  \n    \"type\": \"Text\",  \n    \"value\": \"Helsinki council\"  \n  },  \n  \"numValue\": {  \n    \"type\": \"Number\",  \n    \"value\": 55.2  \n  },  \n  \"textValue\": {  \n    \"type\": \"Text\",  \n    \"value\": \"\"  \n  },  \n  \"controlledProperty\": {  \n    \"type\": \"Text\",  \n    \"value\": \"humidity\"  \n  },  \n  \"refDevice\": {  \n    \"type\": \"Text\",  \n    \"value\": \"urn:ngsi-ld:MEASUREMENT:refDevice:ZMHH:32871158\"  \n  },  \n  \"deviceType\": {  \n    \"type\": \"Text\",  \n    \"value\": \"sensor\"  \n  },  \n  \"measurementType\": {  \n    \"type\": \"Text\",  \n    \"value\": \"FillingLevelSensor\"  \n  },  \n  \"dateObserved\": {  \n    \"type\": \"DateTime\",  \n    \"value\": \"2021-09-03T07:33:18Z\"  \n  },  \n  \"outlier\": {  \n    \"type\": \"Boolean\",  \n    \"value\": true  \n  },  \n  \"unit\": {  \n    \"type\": \"Text\",  \n    \"value\": \"UDT0000016\"  \n  }  \n}  \n```  \n</details>    \n\n#### DeviceMeasurement NGSI-LD key-values Example      \n\nHere is an example of a DeviceMeasurement in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.    \n<details><summary><strong>show/hide example</strong></summary>      \n\n```json  \n\n{  \n  \"id\": \"urn:ngsi-ld:MEASUREMENT:id:PMZY:77452386\",  \n  \"type\": \"DeviceMeasurement\",  \n  \"address\": {  \n    \"streetAddress\": \"Pohjoisesplanadi 11-13 \",  \n    \"addressLocality\": \"Helsinki\",  \n    \"addressRegion\": \"Helsinki\",  \n    \"addressCountry\": \"Finland\",  \n    \"postalCode\": \"00099\",  \n    \"postOfficeBoxNumber\": \"1\"  \n  },  \n  \"alternateName\": \"\",  \n  \"areaServed\": \"Helsinki council\",  \n  \"controlledProperty\": \"humidity\",  \n  \"dataProvider\": \"\",  \n  \"dateCreated\": \"2021-09-03T07:33:18Z\",  \n  \"dateModified\": \"2021-09-03T07:33:18Z\",  \n  \"dateObserved\": \"2021-09-03T07:33:18Z\",  \n  \"description\": \"DAta center measurement values\",  \n  \"deviceType\": \"sensor\",  \n  \"location\": {  \n    \"type\": \"Point\",  \n    \"coordinates\": [  \n      60.170833,  \n      24.9375  \n    ]  \n  },  \n  \"measurementType\": \"FillingLevelSensor\",  \n  \"name\": \"Simple measurement\",  \n  \"numValue\": 55.2,  \n  \"outlier\": true,  \n  \"refDevice\": \"urn:ngsi-ld:MEASUREMENT:refDevice:ZMHH:32871158\",  \n  \"owner\": [  \n    \"urn:ngsi-ld:MEASUREMENT:seeAlso:owner:00001\"  \n  ],  \n  \"seeAlso\": [  \n    \"urn:ngsi-ld:MEASUREMENT:seeAlso:ZMHH:32977\"  \n  ],  \n  \"source\": \"Datacenter\",  \n  \"textValue\": \"\",  \n  \"unit\": \"UDT0000016\",  \n  \"@context\": [  \n    \"https://raw.githubusercontent.com/smart-data-models/dataModel.Device/master/context.jsonld\"  \n  ]  \n}  \n```  \n</details>    \n\n#### DeviceMeasurement NGSI-LD normalized Example      \n\nHere is an example of a DeviceMeasurement in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.    \n<details><summary><strong>show/hide example</strong></summary>      \n\n```json  \n\n{  \n    \"id\": \"urn:ngsi-ld:MEASUREMENT:id:PMZY:77452386\",  \n    \"type\": \"DeviceMeasurement\",  \n    \"address\": {  \n        \"type\": \"Property\",  \n        \"value\": {  \n            \"streetAddress\": \"Pohjoisesplanadi 11-13 \",  \n            \"addressLocality\": \"Helsinki\",  \n            \"addressRegion\": \"Helsinki\",  \n            \"addressCountry\": \"Finland\",  \n            \"postalCode\": \"00099\",  \n            \"postOfficeBoxNumber\": \"1\"  \n        }  \n    },  \n    \"alternateName\": {  \n        \"type\": \"Property\",  \n        \"value\": \"\"  \n    },  \n    \"areaServed\": {  \n        \"type\": \"Property\",  \n        \"value\": \"Helsinki council\"  \n    },  \n    \"controlledProperty\": {  \n        \"type\": \"Property\",  \n        \"value\": \"humidity\"  \n    },  \n    \"dataProvider\": {  \n        \"type\": \"Property\",  \n        \"value\": \"\"  \n    },  \n    \"dateCreated\": {  \n        \"type\": \"Property\",  \n        \"value\": \"2021-09-03T07:33:18Z\"  \n    },  \n    \"dateModified\": {  \n        \"type\": \"Property\",  \n        \"value\": \"2021-09-03T07:33:18Z\"  \n    },  \n    \"dateObserved\": {  \n        \"type\": \"Property\",  \n        \"value\": \"2021-09-03T07:33:18Z\"  \n    },  \n    \"description\": {  \n        \"type\": \"Property\",  \n        \"value\": \"DAta center measurement values\"  \n    },  \n    \"deviceType\": {  \n        \"type\": \"Property\",  \n        \"value\": \"sensor\"  \n    },  \n    \"location\": {  \n        \"type\": \"Property\",  \n        \"value\": {  \n            \"type\": \"Point\",  \n            \"coordinates\": [  \n                60.170833,  \n                24.9375  \n            ]  \n        }  \n    },  \n    \"measurementType\": {  \n        \"type\": \"Property\",  \n        \"value\": \"FillingLevelSensor\"  \n    },  \n    \"name\": {  \n        \"type\": \"Property\",  \n        \"value\": \"Simple measurement\"  \n    },  \n    \"numValue\": {  \n        \"type\": \"Property\",  \n        \"value\": 55.2  \n    },  \n    \"outlier\": {  \n        \"type\": \"Property\",  \n        \"value\": true  \n    },  \n    \"owner\": {  \n        \"type\": \"Property\",  \n        \"value\": []  \n    },  \n    \"refDevice\": {  \n        \"type\": \"Property\",  \n        \"value\": \"urn:ngsi-ld:MEASUREMENT:refDevice:ZMHH:32871158\"  \n    },  \n    \"seeAlso\": {  \n        \"type\": \"Property\",  \n        \"value\": []  \n    },  \n    \"source\": {  \n        \"type\": \"Property\",  \n        \"value\": \"Datacenter\"  \n    },  \n    \"textValue\": {  \n        \"type\": \"Property\",  \n        \"value\": \"\"  \n    },  \n    \"unit\": {  \n        \"type\": \"Property\",  \n        \"value\": \"UDT0000016\"  \n    },  \n    \"@context\": [  \n        \"https://raw.githubusercontent.com/smart-data-models/dataModel.Device/master/context.jsonld\"  \n    ]  \n}  \n```  \n</details><!-- /80-Examples -->\n    \n<!-- 90-FooterNotes -->\n    \n<!-- /90-FooterNotes -->\n    \n<!-- 95-Units -->\n    \n\nSee [FAQ 10](https://smartdatamodels.org/index.php/faqs/) to get an answer on how to deal with magnitude units    \n<!-- /95-Units -->\n    \n<!-- 97-LastFooter -->\n    \n---    \n\n[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->\n    \nSource: https://github.com/smart-data-models/dataModel.Device/blob/master/DeviceMeasurement/doc/spec.md",
+        "className": "",
+        "x": 590,
+        "y": 220,
+        "wires": [
+            []
+        ],
+        "info": "<!-- 10-Header -->\r\n    \r\n[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png \"Logo\")](https://smartdatamodels.org)    \r\n\r\nEntity: DeviceMeasurement    \r\n=========================\r\n<!-- /10-Header -->\r\n    \r\n<!-- 15-License -->\r\n    \r\n\r\n[Open License](https://github.com/smart-data-models//dataModel.Device/blob/master/DeviceMeasurement/LICENSE.md)    \r\n\r\n[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)    \r\n<!-- /15-License -->\r\n    \r\n<!-- 20-Description -->\r\n    \r\n\r\nGlobal description: **Description of a generic measurement entity coming from a device or other data source.**    \r\n\r\nversion: 0.1.0    \r\n<!-- /20-Description -->\r\n    \r\n<!-- 30-PropertiesList -->\r\n    \r\n\r\n## List of properties    \r\n\r\n<sup><sub>[*] If there is not a type in an attribute is because it could have several types or different formats/patterns</sub></sup>    \r\n- `address[object]`: The mailing address  . Model: [https://schema.org/address](https://schema.org/address)\r\n\t- `addressCountry[string]`: The country. For example, Spain  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)    \r\n\t- `addressLocality[string]`: The locality in which the street address is, and which is in the region  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)    \r\n\t- `addressRegion[string]`: The region in which the locality is, and which is in the country  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)    \r\n\t- `district[string]`: A district is a type of administrative division that, in some countries, is managed by the local government      \r\n\t- `postOfficeBoxNumber[string]`: The post office box number for PO box addresses. For example, 03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)    \r\n\t- `postalCode[string]`: The postal code. For example, 24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)    \r\n\t- `streetAddress[string]`: The street address  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)    \r\n- `alternateName[string]`: An alternative name for this item  \r\n- `areaServed[string]`: The geographic area where a service or offered item is provided  . Model: [https://schema.org/Text](https://schema.org/Text)\r\n- `controlledProperty[string]`: Property being measured by the device  . Model: [https://schema.org/Text](https://schema.org/Text)\r\n- `dataProvider[string]`: A sequence of characters identifying the provider of the harmonised data entity  \r\n- `dateCreated[date-time]`: Entity creation timestamp. This will usually be allocated by the storage platform  \r\n- `dateModified[date-time]`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform  \r\n- `dateObserved[date-time]`: The date and time of this observation in ISO8601 UTC format  . Model: [https://schema.org/Text](https://schema.org/Text)\r\n- `description[string]`: A description of this item  \r\n- `deviceType[string]`: Type of device taking the measurement  . Model: [https://schema.org/Text](https://schema.org/Text)\r\n- `id[*]`: Unique identifier of the entity  \r\n- `location[*]`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  \r\n- `measurementType[string]`: The type of measurement to be taken  \r\n- `name[string]`: The name of this item  \r\n- `numValue[number]`: Numerical value of the measurement  . Model: [https://schema.org/Number](https://schema.org/Number)\r\n- `outlier[boolean]`: Value for marking the measurement to be specially processed  . Model: [https://schema.org/Boolean](https://schema.org/Boolean)\r\n- `owner[array]`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  \r\n- `refDevice[*]`: Device taking the measurement  \r\n- `seeAlso[*]`: list of uri pointing to additional resources about the item  \r\n- `source[string]`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object  \r\n- `textValue[string]`: Textual value of the measurement  . Model: [https://schema.org/Text](https://schema.org/Text)\r\n- `type[string]`: NGSI Entity type. It has to be Measurement  \r\n- `unit[string]`: Units of the measurement. In case of use of an acronym use units accepted in [CEFACT](https://www.unece.org/cefact.html) code  \r\n<!-- /30-PropertiesList -->\r\n    \r\n<!-- 35-RequiredProperties -->\r\n    \r\n\r\nRequired properties    \r\n- `id`  \r\n- `type`  \r\n<!-- /35-RequiredProperties -->\r\n    \r\n<!-- 40-RequiredProperties -->\r\n    \r\n\r\nNGSIv2 and NGSI-LD standards have ways of including units in every property. However there is a proeprty call 'Unit' for compatibility reasons. It is optional.    \r\n<!-- /40-RequiredProperties -->\r\n    \r\n<!-- 50-DataModelHeader -->\r\n    \r\n\r\n## Data Model description of properties    \r\n\r\nSorted alphabetically (click for details)    \r\n<!-- /50-DataModelHeader -->\r\n    \r\n<!-- 60-ModelYaml -->\r\n    \r\n<details><summary><strong>full yaml details</strong></summary>      \r\n\r\n```yaml    \r\nDeviceMeasurement:      \r\n  description: Description of a generic measurement entity coming from a device or other data source.      \r\n  properties:      \r\n    address:      \r\n      description: The mailing address      \r\n      properties:      \r\n        addressCountry:      \r\n          description: 'The country. For example, Spain'      \r\n          type: string      \r\n          x-ngsi:      \r\n            model: https://schema.org/addressCountry      \r\n            type: Property      \r\n        addressLocality:      \r\n          description: 'The locality in which the street address is, and which is in the region'      \r\n          type: string      \r\n          x-ngsi:      \r\n            model: https://schema.org/addressLocality      \r\n            type: Property      \r\n        addressRegion:      \r\n          description: 'The region in which the locality is, and which is in the country'      \r\n          type: string      \r\n          x-ngsi:      \r\n            model: https://schema.org/addressRegion      \r\n            type: Property      \r\n        district:      \r\n          description: 'A district is a type of administrative division that, in some countries, is managed by the local government'      \r\n          type: string      \r\n          x-ngsi:      \r\n            type: Property      \r\n        postOfficeBoxNumber:      \r\n          description: 'The post office box number for PO box addresses. For example, 03578'      \r\n          type: string      \r\n          x-ngsi:      \r\n            model: https://schema.org/postOfficeBoxNumber      \r\n            type: Property      \r\n        postalCode:      \r\n          description: 'The postal code. For example, 24004'      \r\n          type: string      \r\n          x-ngsi:      \r\n            model: https://schema.org/https://schema.org/postalCode      \r\n            type: Property      \r\n        streetAddress:      \r\n          description: The street address      \r\n          type: string      \r\n          x-ngsi:      \r\n            model: https://schema.org/streetAddress      \r\n            type: Property      \r\n        streetNr:      \r\n          description: Number identifying a specific property on a public street      \r\n          type: string      \r\n          x-ngsi:      \r\n            type: Property      \r\n      type: object      \r\n      x-ngsi:      \r\n        model: https://schema.org/address      \r\n        type: Property      \r\n    alternateName:      \r\n      description: An alternative name for this item      \r\n      type: string      \r\n      x-ngsi:      \r\n        type: Property      \r\n    areaServed:      \r\n      description: The geographic area where a service or offered item is provided      \r\n      type: string      \r\n      x-ngsi:      \r\n        model: https://schema.org/Text      \r\n        type: Property      \r\n    controlledProperty:      \r\n      description: Property being measured by the device      \r\n      type: string      \r\n      x-ngsi:      \r\n        model: https://schema.org/Text      \r\n        type: Property      \r\n    dataProvider:      \r\n      description: A sequence of characters identifying the provider of the harmonised data entity      \r\n      type: string      \r\n      x-ngsi:      \r\n        type: Property      \r\n    dateCreated:      \r\n      description: Entity creation timestamp. This will usually be allocated by the storage platform      \r\n      format: date-time      \r\n      type: string      \r\n      x-ngsi:      \r\n        type: Property      \r\n    dateModified:      \r\n      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform      \r\n      format: date-time      \r\n      type: string      \r\n      x-ngsi:      \r\n        type: Property      \r\n    dateObserved:      \r\n      description: The date and time of this observation in ISO8601 UTC format      \r\n      format: date-time      \r\n      type: string      \r\n      x-ngsi:      \r\n        model: https://schema.org/Text      \r\n        type: Property      \r\n    description:      \r\n      description: A description of this item      \r\n      type: string      \r\n      x-ngsi:      \r\n        type: Property      \r\n    deviceType:      \r\n      description: Type of device taking the measurement      \r\n      type: string      \r\n      x-ngsi:      \r\n        model: https://schema.org/Text      \r\n        type: Property      \r\n    id:      \r\n      anyOf:      \r\n        - description: Identifier format of any NGSI entity      \r\n          maxLength: 256      \r\n          minLength: 1      \r\n          pattern: ^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$      \r\n          type: string      \r\n          x-ngsi:      \r\n            type: Property      \r\n        - description: Identifier format of any NGSI entity      \r\n          format: uri      \r\n          type: string      \r\n          x-ngsi:      \r\n            type: Property      \r\n      description: Unique identifier of the entity      \r\n      x-ngsi:      \r\n        type: Property      \r\n    location:      \r\n      description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'      \r\n      oneOf:      \r\n        - description: Geojson reference to the item. Point      \r\n          properties:      \r\n            bbox:      \r\n              items:      \r\n                type: number      \r\n              minItems: 4      \r\n              type: array      \r\n            coordinates:      \r\n              items:      \r\n                type: number      \r\n              minItems: 2      \r\n              type: array      \r\n            type:      \r\n              enum:      \r\n                - Point      \r\n              type: string      \r\n          required:      \r\n            - type      \r\n            - coordinates      \r\n          title: GeoJSON Point      \r\n          type: object      \r\n          x-ngsi:      \r\n            type: GeoProperty      \r\n        - description: Geojson reference to the item. LineString      \r\n          properties:      \r\n            bbox:      \r\n              items:      \r\n                type: number      \r\n              minItems: 4      \r\n              type: array      \r\n            coordinates:      \r\n              items:      \r\n                items:      \r\n                  type: number      \r\n                minItems: 2      \r\n                type: array      \r\n              minItems: 2      \r\n              type: array      \r\n            type:      \r\n              enum:      \r\n                - LineString      \r\n              type: string      \r\n          required:      \r\n            - type      \r\n            - coordinates      \r\n          title: GeoJSON LineString      \r\n          type: object      \r\n          x-ngsi:      \r\n            type: GeoProperty      \r\n        - description: Geojson reference to the item. Polygon      \r\n          properties:      \r\n            bbox:      \r\n              items:      \r\n                type: number      \r\n              minItems: 4      \r\n              type: array      \r\n            coordinates:      \r\n              items:      \r\n                items:      \r\n                  items:      \r\n                    type: number      \r\n                  minItems: 2      \r\n                  type: array      \r\n                minItems: 4      \r\n                type: array      \r\n              type: array      \r\n            type:      \r\n              enum:      \r\n                - Polygon      \r\n              type: string      \r\n          required:      \r\n            - type      \r\n            - coordinates      \r\n          title: GeoJSON Polygon      \r\n          type: object      \r\n          x-ngsi:      \r\n            type: GeoProperty      \r\n        - description: Geojson reference to the item. MultiPoint      \r\n          properties:      \r\n            bbox:      \r\n              items:      \r\n                type: number      \r\n              minItems: 4      \r\n              type: array      \r\n            coordinates:      \r\n              items:      \r\n                items:      \r\n                  type: number      \r\n                minItems: 2      \r\n                type: array      \r\n              type: array      \r\n            type:      \r\n              enum:      \r\n                - MultiPoint      \r\n              type: string      \r\n          required:      \r\n            - type      \r\n            - coordinates      \r\n          title: GeoJSON MultiPoint      \r\n          type: object      \r\n          x-ngsi:      \r\n            type: GeoProperty      \r\n        - description: Geojson reference to the item. MultiLineString      \r\n          properties:      \r\n            bbox:      \r\n              items:      \r\n                type: number      \r\n              minItems: 4      \r\n              type: array      \r\n            coordinates:      \r\n              items:      \r\n                items:      \r\n                  items:      \r\n                    type: number      \r\n                  minItems: 2      \r\n                  type: array      \r\n                minItems: 2      \r\n                type: array      \r\n              type: array      \r\n            type:      \r\n              enum:      \r\n                - MultiLineString      \r\n              type: string      \r\n          required:      \r\n            - type      \r\n            - coordinates      \r\n          title: GeoJSON MultiLineString      \r\n          type: object      \r\n          x-ngsi:      \r\n            type: GeoProperty      \r\n        - description: Geojson reference to the item. MultiLineString      \r\n          properties:      \r\n            bbox:      \r\n              items:      \r\n                type: number      \r\n              minItems: 4      \r\n              type: array      \r\n            coordinates:      \r\n              items:      \r\n                items:      \r\n                  items:      \r\n                    items:      \r\n                      type: number      \r\n                    minItems: 2      \r\n                    type: array      \r\n                  minItems: 4      \r\n                  type: array      \r\n                type: array      \r\n              type: array      \r\n            type:      \r\n              enum:      \r\n                - MultiPolygon      \r\n              type: string      \r\n          required:      \r\n            - type      \r\n            - coordinates      \r\n          title: GeoJSON MultiPolygon      \r\n          type: object      \r\n          x-ngsi:      \r\n            type: GeoProperty      \r\n      x-ngsi:      \r\n        type: GeoProperty      \r\n    measurementType:      \r\n      description: The type of measurement to be taken      \r\n      type: string      \r\n      x-ngsi:      \r\n        type: Property      \r\n    name:      \r\n      description: The name of this item      \r\n      type: string      \r\n      x-ngsi:      \r\n        type: Property      \r\n    numValue:      \r\n      description: Numerical value of the measurement      \r\n      type: number      \r\n      x-ngsi:      \r\n        model: https://schema.org/Number      \r\n        type: Property      \r\n    outlier:      \r\n      description: Value for marking the measurement to be specially processed      \r\n      type: boolean      \r\n      x-ngsi:      \r\n        model: https://schema.org/Boolean      \r\n        type: Property      \r\n    owner:      \r\n      description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)      \r\n      items:      \r\n        anyOf:      \r\n          - description: Identifier format of any NGSI entity      \r\n            maxLength: 256      \r\n            minLength: 1      \r\n            pattern: ^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$      \r\n            type: string      \r\n            x-ngsi:      \r\n              type: Property      \r\n          - description: Identifier format of any NGSI entity      \r\n            format: uri      \r\n            type: string      \r\n            x-ngsi:      \r\n              type: Property      \r\n        description: Unique identifier of the entity      \r\n        x-ngsi:      \r\n          type: Property      \r\n      type: array      \r\n      x-ngsi:      \r\n        type: Property      \r\n    refDevice:      \r\n      anyOf:      \r\n        - description: Identifier format of any NGSI entity      \r\n          maxLength: 256      \r\n          minLength: 1      \r\n          pattern: ^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$      \r\n          type: string      \r\n          x-ngsi:      \r\n            type: Property      \r\n        - description: Identifier format of any NGSI entity      \r\n          format: uri      \r\n          type: string      \r\n          x-ngsi:      \r\n            type: Property      \r\n      description: Device taking the measurement      \r\n      x-ngsi:      \r\n        type: Relationship      \r\n    seeAlso:      \r\n      description: list of uri pointing to additional resources about the item      \r\n      oneOf:      \r\n        - items:      \r\n            format: uri      \r\n            type: string      \r\n          minItems: 1      \r\n          type: array      \r\n        - format: uri      \r\n          type: string      \r\n      x-ngsi:      \r\n        type: Property      \r\n    source:      \r\n      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object'      \r\n      type: string      \r\n      x-ngsi:      \r\n        type: Property      \r\n    textValue:      \r\n      description: Textual value of the measurement      \r\n      type: string      \r\n      x-ngsi:      \r\n        model: https://schema.org/Text      \r\n        type: Property      \r\n    type:      \r\n      description: NGSI Entity type. It has to be Measurement      \r\n      enum:      \r\n        - DeviceMeasurement      \r\n      type: string      \r\n      x-ngsi:      \r\n        type: Property      \r\n    unit:      \r\n      description: 'Units of the measurement. In case of use of an acronym use units accepted in [CEFACT](https://www.unece.org/cefact.html) code'      \r\n      type: string      \r\n      x-ngsi:      \r\n        type: Property      \r\n  required:      \r\n    - id      \r\n    - type      \r\n  type: object      \r\n  x-derived-from: \"\"      \r\n  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'      \r\n  x-license-url: https://github.com/smart-data-models/dataModel.Device/blob/master/DeviceMeasurement/LICENSE.md      \r\n  x-model-schema: https://smart-data-models.github.io/dataModel.Device/DeviceMeasurement/schema.json      \r\n  x-model-tags: \"\"      \r\n  x-version: 0.1.0      \r\n```    \r\n</details>      \r\n<!-- /60-ModelYaml -->\r\n    \r\n<!-- 70-MiddleNotes -->\r\n    \r\n<!-- /70-MiddleNotes -->\r\n    \r\n<!-- 80-Examples -->\r\n    \r\n\r\n## Example payloads      \r\n\r\n#### DeviceMeasurement NGSI-v2 key-values Example      \r\n\r\nHere is an example of a DeviceMeasurement in JSON-LD format as key-values. This is compatible with NGSI-v2 when  using `options=keyValues` and returns the context data of an individual entity.    \r\n<details><summary><strong>show/hide example</strong></summary>      \r\n\r\n```json  \r\n\r\n{  \r\n  \"id\": \"urn:ngsi-ld:MEASUREMENT:id:PMZY:77452386\",  \r\n  \"dateCreated\": \"2021-09-03T07:33:18Z\",  \r\n  \"dateModified\": \"2021-09-03T07:33:18Z\",  \r\n  \"source\": \"Datacenter\",  \r\n  \"name\": \"Simple measurement\",  \r\n  \"alternateName\": \"\",  \r\n  \"description\": \"DAta center measurement values\",  \r\n  \"dataProvider\": \"\",  \r\n  \"owner\": [  \r\n    \"urn:ngsi-ld:MEASUREMENT:seeAlso:owner:00001\"  \r\n  ],  \r\n  \"seeAlso\": [  \r\n    \"urn:ngsi-ld:MEASUREMENT:seeAlso:ZMHH:32977\"  \r\n  ],  \r\n  \"location\": {  \r\n    \"type\": \"Point\",  \r\n    \"coordinates\": [  \r\n      60.170833,  \r\n      24.9375  \r\n    ]  \r\n  },  \r\n  \"address\": {  \r\n    \"streetAddress\": \"Pohjoisesplanadi 11-13 \",  \r\n    \"addressLocality\": \"Helsinki\",  \r\n    \"addressRegion\": \"Helsinki\",  \r\n    \"addressCountry\": \"Finland\",  \r\n    \"postalCode\": \"00099\",  \r\n    \"postOfficeBoxNumber\": \"1\"  \r\n  },  \r\n  \"areaServed\": \"Helsinki council\",  \r\n  \"type\": \"DeviceMeasurement\",  \r\n  \"numValue\": 55.2,  \r\n  \"textValue\": \"\",  \r\n  \"controlledProperty\": \"humidity\",  \r\n  \"refDevice\": \"urn:ngsi-ld:MEASUREMENT:refDevice:ZMHH:32871158\",  \r\n  \"deviceType\": \"sensor\",  \r\n  \"measurementType\": \"FillingLevelSensor\",  \r\n  \"dateObserved\": \"2021-09-03T07:33:18Z\",  \r\n  \"outlier\": true,  \r\n  \"unit\": \"UDT0000016\"  \r\n}  \r\n```  \r\n</details>    \r\n\r\n#### DeviceMeasurement NGSI-v2 normalized Example      \r\n\r\nHere is an example of a DeviceMeasurement in JSON-LD format as normalized. This is compatible with NGSI-v2 when not using options and returns the context data of an individual entity.    \r\n<details><summary><strong>show/hide example</strong></summary>      \r\n\r\n```json  \r\n\r\n{  \r\n  \"id\": \"urn:ngsi-ld:MEASUREMENT:id:PMZY:77452386\",  \r\n  \"type\": \"DeviceMeasurement\",  \r\n  \"dateCreated\": {  \r\n    \"type\": \"DateTime\",  \r\n    \"value\": \"2021-09-03T07:33:18Z\"  \r\n  },  \r\n  \"dateModified\": {  \r\n    \"type\": \"DateTime\",  \r\n    \"value\": \"2021-09-03T07:33:18Z\"  \r\n  },  \r\n  \"source\": {  \r\n    \"type\": \"Text\",  \r\n    \"value\": \"Datacenter\"  \r\n  },  \r\n  \"name\": {  \r\n    \"type\": \"Text\",  \r\n    \"value\": \"Simple measurement\"  \r\n  },  \r\n  \"alternateName\": {  \r\n    \"type\": \"Text\",  \r\n    \"value\": \"\"  \r\n  },  \r\n  \"description\": {  \r\n    \"type\": \"Text\",  \r\n    \"value\": \"DAta center measurement values\"  \r\n  },  \r\n  \"dataProvider\": {  \r\n    \"type\": \"Text\",  \r\n    \"value\": \"\"  \r\n  },  \r\n  \"owner\": {  \r\n    \"type\": \"StructuredValue\",  \r\n    \"value\": []  \r\n  },  \r\n  \"seeAlso\": {  \r\n    \"type\": \"StructuredValue\",  \r\n    \"value\": [  \r\n      \"urn:ngsi-ld:MEASUREMENT:seeAlso:ZMHH:32977\"  \r\n    ]  \r\n  },  \r\n  \"location\": {  \r\n    \"type\": \"geo:json\",  \r\n    \"value\": {  \r\n      \"type\": \"Point\",  \r\n      \"coordinates\": [  \r\n        60.170833,  \r\n        24.9375  \r\n      ]  \r\n    }  \r\n  },  \r\n  \"address\": {  \r\n    \"type\": \"StructuredValue\",  \r\n    \"value\": {  \r\n      \"streetAddress\": \"Pohjoisesplanadi 11-13 \",  \r\n      \"addressLocality\": \"Helsinki\",  \r\n      \"addressRegion\": \"Helsinki\",  \r\n      \"addressCountry\": \"Finland\",  \r\n      \"postalCode\": \"00099\",  \r\n      \"postOfficeBoxNumber\": \"1\"  \r\n    }  \r\n  },  \r\n  \"areaServed\": {  \r\n    \"type\": \"Text\",  \r\n    \"value\": \"Helsinki council\"  \r\n  },  \r\n  \"numValue\": {  \r\n    \"type\": \"Number\",  \r\n    \"value\": 55.2  \r\n  },  \r\n  \"textValue\": {  \r\n    \"type\": \"Text\",  \r\n    \"value\": \"\"  \r\n  },  \r\n  \"controlledProperty\": {  \r\n    \"type\": \"Text\",  \r\n    \"value\": \"humidity\"  \r\n  },  \r\n  \"refDevice\": {  \r\n    \"type\": \"Text\",  \r\n    \"value\": \"urn:ngsi-ld:MEASUREMENT:refDevice:ZMHH:32871158\"  \r\n  },  \r\n  \"deviceType\": {  \r\n    \"type\": \"Text\",  \r\n    \"value\": \"sensor\"  \r\n  },  \r\n  \"measurementType\": {  \r\n    \"type\": \"Text\",  \r\n    \"value\": \"FillingLevelSensor\"  \r\n  },  \r\n  \"dateObserved\": {  \r\n    \"type\": \"DateTime\",  \r\n    \"value\": \"2021-09-03T07:33:18Z\"  \r\n  },  \r\n  \"outlier\": {  \r\n    \"type\": \"Boolean\",  \r\n    \"value\": true  \r\n  },  \r\n  \"unit\": {  \r\n    \"type\": \"Text\",  \r\n    \"value\": \"UDT0000016\"  \r\n  }  \r\n}  \r\n```  \r\n</details>    \r\n\r\n#### DeviceMeasurement NGSI-LD key-values Example      \r\n\r\nHere is an example of a DeviceMeasurement in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.    \r\n<details><summary><strong>show/hide example</strong></summary>      \r\n\r\n```json  \r\n\r\n{  \r\n  \"id\": \"urn:ngsi-ld:MEASUREMENT:id:PMZY:77452386\",  \r\n  \"type\": \"DeviceMeasurement\",  \r\n  \"address\": {  \r\n    \"streetAddress\": \"Pohjoisesplanadi 11-13 \",  \r\n    \"addressLocality\": \"Helsinki\",  \r\n    \"addressRegion\": \"Helsinki\",  \r\n    \"addressCountry\": \"Finland\",  \r\n    \"postalCode\": \"00099\",  \r\n    \"postOfficeBoxNumber\": \"1\"  \r\n  },  \r\n  \"alternateName\": \"\",  \r\n  \"areaServed\": \"Helsinki council\",  \r\n  \"controlledProperty\": \"humidity\",  \r\n  \"dataProvider\": \"\",  \r\n  \"dateCreated\": \"2021-09-03T07:33:18Z\",  \r\n  \"dateModified\": \"2021-09-03T07:33:18Z\",  \r\n  \"dateObserved\": \"2021-09-03T07:33:18Z\",  \r\n  \"description\": \"DAta center measurement values\",  \r\n  \"deviceType\": \"sensor\",  \r\n  \"location\": {  \r\n    \"type\": \"Point\",  \r\n    \"coordinates\": [  \r\n      60.170833,  \r\n      24.9375  \r\n    ]  \r\n  },  \r\n  \"measurementType\": \"FillingLevelSensor\",  \r\n  \"name\": \"Simple measurement\",  \r\n  \"numValue\": 55.2,  \r\n  \"outlier\": true,  \r\n  \"refDevice\": \"urn:ngsi-ld:MEASUREMENT:refDevice:ZMHH:32871158\",  \r\n  \"owner\": [  \r\n    \"urn:ngsi-ld:MEASUREMENT:seeAlso:owner:00001\"  \r\n  ],  \r\n  \"seeAlso\": [  \r\n    \"urn:ngsi-ld:MEASUREMENT:seeAlso:ZMHH:32977\"  \r\n  ],  \r\n  \"source\": \"Datacenter\",  \r\n  \"textValue\": \"\",  \r\n  \"unit\": \"UDT0000016\",  \r\n  \"@context\": [  \r\n    \"https://raw.githubusercontent.com/smart-data-models/dataModel.Device/master/context.jsonld\"  \r\n  ]  \r\n}  \r\n```  \r\n</details>    \r\n\r\n#### DeviceMeasurement NGSI-LD normalized Example      \r\n\r\nHere is an example of a DeviceMeasurement in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.    \r\n<details><summary><strong>show/hide example</strong></summary>      \r\n\r\n```json  \r\n\r\n{  \r\n    \"id\": \"urn:ngsi-ld:MEASUREMENT:id:PMZY:77452386\",  \r\n    \"type\": \"DeviceMeasurement\",  \r\n    \"address\": {  \r\n        \"type\": \"Property\",  \r\n        \"value\": {  \r\n            \"streetAddress\": \"Pohjoisesplanadi 11-13 \",  \r\n            \"addressLocality\": \"Helsinki\",  \r\n            \"addressRegion\": \"Helsinki\",  \r\n            \"addressCountry\": \"Finland\",  \r\n            \"postalCode\": \"00099\",  \r\n            \"postOfficeBoxNumber\": \"1\"  \r\n        }  \r\n    },  \r\n    \"alternateName\": {  \r\n        \"type\": \"Property\",  \r\n        \"value\": \"\"  \r\n    },  \r\n    \"areaServed\": {  \r\n        \"type\": \"Property\",  \r\n        \"value\": \"Helsinki council\"  \r\n    },  \r\n    \"controlledProperty\": {  \r\n        \"type\": \"Property\",  \r\n        \"value\": \"humidity\"  \r\n    },  \r\n    \"dataProvider\": {  \r\n        \"type\": \"Property\",  \r\n        \"value\": \"\"  \r\n    },  \r\n    \"dateCreated\": {  \r\n        \"type\": \"Property\",  \r\n        \"value\": \"2021-09-03T07:33:18Z\"  \r\n    },  \r\n    \"dateModified\": {  \r\n        \"type\": \"Property\",  \r\n        \"value\": \"2021-09-03T07:33:18Z\"  \r\n    },  \r\n    \"dateObserved\": {  \r\n        \"type\": \"Property\",  \r\n        \"value\": \"2021-09-03T07:33:18Z\"  \r\n    },  \r\n    \"description\": {  \r\n        \"type\": \"Property\",  \r\n        \"value\": \"DAta center measurement values\"  \r\n    },  \r\n    \"deviceType\": {  \r\n        \"type\": \"Property\",  \r\n        \"value\": \"sensor\"  \r\n    },  \r\n    \"location\": {  \r\n        \"type\": \"Property\",  \r\n        \"value\": {  \r\n            \"type\": \"Point\",  \r\n            \"coordinates\": [  \r\n                60.170833,  \r\n                24.9375  \r\n            ]  \r\n        }  \r\n    },  \r\n    \"measurementType\": {  \r\n        \"type\": \"Property\",  \r\n        \"value\": \"FillingLevelSensor\"  \r\n    },  \r\n    \"name\": {  \r\n        \"type\": \"Property\",  \r\n        \"value\": \"Simple measurement\"  \r\n    },  \r\n    \"numValue\": {  \r\n        \"type\": \"Property\",  \r\n        \"value\": 55.2  \r\n    },  \r\n    \"outlier\": {  \r\n        \"type\": \"Property\",  \r\n        \"value\": true  \r\n    },  \r\n    \"owner\": {  \r\n        \"type\": \"Property\",  \r\n        \"value\": []  \r\n    },  \r\n    \"refDevice\": {  \r\n        \"type\": \"Property\",  \r\n        \"value\": \"urn:ngsi-ld:MEASUREMENT:refDevice:ZMHH:32871158\"  \r\n    },  \r\n    \"seeAlso\": {  \r\n        \"type\": \"Property\",  \r\n        \"value\": []  \r\n    },  \r\n    \"source\": {  \r\n        \"type\": \"Property\",  \r\n        \"value\": \"Datacenter\"  \r\n    },  \r\n    \"textValue\": {  \r\n        \"type\": \"Property\",  \r\n        \"value\": \"\"  \r\n    },  \r\n    \"unit\": {  \r\n        \"type\": \"Property\",  \r\n        \"value\": \"UDT0000016\"  \r\n    },  \r\n    \"@context\": [  \r\n        \"https://raw.githubusercontent.com/smart-data-models/dataModel.Device/master/context.jsonld\"  \r\n    ]  \r\n}  \r\n```  \r\n</details><!-- /80-Examples -->\r\n    \r\n<!-- 90-FooterNotes -->\r\n    \r\n<!-- /90-FooterNotes -->\r\n    \r\n<!-- 95-Units -->\r\n    \r\n\r\nSee [FAQ 10](https://smartdatamodels.org/index.php/faqs/) to get an answer on how to deal with magnitude units    \r\n<!-- /95-Units -->\r\n    \r\n<!-- 97-LastFooter -->\r\n    \r\n---    \r\n\r\n[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->\r\n    \r\nSource: https://github.com/smart-data-models/dataModel.Device/blob/master/DeviceMeasurement/doc/spec.md"
     },
     {
         "id": "183b331947680411",

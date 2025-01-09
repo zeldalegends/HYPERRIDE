@@ -1,26 +1,55 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300,100" rel="stylesheet">
-    <!--link rel="stylesheet" href="style.css"-->
-  </head>
-  <body>
-<h1 style="color:blue">Welcome to FIWARE Universe</h1>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300,100" rel="stylesheet">
+  <!--link rel="stylesheet" href="style.css"-->
+</head>
+<body>
+<h1 style="color:blue">Welcome to HYPERRIDE ICT Framework</h1>
 by Alerox, 2024
 <br>
 <br>
 <div style="background-color: rgb(240,240,240); box-shadow: 10px 10px 5px rgba(64,64,64,0.5); padding: 5px">
-  <h2 style="font-family: Roboto Slab; color: #aa6767;">Dedalus PoC</h2>
-  <a href="../ui"><button>Dashboard</button></a>
+  <h2 style="font-family: Roboto Slab; color: #aa6767;">Terni demo</h2>
+  <a id="node-red" href="http://172.16.1.10:1880/dashboard"><button>Dashboard</button></a>
+  <a id="keycloak" href="http://172.16.1.10:8080"><button>Keycloak</button></a>
+</div>
+<br>
+<div style="background-color: rgb(240,240,240); box-shadow: 10px 10px 5px rgba(64,64,64,0.5); padding: 5px">
+  <h2 style="font-family: Roboto Slab; color: #6767aa;">FIWARE Stack</h2>
+  <a href="orion/version"><button>Orion-LD</button></a>
+  <br>
+  <a href="https://github.com/smart-data-models/dataModel.Device/blob/master/DeviceMeasurement/doc/spec.md"><button>DeviceMeasurement specs</button></a>
+  <br>
+  <a href="https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"><button>Core @context</button></a>
+  <br>
+  <br>
+  NGSI-LD @context file<a href="data-models/context.jsonld"><button>Download</button></a>
 </div>
 <br>
 <div style="background-color: rgb(240,240,240); box-shadow: 10px 10px 5px rgba(64,64,64,0.5); padding: 10px">
-  <h2 style="font-family: Roboto Slab; color: green;">Utils</font></h2>
-  <a href="data-models/json-context.jsonld"><button>JSON-LD @context file</button></a>
-  <a href="data-models/ngsi-context.jsonld"><button>NGSI-LD @context file</button></a>
+  <h2 style="font-family: Roboto Slab; color: green;">Swagger</font></h2>
   <a href="swagger/ngsi-ld"><button>NGSI-LD Open API</button></a>
   <a href="swagger/ngsi-v2"><button>NGSI-v2 Open API</button></a>
-  <a href="swagger/poe9"><button>PoE ver. 9 Open API</button></a>
+  <a href="swagger/poe9"><button>PoE v5 Open API</button></a>
 </div>
 <br>
+<br>
+<button class="button" id="popupButton">Show Commands</button>
+<br>
 <img src="https://www.fiware.org//wp-content/uploads/2017/12/logo14.gif" />
+<script>
+    document.getElementById('popupButton').addEventListener('click', function() {
+        alert("\nUpload files\n" +
+              "curl -T <src-path> " + location + "upload/<file-name> -H 'Content-Type:application/octet-stream'\n" +
+              "\nDelete files\n" +
+              "curl -X DELETE " + location + "upload/<file-name>\n" +
+              "curl " + location + "delete/<file-name>");
+    });
+    <!-- window.location = location.href = location.origin + location.pathname + "#" + location.hash + "?" + location.query -->
+    <!-- location.origin = location.protocol + "//" + location.hostname + ":" + location.port -->
+    document.getElementById("node-red").href = location.protocol + "//" + location.hostname + ":1880/dashboard";
+    document.getElementById("keycloak").href = "http://" + location.hostname + ":8080";
+</script>
+</body>
+</html>

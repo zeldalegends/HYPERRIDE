@@ -20,9 +20,10 @@
                     "info",
                     "help",
                     "debug",
-                    "dashboard",
+                    "dashboard-2.0",
                     "config",
-                    "context"
+                    "context",
+                    "dashboard"
                 ]
             },
             "dialog": {
